@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar -->
+<html lang="pt-BR"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]</title>
+
+	<!-- Meta -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+
+	
+	
+	<link rel="canonical" href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<link rel="shortcut icon" type="image/png" href="https://static.vivaolinux.com.br/favicon.png">
+	<link rel="icon" type="image/png" href="https://static.vivaolinux.com.br/favicon.png">
+	<link rel="image_src" href="https://static.vivaolinux.com.br/imagens/logo-vivaolinux-facebook-azul.png">
+
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/boot-style-min.css">
+	<link rel="stylesheet" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/custom12-min.css">
+	<link rel="stylesheet" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/prettify.css">
+
+<link rel="preload" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(1).txt" as="script"><script type="text/javascript" async="" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/ga.js.download"></script><script src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f.txt"></script><script src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/ca-pub-3535276187000580.js.download"></script><script type="text/javascript" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(1).txt"></script><link rel="preload" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(2).txt" as="script"><script type="text/javascript" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(2).txt"></script></head> 
+
+<body class="header-fixed">
+
+
+<div class="wrapper">
+<!--=== Header ===-->    
+<div class="header header-sticky no-topbar header-fixed-shrink">
+    
+	<!-- Navbar -->
+	<div class="navbar navbar-default mega-menu" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="fa fa-bars"></span>
+			</button>
+		<a class="navbar-brand" href="https://www.vivaolinux.com.br/">
+			<img id="logo-header" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/logo-vol-white-sombra.png" alt="Viva o Linux">
+		</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav">
+				<!-- Home -->
+				<li class="dropdown">
+					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Principal</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.vivaolinux.com.br/artigos/">Artigos</a></li>
+						<li><a href="https://www.vivaolinux.com.br/conf/">Arquivos de configuração</a></li>
+						<li><a href="https://www.vivaolinux.com.br/comunidades/">Comunidades</a></li>
+						<li><a href="https://www.vivaolinux.com.br/dicas/">Dicas</a></li>
+						<li><a href="https://www.vivaolinux.com.br/screenshots/">Screenshots</a></li>
+						<li><a href="https://www.vivaolinux.com.br/scripts/">Scripts</a></li>
+						<li><a href="https://www.vivaolinux.com.br/simulado/">Simulado</a></li>
+					</ul>
+				</li>
+				<!-- End Home -->
+
+				<li><a href="https://www.vivaolinux.com.br/perguntas/">Fórum</a></li>
+
+				<!-- GNU/Linux-->
+				<li class="dropdown menu-grande">
+					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">GNU/Linux</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.vivaolinux.com.br/download-linux/">Download</a></li>
+						<li><a href="https://www.vivaolinux.com.br/linux/">Introdução ao Linux</a></li>
+					</ul>
+				</li>
+				<!-- End GNU/Linux-->
+
+				<!-- Enviar -->
+				<li class="dropdown">
+					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Enviar</a>
+					<ul class="dropdown-menu">
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/artigo/">Artigo</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/conf/">Arquivo de configuração</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/dicas/">Dica</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/comunidades/formTopico.php?codigo=353">Evento</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/comunidades/formTopico.php?codigo=232">Oportunidade de trabalho</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/perguntas/">Pergunta</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/scripts/">Script</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/contribuir/screenshots/">Screenshot</a></li>
+					</ul>
+				</li>
+				<!-- End Enviar -->
+
+				<!-- Sobre -->
+				<li class="dropdown menu-grande"> 
+					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Sobre</a>
+					<ul class="dropdown-menu">
+						<li> <a href="https://www.vivaolinux.com.br/falecom/">Contato</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/anuncie/">Anuncie</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/faq.php">FAQ</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/privacidade/">Política de privacidade</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/quemsomos/">Quem somos</a></li>
+						<li> <a href="https://www.vivaolinux.com.br/termos-de-uso/">Termos de uso</a></li>
+					</ul>
+				</li>
+				<!-- End Sobre -->
+
+				<!-- Search Block -->
+				<li>
+				<i class="search fa fa-search search-btn"></i>
+				<!-- busca google -->
+				<form method="get" action="https://www.vivaolinux.com.br/busca/" name="pesquisa" id="cse-search-box" accept-charset="utf-8">
+				<div class="search-open">
+					<div class="input-group animated fadeInDown">
+						<input type="hidden" name="cx" value="partner-pub-3535276187000580:4725058203">
+						<input type="hidden" name="cof" value="FORID:10">
+						<input type="hidden" name="ie" value="ISO-8859-1">
+
+						<input type="text" name="q" class="form-control" placeholder="Buscar" value="">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit" data-loading-text="Enviando..."><span class="fa fa-search"></span></button>
+						</span>
+					</div>
+				</div>
+				</form>
+				<!-- busca google -->
+				</li>
+				<!-- End Search Block -->
+
+				<li><div class="topbar"><ul class="loginbar"><li><a href="https://www.vivaolinux.com.br/testarLogin.php">Login</a></li><li class="topbar-devider"></li><li><a href="https://www.vivaolinux.com.br/formCadastro.php">Cadastre-se</a></li></ul></div></li>
+
+				<li><!-- social -->
+					<ul id="socialbar">
+						<li> <a data-toggle="tooltip" data-placement="bottom" title="" href="https://www.vivaolinux.com.br/index.rdf" data-original-title="Acompanhe nosso Feed"><i class="fa fa-rss fa-2x"></i></a>
+						</li><li> <a data-toggle="tooltip" data-placement="bottom" title="" href="https://www.facebook.com/vivaolinux" target="_blank" data-original-title="Visite-nos no Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+						</li><li> <a data-toggle="tooltip" data-placement="bottom" title="" href="https://twitter.com/vivaolinux_" target="_blank" data-original-title="Siga-nos no Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+						</li><li> <a data-toggle="tooltip" data-placement="bottom" title="" href="https://telegram.me/vivaolinuxOficial" target="_blank" data-original-title="Siga-nos no Telegram"><i class="fa fa-telegram fa-2x"></i></a>
+					</li></ul>
+				</li><!-- social -->
+
+
+			</ul>
+			</div><!--/navbar-collapse-->
+		</div>
+		</div>            
+		<!-- End Navbar -->
+</div>
+
+
+<!--=== End Header ===-->    
+
+<!--=== Content Part ===-->
+<!-- div class="container content" --> 
+<div class="container-fluid"> 
+
+<div class="row centro">
+<div class="col-md-10">
+	<!-- BANNER SKY -->
+	<div class="container-fluid centro">
+		<div id="banner-sky" class="visible-md visible-lg"><div class="figura">
+<script async="" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(3).txt"></script>
+<!-- 970x90 geral -->
+<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-3535276187000580" data-ad-slot="1085253688" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><iframe width="970" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:970px;height:90px;" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/saved_resource.html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+	</div>
+
+	<div class="row">
+
+		<!-- coluna esquerda -->
+		<div class="col-md-2 esquerda visible-md visible-lg">
+
+			<div id="banner-left"><div class="figura">
+<script async="" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(3).txt"></script>
+<!-- 160x600 geral -->
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-3535276187000580" data-ad-slot="5522126481" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:160px;height:600px;" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/saved_resource(1).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+
+		</div>
+		<!-- fim coluna esquerda -->
+
+		<!-- coluna central -->
+		<div class="col-md-10 esquerda">
+
+
+		<div class="breadcrumbs">
+		<ul class="pull-right breadcrumb">
+			<li> <a href="https://www.vivaolinux.com.br/index.php">Home</a> </li>
+			<li> <a href="https://www.vivaolinux.com.br/comunidades/index.php">Comunidades</a> </li>
+			<li> <a href="https://www.vivaolinux.com.br/comunidades/categoriaIndex.php?codigo=4">Introdução ao Linux</a> </li>
+			<li> <a href="https://www.vivaolinux.com.br/comunidade/Iniciantes-no-Linux">Iniciantes no Linux</a> </li> 
+			<li> <a href="https://www.vivaolinux.com.br/comunidade/Iniciantes-no-Linux/forum/">Fórum</a> </li> 
+			<li class="active"> Ver tópico </li>
+		</ul>
+</div>
+
+
+<div id="corpoArtigo">
+
+<div class="centro">
+<ul id="toolbar">
+<li> <a href="https://www.vivaolinux.com.br/comunidade/Iniciantes-no-Linux"><i class="fa fa-h-square"></i> Home</a> </li>
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formJoin.php?codigo=115"><i class="fa fa-sign-in"></i> Participar</a> </li> 
+<li> <a href="https://www.vivaolinux.com.br/comunidade/Iniciantes-no-Linux/forum/"><i class="fa fa-comments"></i> Fórum</a> </li> 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/verMembros.php?codigo=115"><i class="fa fa-group"></i> Membros</a> </li> 
+ 
+<li> <a href="https://feeds.feedburner.com/forum-vivaolinux?format=xml"><i class="fa fa-rss"></i> RSS do fórum</a> </li>
+</ul><br>
+
+<div class="direita text-right fonte12">
+<a href="https://www.vivaolinux.com.br/denuncie/index.php" title="Denunciar conteúdo"><i class="fa fa-exclamation-triangle"></i> Denuncie</a>&nbsp;&nbsp; 
+<a href="https://www.vivaolinux.com.br/addBookmark.php?tipo=comunidadeTopico&amp;codigo=95820" title="Adicionar aos favoritos"><i class="fa fa-plus-circle"></i> Favoritos</a>&nbsp;&nbsp;
+<a href="https://www.vivaolinux.com.br/formIndicar.php?tipo=topico&amp;codigo=95820" title="Indicar"><i class="fa fa-envelope"></i> Indicar</a>&nbsp;&nbsp;
+</div>
+
+<p></p>
+
+</div>
+
+
+
+
+<h1>SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]</h1>
+<div class="centro">
+<ul id="likebar">
+<li> <a data-toggle="tooltip" data-placement="left" href="javascript:if (window.open(&#39;http://www.facebook.com/sharer.php?u=http://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar?&#39;, &#39;_blank&#39;,&#39;toolbar=no,menubar=no,resizable=yes,scrollbars=yes,width=500,height=500&#39;)) {} " title="" data-original-title="Compartilhar no Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+<li> <a data-toggle="tooltip" data-placement="bottom" href="javascript:if (window.open(&#39;https://twitter.com/share?url=http://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar?&#39;, &#39;_blank&#39;,&#39;toolbar=no,menubar=no,resizable=yes,scrollbars=yes,width=500,height=500&#39;)) {} " title="" data-original-title="Compartilhar no Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+<li> <a data-toggle="tooltip" data-placement="right" href="javascript:if (window.open(&#39;http://plus.google.com/share?url=http://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar?&#39;, &#39;_blank&#39;,&#39;toolbar=no,menubar=no,resizable=yes,scrollbars=yes,width=500,height=500&#39;)) {} " title="" data-original-title="Compartilhar no Google Plus"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+</ul>
+</div>
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>1. SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #ffffff">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~doctorx777"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1221156124Sergio-Leone.JPG" alt="Leandro Medeiros" title="Leandro Medeiros" border="0" width="80" height="60"><br>
+		doctorx777</a>
+		<br>
+		(usa Ubuntu)
+		</span>
+
+
+		<p class="terminal">Enviado em 20/05/2012 - 11:05h </p>
+		Então, tenho algumas tarefas que rodam em um servidor remoto ssh,<br>
+o problema é que eu preciso ficar com meu computador ligado pra tarefa<br>
+funcionar, se eu sair do ssh a tarefa encerra.<br>
+gostaria de saber se tem como eu logar na maquina via ssh, rodar meu programa,<br>
+sair do ssh mas de modo que o programa na maquina remota não pare de ser executado?<br>
+e depois quando eu logar na maquina de novo, poder capturar o terminal que o programa<br>
+tá rodando, pois ele mostra varias mensagens e tal. seria como se eu não tivesse deslogado.<br>
+tem como fazer isso?<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="95820" data-tabela="comunidadeTopico" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="95820" data-tabela="comunidadeTopico" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=-1"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-topico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editTopico.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar tópico</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+		<textarea name="texto" rows="8">Então, tenho algumas tarefas que rodam em um servidor remoto ssh,
+o problema é que eu preciso ficar com meu computador ligado pra tarefa
+funcionar, se eu sair do ssh a tarefa encerra.
+gostaria de saber se tem como eu logar na maquina via ssh, rodar meu programa,
+sair do ssh mas de modo que o programa na maquina remota não pare de ser executado?
+e depois quando eu logar na maquina de novo, poder capturar o terminal que o programa
+tá rodando, pois ele mostra varias mensagens e tal. seria como se eu não tivesse deslogado.
+tem como fazer isso?</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<p class="pull-left"><button type="button" class="btn btn-u rounded-2x" onclick="window.location.href=&#39;/comunidades/formPost.php?codigo=115&amp;codtopico=95820&#39;">Responder tópico</button></p>
+<div class="centro visible-lg visible-md visible-sm" id="gad336">
+<script async="" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(3).txt"></script>
+<!-- 336x280 artigo direita verde -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-3535276187000580" data-ad-slot="2913193654" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:336px;height:280px;" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/saved_resource(2).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+&nbsp;&nbsp;
+<script async="" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/f(3).txt"></script>
+<!-- 200x90 links -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-3535276187000580" data-ad-slot="9862152083" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent;"><iframe width="200" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;width:200px;height:90px;" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<br><br>
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>2. Re: SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #efefef">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~eabreu"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/135dc364e1d0.png" alt="Edson" title="Edson" border="0" width="80" height="60"><br>
+		eabreu</a>
+		<br>
+		(usa Debian)
+		</span>
+
+
+		<p class="terminal">Enviado em 20/05/2012 - 12:50h </p>
+		Boa tarde,<br>
+<br>
+ esse trabalho de fazer o programa rodar mesmo você não estando logado, ou seja fazer login e rodar o programa e fazer logout e mesmo fazendo logout o programa continuar em execução pode ser feito com o comando nohup.<br>
+<br>
+<pre class="prettyprint prettyprinted" id="code1" style=""><span class="pln">
+nohup comando</span>
+</pre><br>
+<br>
+ Para rodar o programa em segundo plano:<br>
+<br>
+<pre class="prettyprint prettyprinted" id="code2" style=""><span class="pln">
+nohup comando </span><span class="pun">&amp;</span>
+</pre><br>
+<br>
+ a saída do programa fica gravada em um arquivo chamado: nohup.out<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386147" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386147" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=386147"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-386147" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="386147">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Re: SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Boa tarde,
+
+ esse trabalho de fazer o programa rodar mesmo você não estando logado, ou seja fazer login e rodar o programa e fazer logout e mesmo fazendo logout o programa continuar em execução pode ser feito com o comando nohup.
+
+[code]
+nohup comando
+[/code]
+
+ Para rodar o programa em segundo plano:
+
+[code]
+nohup comando &amp;
+[/code]
+
+ a saída do programa fica gravada em um arquivo chamado: nohup.out</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>3. Re: SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #ffffff">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~doctorx777"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1221156124Sergio-Leone.JPG" alt="Leandro Medeiros" title="Leandro Medeiros" border="0" width="80" height="60"><br>
+		doctorx777</a>
+		<br>
+		(usa Ubuntu)
+		</span>
+
+
+		<p class="terminal">Enviado em 20/05/2012 - 14:09h </p>
+		Fala eabreu,<br>
+<br>
+então cara, pelo que entendi ele vai salvar toda saída do programa no arquivo.<br>
+so que isso seria complicado, pq ele mostra muita informação na tela a todo segundo<br>
+se for salvar isso tudo o arquivo vai ficar imenso, e tb o programa já salva em outro arquivo<br>
+o que é necessário. o que eu queria era retomar a tela pra poder ficar olhando mesmo, pra v se tá<br>
+rodando rapido ou devagar... se ta rodando na sequencia certa... etc... nao preciso salvar toda saída, seria<br>
+impraticável.<br>
+<br>
+imagine que vc pingue um host, vai ficar na tela as linhas passando certo?<br>
+nisso vc pode acompanhar a latencia, o tempo de resposta.. mas não necessariamente<br>
+vc tenha que salvar tudo isso num arquivo.. não precisa. então seria como vc rodar o ping,<br>
+sair, depois voltar e poder fazer um comando pra poder ver na tela novamente como tá indo....<br>
+<br>
+acho que consegui explicar o que preciso...<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386167" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386167" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=386167"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-386167" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="386167">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Re: SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO]" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Fala eabreu,
+
+então cara, pelo que entendi ele vai salvar toda saída do programa no arquivo.
+so que isso seria complicado, pq ele mostra muita informação na tela a todo segundo
+se for salvar isso tudo o arquivo vai ficar imenso, e tb o programa já salva em outro arquivo
+o que é necessário. o que eu queria era retomar a tela pra poder ficar olhando mesmo, pra v se tá
+rodando rapido ou devagar... se ta rodando na sequencia certa... etc... nao preciso salvar toda saída, seria
+impraticável.
+
+imagine que vc pingue um host, vai ficar na tela as linhas passando certo?
+nisso vc pode acompanhar a latencia, o tempo de resposta.. mas não necessariamente
+vc tenha que salvar tudo isso num arquivo.. não precisa. então seria como vc rodar o ping,
+sair, depois voltar e poder fazer um comando pra poder ver na tela novamente como tá indo....
+
+acho que consegui explicar o que preciso...</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>4. Achei a resposta</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #efefef">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~doctorx777"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1221156124Sergio-Leone.JPG" alt="Leandro Medeiros" title="Leandro Medeiros" border="0" width="80" height="60"><br>
+		doctorx777</a>
+		<br>
+		(usa Ubuntu)
+		</span>
+
+
+		<p class="terminal">Enviado em 20/05/2012 - 14:40h </p>
+		Achei a resposta exatamente para o que preciso.<br>
+compartilhando a solução:<br>
+<br>
+Quando você se conecta a uma náquina Linux pelo putty (SSH), todas as operações são dependentes da sua sessão.<br>
+<br>
+Se você der um wget e fechar o putty, por exemplo, o download é interrompido. E isso vale para tar, zip, make, etc.<br>
+<br>
+Uma solução para isso é o terminal virtual. O que utilizo é o screen.<br>
+Para instalá-lo no Debian, é o de sempre:<br>
+<pre class="prettyprint prettyprinted" id="code3" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+$ apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> install screen</span>
+</pre><br>
+A utilização também é simples.<br>
+Depois de instalado, para iniciar uma sessão do terminal basta chamar o screen:<br>
+<pre class="prettyprint prettyprinted" id="code4" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+$ screen</span>
+</pre><br>
+Vai abrir um shell normal, onde você pode executar o(s) comando(s) que precisam ficar rodando mesmo depois de desconectado o SSH.<br>
+<br>
+Para sair do screen sem fechar (detach), basta teclar:<br>
+Ctrl+a+d<br>
+<br>
+Para retomar a sessão do screen, basta digitar:<br>
+<pre class="prettyprint prettyprinted" id="code5" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span>
+</pre><br>
+$ screen -r<br>
+[/code]<br>
+Se você tiver mais de uma sessão de terminal, basta dar um<br>
+<pre class="prettyprint prettyprinted" id="code6" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+$ screen </span><span class="pun">-</span><span class="pln">ls</span>
+</pre><br>
+Vai aparecer uma lista como essa:<br>
+<pre class="prettyprint prettyprinted" id="code7" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+</span><span class="typ">There</span><span class="pln"> are several suitable screens on</span><span class="pun">:</span><span class="pln">
+        </span><span class="lit">26826.pts</span><span class="pun">-</span><span class="lit">0.AgenceDebianServer</span><span class="pln">  </span><span class="pun">(</span><span class="typ">Detached</span><span class="pun">)</span><span class="pln">
+        </span><span class="lit">26850.wget</span><span class="pln">      </span><span class="pun">(</span><span class="typ">Detached</span><span class="pun">)</span>
+</pre><br>
+Para restaurar uma sessão específica, é só pasar o nome da mesma. Por exemplo:<br>
+<pre class="prettyprint prettyprinted" id="code8" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+$ screen </span><span class="pun">-</span><span class="pln">r </span><span class="lit">26826.pts</span><span class="pun">-</span><span class="lit">0.AgenceDebianServer</span>
+</pre><br>
+O nome da sessão é composta de [PID].[terminal].[servidor]<br>
+<br>
+Na segunda sessão listada no exemplo acima, o nome é o [PID].wget.<br>
+Esse nome foi definido na hora de criar a sessão do screen, usando<br>
+<pre class="prettyprint prettyprinted" id="code9" style=""><span class="pln">
+C</span><span class="pun">ó</span><span class="pln">digo</span><span class="pun">:</span><span class="pln">
+</span><span class="pln">
+$ screen </span><span class="pun">-</span><span class="pln">S wget</span>
+</pre><br>
+Isso pode ajudar bastante se você tem várias sessões abertas.<br>
+<br>
+<br>
+É isso.<br>
+Abraço.<br>
+<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386174" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">12</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="386174" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=386174"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-386174" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="386174">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Achei a resposta" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Achei a resposta exatamente para o que preciso.
+compartilhando a solução:
+
+Quando você se conecta a uma náquina Linux pelo putty (SSH), todas as operações são dependentes da sua sessão.
+
+Se você der um wget e fechar o putty, por exemplo, o download é interrompido. E isso vale para tar, zip, make, etc.
+
+Uma solução para isso é o terminal virtual. O que utilizo é o screen.
+Para instalá-lo no Debian, é o de sempre:
+[code]
+Código:
+
+$ apt-get install screen
+[/code]
+A utilização também é simples.
+Depois de instalado, para iniciar uma sessão do terminal basta chamar o screen:
+[code]
+Código:
+
+$ screen
+[/code]
+Vai abrir um shell normal, onde você pode executar o(s) comando(s) que precisam ficar rodando mesmo depois de desconectado o SSH.
+
+Para sair do screen sem fechar (detach), basta teclar:
+Ctrl+a+d
+
+Para retomar a sessão do screen, basta digitar:
+[code]
+Código:
+[/code]
+$ screen -r
+[/code]
+Se você tiver mais de uma sessão de terminal, basta dar um
+[code]
+Código:
+
+$ screen -ls
+[/code]
+Vai aparecer uma lista como essa:
+[code]
+Código:
+
+There are several suitable screens on:
+        26826.pts-0.AgenceDebianServer  (Detached)
+        26850.wget      (Detached)
+[/code]
+Para restaurar uma sessão específica, é só pasar o nome da mesma. Por exemplo:
+[code]
+Código:
+
+$ screen -r 26826.pts-0.AgenceDebianServer
+[/code]
+O nome da sessão é composta de [PID].[terminal].[servidor]
+
+Na segunda sessão listada no exemplo acima, o nome é o [PID].wget.
+Esse nome foi definido na hora de criar a sessão do screen, usando
+[code]
+Código:
+
+$ screen -S wget
+[/code]
+Isso pode ajudar bastante se você tem várias sessões abertas.
+
+
+É isso.
+Abraço.
+</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>5. Thank You!</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #ffffff">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~SonnyBoySilvson"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/5c35d200293c.jpg" alt="João Pedro" title="João Pedro" border="0" width="80" height="60"><br>
+		SonnyBoySilvson</a>
+		<br>
+		(usa Ubuntu)
+		</span>
+
+
+		<p class="terminal">Enviado em 17/06/2015 - 11:54h </p>
+		<br>
+ Valeu doctorx!<br>
+<br>
+ Definitamente tive que me cadastrar somente para agradecer. Estamos em 2015 e sua resposta direto do túnel do tempo salvou de maneira prática e eficiente muito trabalho.<br>
+<br>
+ Lhe agradeço em nome da comunidade pela gentileza.<br>
+<br>
+ Espero aumentar em conhecimento para também poder ajudar.<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="606685" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">9</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="606685" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=606685"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-606685" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="606685">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Thank You!" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8"> Valeu doctorx!
+
+ Definitamente tive que me cadastrar somente para agradecer. Estamos em 2015 e sua resposta direto do túnel do tempo salvou de maneira prática e eficiente muito trabalho.
+
+ Lhe agradeço em nome da comunidade pela gentileza.
+
+ Espero aumentar em conhecimento para também poder ajudar.</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>6. valeu manim!</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #efefef">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~madprolondon"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/desconhecido.png" alt="Sergio" title="Sergio" border="0" width="80" height="60"><br>
+		madprolondon</a>
+		<br>
+		(usa CentOS)
+		</span>
+
+
+		<p class="terminal">Enviado em 21/12/2015 - 16:28h </p>
+		quebrou meu galho!<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="643271" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="643271" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=643271"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-643271" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="643271">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="valeu manim!" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">quebrou meu galho!</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>7. ótimo!!!</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #ffffff">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~Krusth"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/2e2277ba1c9b7.jpg" alt="Alessandro Schneider dos Santos" title="Alessandro Schneider dos Santos" border="0" width="80" height="60"><br>
+		Krusth</a>
+		<br>
+		(usa Fedora)
+		</span>
+
+
+		<p class="terminal">Enviado em 05/01/2016 - 16:26h </p>
+		Parabéns!!!<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="645830" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="645830" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=645830"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-645830" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="645830">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="ótimo!!!" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Parabéns!!!</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>8. Ótima solução</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #efefef">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~lucasbretana"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/desconhecido.png" alt="Lucas Eduardo Bretana" title="Lucas Eduardo Bretana" border="0" width="80" height="60"><br>
+		lucasbretana</a>
+		<br>
+		(usa Debian)
+		</span>
+
+
+		<p class="terminal">Enviado em 06/01/2016 - 12:32h </p>
+		Funcionou perfeitamente. <br>
+Vlw.<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="645986" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="645986" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=645986"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-645986" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="645986">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Ótima solução" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Funcionou perfeitamente. 
+Vlw.</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>9. Agradecimento</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #ffffff">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~Rauntty"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/desconhecido.png" alt="Raul" title="Raul" border="0" width="80" height="60"><br>
+		Rauntty</a>
+		<br>
+		(usa Outra)
+		</span>
+
+
+		<p class="terminal">Enviado em 24/03/2016 - 15:40h </p>
+		Sem essa ferramenta, qualquer trabalho que demande muitas horas de computador é uma verdadeira condenação. Eu que rodo programas que duram dias, semanas,.... ficar com o terminal aberto, além de um puto consumo de energia, é uma ocupação inviável para minha máquina pessoal.<br>
+<br>
+Valeu pela ajuda. Muito esclarecedora e útil.<br>
+<br>
+Parabéns!!<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="664226" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="664226" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=664226"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-664226" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="664226">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Agradecimento" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Sem essa ferramenta, qualquer trabalho que demande muitas horas de computador é uma verdadeira condenação. Eu que rodo programas que duram dias, semanas,.... ficar com o terminal aberto, além de um puto consumo de energia, é uma ocupação inviável para minha máquina pessoal.
+
+Valeu pela ajuda. Muito esclarecedora e útil.
+
+Parabéns!!</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+<div class="postItem">
+
+	<div class="postHeader rounded-2x">
+		<h2>10. Parabéns</h2><span class="pull-right"></span>
+	</div>
+
+	<div class="postCorpo" style="background: #efefef">
+
+		<span class="pull-left fotoPost centro"> 
+		<a href="https://www.vivaolinux.com.br/~Kwiek"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/desconhecido.png" alt="Carlos kwiek" title="Carlos kwiek" border="0" width="80" height="60"><br>
+		Kwiek</a>
+		<br>
+		(usa Outra)
+		</span>
+
+
+		<p class="terminal">Enviado em 04/06/2017 - 17:42h </p>
+		Olá doctorx777,  parabéns e obrigado, estou rodando no Raspberry alguns programas desta forma, e não sabia como resolver, muito boa a pratica a solução, porque permite voltar ao programa a qualquer momento e retomar o processo.<br>
+<br>
+Grand abraço!<br>
+
+<br>
+<div class="pull-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="758553" data-tabela="comunidadePost" data-tipo="like" class="btn-like btn btn-default btn-xs rounded"><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-up"></i></a> <a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar#" data-codigo="758553" data-tabela="comunidadePost" data-tipo="dislike" class="btn-like btn btn-default btn-xs rounded" disabled=""><span class="likeBadge">0</span> <i class="fa fa-thumbs-o-down"></i></a></div>
+
+		<div class="commentBar direita">
+ 
+ 
+<li> <a href="https://www.vivaolinux.com.br/comunidades/formPost.php?codigo=115&amp;codtopico=95820&amp;quote=758553"><i class="fa fa-quote-left"></i> Quote</a></li>
+
+</div>
+	<br>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-758553" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form action="https://www.vivaolinux.com.br/comunidades/editPost.php" method="post" name="form1" id="sky-form3" class="sky-form">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar post</h4>
+      </div>
+      <div class="modal-body">
+
+	<input type="hidden" name="codigo" value="115">
+	<input type="hidden" name="codtopico" value="95820">
+	<input type="hidden" name="codpost" value="758553">
+	<input type="hidden" name="url" value="/topico/Iniciantes-no-Linux/SSH-Deixar-tarefa-rodando-e-depois-retomar">
+
+	<fieldset>
+	<div class="row">
+	<section>
+		<label class="label">Assunto</label>
+		<label class="input">
+		<input name="assunto" value="Parabéns" size="25">
+		</label>
+	</section>
+	</div>
+
+	<div class="row">
+	<section>
+		<label class="label">Mensagem</label>
+		<label class="textarea">
+
+		<textarea name="texto" rows="8">Olá doctorx777,  parabéns e obrigado, estou rodando no Raspberry alguns programas desta forma, e não sabia como resolver, muito boa a pratica a solução, porque permite voltar ao programa a qualquer momento e retomar o processo.
+
+Grand abraço!</textarea>
+		</label>
+	</section>
+	</div></fieldset>
+
+
+      </div>
+      <div class="modal-footer">
+	<button type="submit" class="btn btn-primary rounded-2x" data-loading-text="Enviando...">Gravar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Modal -->
+
+
+
+
+
+<br>
+<p class="esquerda"><button type="button" class="btn btn-u rounded-2x" onclick="window.location.href=&#39;/comunidades/formPost.php?codigo=115&amp;codtopico=95820&#39;">Responder tópico</button></p>
+
+
+
+
+<div class="centro"></div>
+
+</div>
+
+<link rel="stylesheet" href="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/custom-sky-forms.css">
+
+		<br><br>
+		<!-- div class="clerafix margin-bottom-50"></div -->
+
+		</div>
+		    
+	</div>
+	<!-- fim row-->
+
+</div>
+
+<!-- coluna direita -->
+<div class="col-md-2 esquerda visible-md visible-lg">
+	<br>
+	<div class="headline" style="margin-top: 0px"><h3>Patrocínio</h3></div>
+
+	<div class="blog-twitter">
+		<div class="text-center blog-twitter-inner">Site hospedado pelo provedor <a href="https://www.vivaolinux.com.br/verBanner.php?codigo=247" target="_blank" rel="nofollow">HostGator</a>.</div>
+	</div>
+
+
+	<div id="bannerRight" class="text-center">
+<div class="textosolto">
+<div style="margin-bottom: 8px;">
+	<a href="https://www.vivaolinux.com.br/verBanner.php?codigo=617" target="_blank" rel="nofollow"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/banner-hostgator-vaga.png" width="160" height="120" border="0" alt="Linux banner"></a></div>
+<div style="margin-bottom: 8px;">
+	<a href="https://www.vivaolinux.com.br/verBanner.php?codigo=496" target="_blank" rel="nofollow"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/banner-treina-android.gif" width="160" height="120" border="0" alt="Linux banner"></a></div>  
+<div style="margin-bottom: 8px;">
+	<a href="https://www.vivaolinux.com.br/verBanner.php?codigo=624" target="_blank" rel="nofollow"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/banner-uninerds.gif" width="160" height="120" border="0" alt="Linux banner"></a></div>
+</div>
+</div>
+
+
+	<!-- Destaques -->
+	
+		<div class="headline"><h3>Destaques</h3></div>
+		<div id="destaques" class="service-block rounded-2x service-block-dark box-ultimas">
+			<p class="text-left"><a href="https://www.vivaolinux.com.br/topico/Divulgacao-de-eventos/Festival-Latino-Americano-de-Instalacao-de-Software-Livre/">Festival Latino Americano de Instalação de Software Livre [RESOLVIDO]  (2)</a></p>
+			<p class="text-left"><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Como-fazer-topicos-eficientes/">Como fazer tópicos eficientes! [RESOLVIDO]  (396)</a></p>
+			<p class="text-left"><a href="https://www.vivaolinux.com.br/topico/Quero-ser-linuxer-senpai/Como-denunciar-um-usuario-troll/">Como denunciar um usuário troll.  (47)</a></p>
+
+		</div>
+
+	<!-- End Destaques -->
+
+	<!-- Artigos -->
+	<div class="headline"><h3>Artigos</h3></div>
+	<div class="service-block rounded-2x service-block-dark box-ultimas">
+		<p><a href="https://www.vivaolinux.com.br/artigo/PostgreSQL-no-Slackware-Importando-e-Exportando-arquivos-TXT-e-CSV">PostgreSQL no Slackware - Importando e Exportando arquivos TXT e CSV</a></p>
+		<p><a href="https://www.vivaolinux.com.br/artigo/Como-instalar-Ubuntu-no-Pendrive-nao-e-Live-USB-em-modo-UEFI">Como instalar Ubuntu no Pendrive (não é Live-USB) em modo UEFI</a></p>
+		<p><a href="https://www.vivaolinux.com.br/artigo/Conheca-o-projeto-BASHSRC">Conheça o projeto BASHSRC</a></p>
+		<p><a href="https://www.vivaolinux.com.br/artigo/Configurando-Zabbix-34-no-CentOS-7">Configurando Zabbix 3.4 no CentOS 7 </a></p>
+		<p><a href="https://www.vivaolinux.com.br/artigo/Criando-aplicacoes-RESTful-com-Qt-e-Cutelyst">Criando aplicações RESTful com Qt e Cutelyst</a></p>
+
+	</div>
+	<!-- Fim Artigos -->
+
+	<!-- Dicas -->
+	<div class="headline"><h3>Dicas</h3></div>
+	<div class="service-block rounded-2x service-block-dark box-ultimas">
+		<p><a href="https://www.vivaolinux.com.br/dica/Como-instalar-corretamente-o-VirtualBox-no-Kali-Linux">Como instalar corretamente o VirtualBox no Kali Linux</a></p>
+		<p><a href="https://www.vivaolinux.com.br/dica/Como-instalar-programas-targz">Como instalar programas .tar.gz</a></p>
+		<p><a href="https://www.vivaolinux.com.br/dica/Bug-do-fullscreen-no-VirtualBox-em-i3wm-Resolvido">Bug do fullscreen no VirtualBox em i3wm [Resolvido]</a></p>
+		<p><a href="https://www.vivaolinux.com.br/dica/Projeto-Root-Realizando-backup-criptografado-com-Duplicati">Projeto Root - Realizando backup criptografado com Duplicati </a></p>
+		<p><a href="https://www.vivaolinux.com.br/dica/Kernel-Libre-no-Fedora-27">Kernel Libre no Fedora 27</a></p>
+	</div>
+	<!-- Fim Dicas -->
+
+	<!-- Viva o Android -->
+	<div class="headline"><h3>Viva o Android</h3></div>
+	<div class="service-block rounded-2x service-block-dark box-ultimas">
+		<p><a href="https://www.vivaoandroid.com.br/artigo/Tres-jogos-de-RPG-Idle-Gratis" target="_blank">Três jogos de RPG Idle! Grátis</a></p>
+		<p><a href="https://www.vivaoandroid.com.br/artigo/Jogo-em-desenvolvimento-lembra-Diablo-3" target="_blank">Jogo em desenvolvimento lembra Diablo 3</a></p>
+		<p><a href="https://www.vivaoandroid.com.br/artigo/Lista-de-jogos-violentos-para-Android-video" target="_blank">Lista de jogos violentos para Android (vídeo)</a></p>
+		<p><a href="https://www.vivaoandroid.com.br/artigo/Jogo-que-brinca-com-a-corrupcao-do-Brasil" target="_blank">Jogo que brinca com a corrupção do Brasil</a></p>
+		<p><a href="https://www.vivaoandroid.com.br/artigo/O-que-voce-achou-da-serie-Altered-Carbon" target="_blank">O que você achou da série Altered Carbon?</a></p>
+	</div>
+	<!-- Fim Viva o Android -->
+
+	<!-- Topicos -->
+	<div class="headline"><h3>Tópicos</h3></div>
+	<div class="service-block rounded-2x service-block-dark box-ultimas">
+		<p><a href="https://www.vivaolinux.com.br/topico/Linux-Basico/Comando-do-qual-nao-lembro-DD">Comando do qual nao lembro. DD.  (6)</a></p>
+		<p><a href="https://www.vivaolinux.com.br/topico/vivaolinux/Aconteceu-algum-problema-com-as-dicas">Aconteceu algum problema com as dicas?  (0)</a></p>
+		<p><a href="https://www.vivaolinux.com.br/topico/Cinnamon/tela-de-login-16">tela de login  (2)</a></p>
+		<p><a href="https://www.vivaolinux.com.br/topico/AMD-64-bits/utilizar-maximo-recurso-da-maquina">utilizar máximo recurso da máquina  (4)</a></p>
+		<p><a href="https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/mensagem-de-erro-apos-atualizar">mensagem de erro após atualizar  (3)</a></p>
+	</div>
+	<!-- Fim Topicos -->
+
+	<!-- Top 10-->
+	<div class="headline"><h3>Top 10 do mês</h3></div>
+	<div id="top10" class="service-block rounded-2x service-block-dark text-left" style="padding: 10px;">
+			<ul class="newsticker list-unstyled" style="height: 360px; overflow: hidden;">
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+
+			<li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~xerxeslins"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1464d1ff6ee.jpg"><br>Xerxes Lins</a><br><span style="color: #fff">2° lugar - 91.337 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~fabio"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/10c9eb53afc21.png"><br>Fábio Berbert de Paula</a><br><span style="color: #fff">3° lugar - 40.474 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~albfneto"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/telapad.png"><br>Alberto Federman Neto.</a><br><span style="color: #fff">4° lugar - 37.349 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~edps"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/fdfa73842224.gif"><br>edps</a><br><span style="color: #fff">5° lugar - 27.790 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~Lisandro"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/194b2dbbf5b9c.jpg"><br>Lisandro Guerra</a><br><span style="color: #fff">6° lugar - 26.347 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~danniel-lara"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1275176319.euu.jpg"><br>Daniel Lara Souza</a><br><span style="color: #fff">7° lugar - 23.992 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~pylm"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1371993086.algerino-tux-goku-2044.png"><br>Matheus</a><br><span style="color: #fff">8° lugar - 21.709 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~magotico"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/1287842399.ln.jpg"><br>Robson Fernando Gomes</a><br><span style="color: #fff">9° lugar - 21.399 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~cabelo"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/4fcb75802380.png"><br>Alessandro de Oliveira Faria (A.K.A. CABELO)</a><br><span style="color: #fff">10° lugar - 20.682 pts</span> </li><li style="margin-top: 0px;"> <a style="color: #fff" href="https://www.vivaolinux.com.br/~clodoaldops"><img class="img-thumbnail rounded-2x" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/klods-lee.png"><br>Clodoaldo Santos</a><br><span style="color: #fff">1° lugar - 92.947 pts</span> </li></ul>
+	</div>
+	<!-- End Top 10-->
+
+	<!-- Scripts -->
+	<div class="headline"><h3>Scripts</h3></div>
+	<div class="service-block rounded-2x service-block-dark box-ultimas">
+		<p><a href="https://www.vivaolinux.com.br/script/Transformar-datas-para-gravar-no-banco-de-dados-MySQL-Postgres-e-outros">[PHP] Transformar datas para gravar no banco de dados (MySQL, Postgres e outros)</a></p>
+		<p><a href="https://www.vivaolinux.com.br/script/SQ-simulador-do-comando-seq">[Shell Script] SQ - simulador do comando seq</a></p>
+		<p><a href="https://www.vivaolinux.com.br/script/Simples-gerador-de-numeros-primos">[C/C++] Simples gerador de números primos</a></p>
+		<p><a href="https://www.vivaolinux.com.br/script/SLAC-Programa-de-manutencao-para-Slackware-14x">[Shell Script] SLAC - Programa de manutenção para Slackware 14x</a></p>
+		<p><a href="https://www.vivaolinux.com.br/script/Jogo-Guitar-Hero">[C/C++] Jogo Guitar Hero</a></p>
+	</div>
+	<!-- Fim Scripts -->
+
+
+</div>
+<!-- fim coluna direita -->
+
+
+</div>
+
+</div><!--/container-->     
+<!-- End Content Part -->
+
+
+
+
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1">
+<div class="footer">
+<div class="container">
+<div class="row">
+	<!-- About -->
+	<div class="col-md-3 md-margin-bottom-40">
+
+	<a href="https://www.vivaolinux.com.br/"><img class="footer-logo" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/logo-vol-white.png" alt="Viva o Linux"></a>
+	<p>A maior comunidade GNU/Linux da América Latina! Artigos, dicas, tutoriais, fórum, scripts e muito mais. Ideal para quem busca auto-ajuda.</p>
+
+	</div>
+	<!-- End About -->
+
+	<!-- Links -->
+	<div class="col-md-3 md-margin-bottom-40">
+
+		<div class="posts">
+			<ul class="list-unstyled latest-list">
+				<li> <a href="https://www.vivaolinux.com.br/faq.php">FAQ - Perguntas frequentes</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/estatisticas.php">Estatísticas do site</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/equipe/">Equipe de moderadores</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/membros/">Membros da comunidade</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- End Links -->
+
+	<!-- Links -->
+	<div class="col-md-3 md-margin-bottom-40">
+
+		<div class="posts">
+			<ul class="list-unstyled latest-list">
+				<li> <a href="https://www.vivaolinux.com.br/anuncie/">Anuncie</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/falecom/">Contato</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/privacidade/">Política de privacidade</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/quemsomos/">Quem somos</a></li>
+				<li> <a href="https://www.vivaolinux.com.br/termos-de-uso/">Termos de uso</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- End Links -->
+
+
+	<!-- Hostgator -->
+	<div class="col-md-3 md-margin-bottom-40">
+
+		<p>Site hospedado por: </p><br>
+		<a href="https://www.vivaolinux.com.br/verBanner.php?codigo=247" target="_blank" rel="nofollow"><img src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/hostgator-2015.png" class="footer-header"></a>
+	</div>
+	<!-- End Hostgator -->
+</div>
+
+<div class="row">
+<div class="col-md-12 md-margin-bottom-40 centro">
+<br><br>
+
+<p class="fonte12">Visite também: &nbsp;&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaoandroid.com.br/" target="_blank">Viva o Android</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=134" target="_blank" rel="nofollow">BR-Linux.org</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=135" target="_blank" rel="nofollow">Dicas-L</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=506" target="_blank" rel="nofollow">Diolinux</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=133" target="_blank" rel="nofollow">SoftwareLivre.org</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=131" target="_blank" rel="nofollow">UnderLinux</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=565" target="_blank" rel="nofollow">Blog do Edivaldo</a> &nbsp;·&nbsp; <a style="color: #fff; text-decoration: none" href="https://www.vivaolinux.com.br/verBanner.php?codigo=610" target="_blank" rel="nofollow">Sempre Update</a> </p>
+
+
+</div>
+</div>
+
+</div> 
+</div><!--/footer-->
+
+</div>     
+<!--=== End Footer Version 1 ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->           
+<script src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/jquery-boot-min.js.download"></script>
+
+<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/mega-plugins-interna-min.js.download"></script>
+
+<!-- picture-cut-->
+
+
+<!-- JS Page Level -->           
+<script type="text/javascript" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/js-page-level-min.js.download"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();
+        window.prettyPrint && prettyPrint();
+
+	$(".counter").counterUp({
+		delay: 10,
+		time: 3000
+	});
+
+	//$("#banner-sky").replaceWith( $("#google-sky") );	
+	//$("#banner-left").replaceWith( $("#google-left") );
+
+	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-tooltip="tooltip"]').tooltip();
+
+	$("button[type=submit]").attr("data-loading-text", "Enviando...");
+	$("button[data-loading-text]").click(function () {
+        	var btn = $(this).button("loading");
+		setInterval(function () {
+        		btn.button("reset");
+		}, 2000);
+	});
+
+
+	$(".btn-like").click(function(event) {
+		event.preventDefault();
+
+		var botao = $(this);
+
+		var codigo = $(botao).attr("data-codigo");
+		var tabela  = $(botao).attr("data-tabela");
+		var tipo   = $(botao).attr("data-tipo");
+
+		$.ajax({
+			"url": "/like.php",
+			"dataType": "html",
+			"data": {
+				"codigo": codigo,
+				"tabela": tabela,
+				"tipo": tipo
+			},
+			"success": function (r) {
+
+				if (r=="1") {
+					var incr = +($(botao).find(".likeBadge").text());
+					incr += 1;
+					 $(botao).find(".likeBadge").text(incr);
+				}
+			}
+		});
+
+	});
+
+	$('.newsticker').newsTicker({
+		row_height: 120,
+		max_rows: 3,
+		autostart: 1,
+		duration: 4000,
+		pauseOnHover: 0,
+		speed: 1600
+	});
+
+	
+$("pre br").remove();
+
+$("div.quote").find(".quote").css("background", "#eee");
+
+/*!
+ * jQuery.selection - jQuery Plugin
+ */
+(function($, win, doc) {
+    var _getCaretInfo = function(element){
+        var res = {
+            text: '',
+            start: 0,
+            end: 0
+        };
+
+        if (!element.value) {
+            /* no value or empty string */
+            return res;
+        }
+
+        try {
+            if (win.getSelection) {
+                /* except IE */
+                res.start = element.selectionStart;
+                res.end = element.selectionEnd;
+                res.text = element.value.slice(res.start, res.end);
+            } else if (doc.selection) {
+                /* for IE */
+                element.focus();
+
+                var range = doc.selection.createRange(),
+                    range2 = doc.body.createTextRange();
+
+                res.text = range.text;
+
+                try {
+                    range2.moveToElementText(element);
+                    range2.setEndPoint('StartToStart', range);
+                } catch (e) {
+                    range2 = element.createTextRange();
+                    range2.setEndPoint('StartToStart', range);
+                }
+
+                res.start = element.value.length - range2.text.length;
+                res.end = res.start + range.text.length;
+            }
+        } catch (e) {
+            /* give up */
+        }
+
+        return res;
+    };
+
+    var _CaretOperation = {
+        /**
+         * get caret position
+         *
+         * @param   {Element}   element         target element
+         * @return  {Object}    return
+         * @return  {Number}    return.start    start position for the selection
+         * @return  {Number}    return.end      end position for the selection
+         */
+        getPos: function(element) {
+            var tmp = _getCaretInfo(element);
+            return {start: tmp.start, end: tmp.end};
+        },
+
+        /**
+         * set caret position
+         *
+         * @param   {Element}   element         target element
+         * @param   {Object}    toRange         caret position
+         * @param   {Number}    toRange.start   start position for the selection
+         * @param   {Number}    toRange.end     end position for the selection
+         * @param   {String}    caret           caret mode: any of the following: "keep" | "start" | "end"
+         */
+        setPos: function(element, toRange, caret) {
+            caret = this._caretMode(caret);
+
+            if (caret === 'start') {
+                toRange.end = toRange.start;
+            } else if (caret === 'end') {
+                toRange.start = toRange.end;
+            }
+
+            element.focus();
+            try {
+                if (element.createTextRange) {
+                    var range = element.createTextRange();
+
+                    if (win.navigator.userAgent.toLowerCase().indexOf("msie") >= 0) {
+                        toRange.start = element.value.substr(0, toRange.start).replace(/\r/g, '').length;
+                        toRange.end = element.value.substr(0, toRange.end).replace(/\r/g, '').length;
+                    }
+
+                    range.collapse(true);
+                    range.moveStart('character', toRange.start);
+                    range.moveEnd('character', toRange.end - toRange.start);
+
+                    range.select();
+                } else if (element.setSelectionRange) {
+                    element.setSelectionRange(toRange.start, toRange.end);
+                }
+            } catch (e) {
+                /* give up */
+            }
+        },
+
+        /**
+         * get selected text
+         *
+         * @param   {Element}   element         target element
+         * @return  {String}    return          selected text
+         */
+        getText: function(element) {
+            return _getCaretInfo(element).text;
+        },
+
+        /**
+         * get caret mode
+         *
+         * @param   {String}    caret           caret mode
+         * @return  {String}    return          any of the following: "keep" | "start" | "end"
+         */
+        _caretMode: function(caret) {
+            caret = caret || "keep";
+            if (caret === false) {
+                caret = 'end';
+            }
+
+            switch (caret) {
+                case 'keep':
+                case 'start':
+                case 'end':
+                    break;
+
+                default:
+                    caret = 'keep';
+            }
+
+            return caret;
+        },
+
+        /**
+         * replace selected text
+         *
+         * @param   {Element}   element         target element
+         * @param   {String}    text            replacement text
+         * @param   {String}    caret           caret mode: any of the following: "keep" | "start" | "end"
+         */
+        replace: function(element, text, caret) {
+            var tmp = _getCaretInfo(element),
+                orig = element.value,
+                pos = $(element).scrollTop(),
+                range = {start: tmp.start, end: tmp.start + text.length};
+
+            element.value = orig.substr(0, tmp.start) + text + orig.substr(tmp.end);
+
+            $(element).scrollTop(pos);
+            this.setPos(element, range, caret);
+        },
+
+        /**
+         * insert before the selected text
+         *
+         * @param   {Element}   element         target element
+         * @param   {String}    text            insertion text
+         * @param   {String}    caret           caret mode: any of the following: "keep" | "start" | "end"
+         */
+        insertBefore: function(element, text, caret) {
+            var tmp = _getCaretInfo(element),
+                orig = element.value,
+                pos = $(element).scrollTop(),
+                range = {start: tmp.start + text.length, end: tmp.end + text.length};
+
+            element.value = orig.substr(0, tmp.start) + text + orig.substr(tmp.start);
+
+            $(element).scrollTop(pos);
+            this.setPos(element, range, caret);
+        },
+
+        /**
+         * insert after the selected text
+         *
+         * @param   {Element}   element         target element
+         * @param   {String}    text            insertion text
+         * @param   {String}    caret           caret mode: any of the following: "keep" | "start" | "end"
+         */
+        insertAfter: function(element, text, caret) {
+            var tmp = _getCaretInfo(element),
+                orig = element.value,
+                pos = $(element).scrollTop(),
+                range = {start: tmp.start, end: tmp.end};
+
+            element.value = orig.substr(0, tmp.end) + text + orig.substr(tmp.end);
+
+            $(element).scrollTop(pos);
+            this.setPos(element, range, caret);
+        }
+    };
+
+    /* add jQuery.selection */
+    $.extend({
+        /**
+         * get selected text on the window
+         *
+         * @param   {String}    mode            selection mode: any of the following: "text" | "html"
+         * @return  {String}    return
+         */
+        selection: function(mode) {
+            var getText = ((mode || 'text').toLowerCase() === 'text');
+
+            try {
+                if (win.getSelection) {
+                    if (getText) {
+                        // get text
+                        return win.getSelection().toString();
+                    } else {
+                        // get html
+                        var sel = win.getSelection(), range;
+
+                        if (sel.getRangeAt) {
+                            range = sel.getRangeAt(0);
+                        } else {
+                            range = doc.createRange();
+                            range.setStart(sel.anchorNode, sel.anchorOffset);
+                            range.setEnd(sel.focusNode, sel.focusOffset);
+                        }
+
+                        return $('<div></div>').append(range.cloneContents()).html();
+                    }
+                } else if (doc.selection) {
+                    if (getText) {
+                        // get text
+                        return doc.selection.createRange().text;
+                    } else {
+                        // get html
+                        return doc.selection.createRange().htmlText;
+                    }
+                }
+            } catch (e) {
+                /* give up */
+            }
+
+            return '';
+        }
+    });
+
+    /* add selection */
+    $.fn.extend({
+        selection: function(mode, opts) {
+            opts = opts || {};
+
+            switch (mode) {
+                /**
+                 * selection('getPos')
+                 * get caret position
+                 *
+                 * @return  {Object}    return
+                 * @return  {Number}    return.start    start position for the selection
+                 * @return  {Number}    return.end      end position for the selection
+                 */
+                case 'getPos':
+                    return _CaretOperation.getPos(this[0]);
+
+                /**
+                 * selection('setPos', opts)
+                 * set caret position
+                 *
+                 * @param   {Number}    opts.start      start position for the selection
+                 * @param   {Number}    opts.end        end position for the selection
+                 */
+                case 'setPos':
+                    return this.each(function() {
+                        _CaretOperation.setPos(this, opts);
+                    });
+
+                /**
+                 * selection('replace', opts)
+                 * replace the selected text
+                 *
+                 * @param   {String}    opts.text            replacement text
+                 * @param   {String}    opts.caret           caret mode: any of the following: "keep" | "start" | "end"
+                 */
+                case 'replace':
+                    return this.each(function() {
+                        _CaretOperation.replace(this, opts.text, opts.caret);
+                    });
+
+                /**
+                 * selection('insert', opts)
+                 * insert before/after the selected text
+                 *
+                 * @param   {String}    opts.text            insertion text
+                 * @param   {String}    opts.caret           caret mode: any of the following: "keep" | "start" | "end"
+                 * @param   {String}    opts.mode            insertion mode: any of the following: "before" | "after"
+                 */
+                case 'insert':
+                    return this.each(function() {
+                        if (opts.mode === 'before') {
+                            _CaretOperation.insertBefore(this, opts.text, opts.caret);
+                        } else {
+                            _CaretOperation.insertAfter(this, opts.text, opts.caret);
+                        }
+                    });
+
+                /**
+                 * selection('get')
+                 * get selected text
+                 *
+                 * @return  {String}    return
+                 */
+                case 'get':
+                    /* falls through */
+                default:
+                    return _CaretOperation.getText(this[0]);
+            }
+
+            return this;
+        }
+    });
+})(jQuery, window, window.document);
+
+
+var e = $("textarea[name=texto]");
+$("a#btn-bold").click(function() {
+	e.selection('insert', {text: '[b]', mode: 'before'})
+	.selection('insert', {text: '[/b]', mode: 'after'});
+});
+
+$("a#btn-italic").click(function() {
+	e.selection('insert', {text: '[i]', mode: 'before'})
+	.selection('insert', {text: '[/i]', mode: 'after'});
+});
+
+$("a#btn-quote").click(function() {
+	e.selection('insert', {text: '[quote]', mode: 'before'})
+	.selection('insert', {text: '[/quote]', mode: 'after'});
+});
+
+$("a#btn-code").click(function() {
+	e.selection('insert', {text: '[code]', mode: 'before'})
+	.selection('insert', {text: '[/code]', mode: 'after'});
+});
+
+$("a#btn-youtube").click(function() {
+	e.selection('insert', {text: '[youtube]', mode: 'before'})
+	.selection('insert', {text: '[/youtube]', mode: 'after'});
+});
+
+
+
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="//static.vivaolinux.com.br/assets/plugins/ie-plugins-min.js"></script>
+<![endif]-->
+	
+<script>
+// -> /include/funcoes3-min.js
+function submeter_busca(a){a.submit}function showHide(a){if(document.getElementById(a).style.display=="none"){document.getElementById(a).style.display=""}else{document.getElementById(a).style.display="none"}}function quote(a){var b=document.getElementById(a).innerHTML;b=b.replace(/(<([^>]+)>)/ig,"");document.formComentario.comentario.value="[quote]"+b+"[/quote]\n\n";document.formComentario.comentario.focus()}
+</script>
+
+<!-- Google Analytics-->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4140598-1']);
+  _gaq.push(['_setDomainName', 'vivaolinux.com.br']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+/*rejection fix*/
+/*
+(function (tos) {
+	  window.setInterval(function () {
+	    tos = (function (t) {
+	      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+	    })(tos.split(':').reverse());
+	    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+	  }, 10000);
+	})('00');
+*/
+</script>
+<!-- Google Analytics-->
+
+
+<script>
+function leftArrowPressed() {
+	
+}
+
+function rightArrowPressed() {
+	
+}
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    switch (evt.keyCode) {
+        case 37:
+            leftArrowPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+    }
+};
+
+$("textarea").keydown(function() {
+	document.onkeydown = null;
+});
+
+$("textarea").focusout(function() {
+	document.onkeydown = function(evt) {
+	    evt = evt || window.event;
+	    switch (evt.keyCode) {
+		case 37:
+		    leftArrowPressed();
+		    break;
+		case 39:
+		    rightArrowPressed();
+		    break;
+	    }
+	};
+});
+
+
+</script>
+
+
+
+	
+<div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 1; cursor: pointer;"></div><iframe id="google_osd_static_frame_4925259690056" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./SSH - Deixar tarefa rodando e depois retomar [RESOLVIDO] [Iniciantes no Linux]_files/saved_resource(4).html"></iframe></body></html>
