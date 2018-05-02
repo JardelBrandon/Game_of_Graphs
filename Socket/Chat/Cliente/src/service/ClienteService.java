@@ -23,7 +23,7 @@ public class ClienteService {
     
     public Socket connect() {
         try {
-            this.socket = new Socket("localhost", 5555);
+            this.socket = new Socket("35.231.137.198", 5555);
             this.output = new ObjectOutputStream(socket.getOutputStream());
         } catch (UnknownHostException ex) {
             Logger.getLogger(ClienteService.class.getName()).log(Level.SEVERE, null, ex);
