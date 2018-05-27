@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hero\'s_Graphs</string>
+    <string name="novoJogo">Novo Jogo</string>
+    <string name="continuarJogo">Continuar Jogo</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="sair">Sair</string>
+    <string name="bemVindo">Bem vindo ao mundo dos grafos!</string>
+    <string name="mundoDosGrafos">World of Graphs</string>
+</resources>
