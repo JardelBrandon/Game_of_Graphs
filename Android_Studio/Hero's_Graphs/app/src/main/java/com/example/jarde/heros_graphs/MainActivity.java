@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         buttonNovoJogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentJogo = new Intent(getContext(), JogoActivity.class);
+                Intent intentJogo = new Intent(getApplicationContext(), JogoActivity.class);
                 startActivity(intentJogo);
             }
         });
@@ -52,9 +52,5 @@ public class MainActivity extends AppCompatActivity {
     private void alert(String string) {
         //A classe Toast mostra um alerta temporário
         Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
-    }
-
-    private Context getContext() {
-        return this;
     }
 }
