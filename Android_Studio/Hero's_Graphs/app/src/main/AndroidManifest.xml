@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jarde.heros_graphs">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +11,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JogoActivity"
+        <activity
+            android:name=".JogoActivity"
+            android:label="@string/mundoDosGrafos"
             android:parentActivityName=".MainActivity"
-            android:label="@string/mundoDosGrafos">
-
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PdfViewActivity"
+            android:label="@string/monitor"
+            android:parentActivityName=".JogoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DesafioActivity"
+            android:label="@string/desafio"
+            android:screenOrientation="landscape" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".MonitoriaActivity"
+            android:label="@string/monitor"
+            android:parentActivityName=".JogoActivity"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

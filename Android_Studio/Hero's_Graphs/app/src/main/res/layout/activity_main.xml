@@ -14,7 +14,7 @@
         android:id="@+id/buttonNovoJogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:text="@string/novoJogo"
         tools:ignore="MissingConstraints" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/buttonContinuarJogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/continuarJogo"
         tools:ignore="MissingConstraints" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/buttonConfiguracoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/configuracoes"
         tools:ignore="MissingConstraints" />
 
@@ -38,6 +38,6 @@
         android:id="@+id/buttonSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/sair" />
 </LinearLayout>

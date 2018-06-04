@@ -6,4 +6,12 @@
     <string name="sair">Sair</string>
     <string name="bemVindo">Bem vindo ao mundo dos grafos!</string>
     <string name="mundoDosGrafos">World of Graphs</string>
+    <string name="teste1">Teste 1</string>
+    <string name="teste2">Teste 2</string>
+    <string name="monitor">Monitoria</string>
+    <string name="desafio">Desafio</string>
+    <string name="tituloCollapisngTollbar">Livro:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
