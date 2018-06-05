@@ -4,6 +4,8 @@ package com.example.jarde.heros_graphs;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -24,11 +27,13 @@ import java.util.Map;
  * A simple {@link Fragment} subclass.
  */
 public class    GrafoFragment extends Fragment {
-    private ViewGroup grafoLayout;
+    private LinearLayout grafoLayout;
     private int _xDelta;
     private int _yDelta;
     private int contadorVertices;
     private int contadorArestas;
+    private int tamanhoVertice;
+    private LinearLayout.LayoutParams verticeParams;
     private Map<String, Vertice> mapaVertices;
     private Map<String, Aresta> mapaArestas;
 
@@ -48,21 +53,36 @@ public class    GrafoFragment extends Fragment {
         contadorArestas = 0;
         mapaVertices = new HashMap<>();
         mapaArestas = new HashMap<>();
-        grafoLayout = (ViewGroup) view.findViewById(R.id.grafoLayout);
+        tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
+        verticeParams = new LinearLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+        grafoLayout = (LinearLayout) view.findViewById(R.id.grafoLayout);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         grafoLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Vertice vertice = new Vertice(getContext());
-                vertice.setLayoutParams(new FrameLayout.LayoutParams(R.dimen.tamanho_circulo, R.dimen.tamanho_circulo));
-                vertice.setText(contadorVertices);
+                Vertice vertice = new Vertice(getActivity());
+                vertice.setLayoutParams(verticeParams);
+                vertice.setBackgroundResource(R.drawable.vertice_button);
+                vertice.setText(String.valueOf(contadorVertices));
                 vertice.setId(contadorVertices);
+                vertice.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
                 mapaVertices.put(String.valueOf(contadorVertices), vertice);
                 grafoLayout.addView(vertice);
-                grafoLayout.invalidate();
+                contadorVertices ++;
             }
         });
-
-        return view;
     }
 
     private class Vertice extends android.support.v7.widget.AppCompatButton{

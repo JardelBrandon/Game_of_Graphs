@@ -2,5 +2,6 @@
 <resources>
     <dimen name="fab_margem_inferior">16dp</dimen>
     <dimen name="fab_margem_direita">16dp</dimen>
-    <dimen name="tamanho_circulo">50dp</dimen>
+    <dimen name="tamanho_vertice">50dp</dimen>
+    <dimen name="borda_vertice">8dp</dimen>
 </resources>

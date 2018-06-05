@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".DesafioActivity"
     android:clickable="true">
-    <fragment
-        android:id="@+id/fragmentDesafio"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.example.jarde.heros_graphs.GrafoFragment"
-        tools:layout="@layout/fragment_grafo"/>
 
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.jarde.heros_graphs.GrafoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </FrameLayout>
