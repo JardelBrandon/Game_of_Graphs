@@ -2,6 +2,7 @@ package com.example.jarde.heros_graphs;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 alert("Continuar Jogo...");
+                Intent intentDesafio = new Intent(getApplicationContext(), DesafioActivity.class);
+                startActivity(intentDesafio);
             }
         });
 

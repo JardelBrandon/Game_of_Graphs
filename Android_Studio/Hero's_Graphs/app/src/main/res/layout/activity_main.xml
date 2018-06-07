@@ -34,10 +34,13 @@
         android:text="@string/configuracoes"
         tools:ignore="MissingConstraints" />
 
+
     <Button
         android:id="@+id/buttonSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
         android:layout_marginTop="20dp"
         android:text="@string/sair" />
+
 </LinearLayout>

@@ -4,4 +4,5 @@
     <dimen name="fab_margem_direita">16dp</dimen>
     <dimen name="tamanho_vertice">50dp</dimen>
     <dimen name="borda_vertice">8dp</dimen>
+    <dimen name="monitoria_margem_inferior">60dp</dimen>
 </resources>

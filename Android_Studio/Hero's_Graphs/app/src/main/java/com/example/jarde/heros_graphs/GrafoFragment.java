@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -27,13 +27,15 @@ import java.util.Map;
  * A simple {@link Fragment} subclass.
  */
 public class    GrafoFragment extends Fragment {
-    private LinearLayout grafoLayout;
+    private FrameLayout grafoLayout;
     private int _xDelta;
     private int _yDelta;
     private int contadorVertices;
     private int contadorArestas;
     private int tamanhoVertice;
-    private LinearLayout.LayoutParams verticeParams;
+    private int metadeTamanhoVertice;
+    private int dobroTamanhoVertice;
+    private FrameLayout.LayoutParams verticeParams;
     private Map<String, Vertice> mapaVertices;
     private Map<String, Aresta> mapaArestas;
 
@@ -46,7 +48,12 @@ public class    GrafoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_grafo, container, false);
+        return inflater.inflate(R.layout.fragment_grafo, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         //Inicializando Variávies
         contadorVertices = 0;
@@ -54,33 +61,40 @@ public class    GrafoFragment extends Fragment {
         mapaVertices = new HashMap<>();
         mapaArestas = new HashMap<>();
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
-        verticeParams = new LinearLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
-        grafoLayout = (LinearLayout) view.findViewById(R.id.grafoLayout);
+        metadeTamanhoVertice = tamanhoVertice / 2;
+        dobroTamanhoVertice = tamanhoVertice * 2;
+        grafoLayout = (FrameLayout) view.findViewById(R.id.grafoLayout);
 
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        grafoLayout.setOnClickListener(new View.OnClickListener() {
+        grafoLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                Vertice vertice = new Vertice(getActivity());
-                vertice.setLayoutParams(verticeParams);
-                vertice.setBackgroundResource(R.drawable.vertice_button);
-                vertice.setText(String.valueOf(contadorVertices));
-                vertice.setId(contadorVertices);
-                vertice.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
+                int x = (int) event.getX();
+                int y = (int) event.getY();
 
-                    }
-                });
-                mapaVertices.put(String.valueOf(contadorVertices), vertice);
-                grafoLayout.addView(vertice);
-                contadorVertices ++;
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    final Vertice vertice = new Vertice(getActivity());
+                    verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+                    verticeParams.setMargins(x - metadeTamanhoVertice, y - metadeTamanhoVertice, 0, 0);
+                    vertice.setLayoutParams(verticeParams);
+                    vertice.setBackgroundResource(R.drawable.vertice_button);
+                    vertice.setText(String.valueOf(contadorVertices));
+                    vertice.setId(contadorVertices);
+                    vertice.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                                verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
+                                verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
+                                vertice.setLayoutParams(verticeParams);
+                            }
+                            return false;
+                        }
+                    });
+                    mapaVertices.put(String.valueOf(contadorVertices), vertice);
+                    grafoLayout.addView(vertice);
+                    contadorVertices ++;
+                }
+                return false;
             }
         });
     }
@@ -105,6 +119,9 @@ public class    GrafoFragment extends Fragment {
         private Vertice verticeInicial;
         private Vertice verticeFinal;
     }
+}
+    
+/*
 
     private final class ChoiceTouchListener implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent event) {
@@ -138,7 +155,7 @@ public class    GrafoFragment extends Fragment {
     }
 }
 
-/*
+
         rootLayout = (ViewGroup) findViewById(R.id.rootLayout);
         vertice = (Button) rootLayout.findViewById(R.id.vetice1);
         vertice.setOnClickListener(new View.OnClickListener() {
