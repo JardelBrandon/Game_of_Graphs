@@ -3,6 +3,7 @@ package com.example.jarde.heros_graphs;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,6 +37,9 @@ public class    GrafoFragment extends Fragment {
     private int metadeTamanhoVertice;
     private int dobroTamanhoVertice;
     private FrameLayout.LayoutParams verticeParams;
+    private FrameLayout.LayoutParams arestaParams;
+    private PointF pointA;
+    private PointF pointB;
     private Map<String, Vertice> mapaVertices;
     private Map<String, Aresta> mapaArestas;
 
@@ -68,8 +72,8 @@ public class    GrafoFragment extends Fragment {
         grafoLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                int x = (int) event.getX();
-                int y = (int) event.getY();
+                final int x = (int) event.getX();
+                final int y = (int) event.getY();
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     final Vertice vertice = new Vertice(getActivity());
@@ -82,44 +86,46 @@ public class    GrafoFragment extends Fragment {
                     vertice.setOnTouchListener(new View.OnTouchListener() {
                         @Override
                         public boolean onTouch(View v, MotionEvent event) {
-                            if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                                verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
-                                verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
-                                vertice.setLayoutParams(verticeParams);
+                            switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                                case MotionEvent.ACTION_DOWN:
+                                    vertice.setSelecionado(true);
+                                    break;
+
+                                case MotionEvent.ACTION_MOVE:
+                                    verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
+                                    verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
+                                    vertice.setLayoutParams(verticeParams);
+                                    vertice.setSelecionado(false);
+                                    break;
+
+                                case MotionEvent.ACTION_UP:
+                                    if (vertice.isSelecionado()) {
+                                        vertice.setBackgroundResource(R.drawable.fab_oval);
+                                        final Aresta aresta = new Aresta(getActivity());
+                                        arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                        aresta.setLayoutParams(arestaParams);
+                                        pointA = new PointF(x, y);
+                                        pointB = new PointF(10, 50);
+                                        aresta.setPointA(pointA);
+                                        aresta.setPointB(pointB);
+                                        grafoLayout.addView(aresta);
+                                    }
+                                    break;
                             }
                             return false;
                         }
                     });
                     mapaVertices.put(String.valueOf(contadorVertices), vertice);
                     grafoLayout.addView(vertice);
-                    contadorVertices ++;
+                    contadorVertices++;
                 }
                 return false;
             }
         });
     }
-
-    private class Vertice extends android.support.v7.widget.AppCompatButton{
-        private String nome;
-        private int grau;
-        private Color cor;
-        private boolean visitado;
-        private Vertice[] verticesAdjacentes;
-
-        public Vertice(Context context) {
-            super(context);
-        }
-    }
-
-
-    private class Aresta {
-        private String nome;
-        private Color cor;
-        private float peso;
-        private Vertice verticeInicial;
-        private Vertice verticeFinal;
-    }
 }
+
+
     
 /*
 
