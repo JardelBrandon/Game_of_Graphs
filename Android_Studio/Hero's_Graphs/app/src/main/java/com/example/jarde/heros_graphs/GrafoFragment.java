@@ -75,6 +75,13 @@ public class    GrafoFragment extends Fragment {
                 final int x = (int) event.getX();
                 final int y = (int) event.getY();
 
+                for (Vertice vertice : mapaVertices.values()) {
+                    if (vertice.isSelecionado()) {
+                        vertice.setBackgroundResource(R.drawable.vertice_button);
+                        vertice.setSelecionado(false);
+                    }
+                }
+
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     final Vertice vertice = new Vertice(getActivity());
                     verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
@@ -100,15 +107,31 @@ public class    GrafoFragment extends Fragment {
 
                                 case MotionEvent.ACTION_UP:
                                     if (vertice.isSelecionado()) {
+                                        Vertice verticeSelecionado = vertice;
+                                        pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
                                         vertice.setBackgroundResource(R.drawable.fab_oval);
-                                        final Aresta aresta = new Aresta(getActivity());
-                                        arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                        aresta.setLayoutParams(arestaParams);
-                                        pointA = new PointF(x, y);
-                                        pointB = new PointF(10, 50);
-                                        aresta.setPointA(pointA);
-                                        aresta.setPointB(pointB);
-                                        grafoLayout.addView(aresta);
+
+                                        for (Vertice vertice : mapaVertices.values()) {
+                                            if (vertice.isSelecionado() && verticeSelecionado != vertice) {
+                                                pointB = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
+
+                                                final Aresta aresta = new Aresta(getActivity());
+                                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                                aresta.setLayoutParams(arestaParams);
+                                                aresta.setPointA(pointA);
+                                                aresta.setPointB(pointB);
+                                                grafoLayout.addView(aresta);
+
+                                                vertice.setBackgroundResource(R.drawable.vertice_button);
+                                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                                vertice.setSelecionado(false);
+                                                verticeSelecionado.setSelecionado(false);
+                                            }
+                                        }
+
+
+
+
                                     }
                                     break;
                             }
