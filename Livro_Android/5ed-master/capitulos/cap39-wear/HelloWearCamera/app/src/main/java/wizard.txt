@@ -1,2 +1,0 @@
-> File > New Module > Wear
-> Blank Wear Activity

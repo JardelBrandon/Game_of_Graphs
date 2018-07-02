@@ -1,6 +1,7 @@
 package com.example.jarde.heros_graphs;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PointF;
@@ -55,6 +56,7 @@ public class    GrafoFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_grafo, container, false);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -115,23 +117,40 @@ public class    GrafoFragment extends Fragment {
                                             if (vertice.isSelecionado() && verticeSelecionado != vertice) {
                                                 pointB = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
 
-                                                final Aresta aresta = new Aresta(getActivity());
-                                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                                aresta.setLayoutParams(arestaParams);
-                                                aresta.setPointA(pointA);
-                                                aresta.setPointB(pointB);
-                                                grafoLayout.addView(aresta);
-
+                                                if (mapaArestas.isEmpty()) {
+                                                    final Aresta novaAresta = new Aresta(getActivity());
+                                                    arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                                    novaAresta.setLayoutParams(arestaParams);
+                                                    novaAresta.setPointA(pointA);
+                                                    novaAresta.setPointB(pointB);
+                                                    novaAresta.setVerticeInicial(vertice);
+                                                    novaAresta.setVerticeFinal(verticeSelecionado);
+                                                    mapaArestas.put(String.valueOf(contadorArestas), novaAresta);
+                                                    grafoLayout.addView(novaAresta);
+                                                    contadorArestas++;
+                                                } else {
+                                                    for (Aresta aresta : mapaArestas.values()) {
+                                                        if (!((aresta.getVerticeInicial() == vertice && aresta.getVerticeFinal() == verticeSelecionado)
+                                                                || (aresta.getVerticeInicial() == verticeSelecionado && aresta.getVerticeFinal() == vertice))) {
+                                                            final Aresta novaAresta = new Aresta(getActivity());
+                                                            arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                                            novaAresta.setLayoutParams(arestaParams);
+                                                            novaAresta.setPointA(pointA);
+                                                            novaAresta.setPointB(pointB);
+                                                            novaAresta.setVerticeInicial(vertice);
+                                                            novaAresta.setVerticeFinal(verticeSelecionado);
+                                                            mapaArestas.put(String.valueOf(contadorArestas), novaAresta);
+                                                            grafoLayout.addView(novaAresta);
+                                                            contadorArestas++;
+                                                        }
+                                                    }
+                                                }
                                                 vertice.setBackgroundResource(R.drawable.vertice_button);
                                                 verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
                                                 vertice.setSelecionado(false);
                                                 verticeSelecionado.setSelecionado(false);
                                             }
                                         }
-
-
-
-
                                     }
                                     break;
                             }
@@ -140,7 +159,7 @@ public class    GrafoFragment extends Fragment {
                     });
                     mapaVertices.put(String.valueOf(contadorVertices), vertice);
                     grafoLayout.addView(vertice);
-                    contadorVertices++;
+                    contadorVertices ++;
                 }
                 return false;
             }
