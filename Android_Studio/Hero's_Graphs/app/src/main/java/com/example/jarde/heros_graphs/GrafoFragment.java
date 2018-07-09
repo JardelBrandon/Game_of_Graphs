@@ -28,12 +28,10 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class    GrafoFragment extends Fragment {
+public class GrafoFragment extends Fragment {
     private FrameLayout grafoLayout;
     private int _xDelta;
     private int _yDelta;
-    private int contadorVertices;
-    private int contadorArestas;
     private int tamanhoVertice;
     private int metadeTamanhoVertice;
     private int dobroTamanhoVertice;
@@ -41,8 +39,7 @@ public class    GrafoFragment extends Fragment {
     private FrameLayout.LayoutParams arestaParams;
     private PointF pointA;
     private PointF pointB;
-    private Map<String, Vertice> mapaVertices;
-    private Map<String, Aresta> mapaArestas;
+    private MatrizAdjacencias matrizAdjacencias;
 
     public GrafoFragment() {
         // Required empty public constructor
@@ -62,108 +59,110 @@ public class    GrafoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //Inicializando Variávies
-        contadorVertices = 0;
-        contadorArestas = 0;
-        mapaVertices = new HashMap<>();
-        mapaArestas = new HashMap<>();
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
-        grafoLayout = (FrameLayout) view.findViewById(R.id.grafoLayout);
 
-        grafoLayout.setOnTouchListener(new View.OnTouchListener() {
+        grafoLayout.setOnTouchListener(onClickTela());
+    }
+
+    private View.OnTouchListener onClickTela() {
+        return new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 final int x = (int) event.getX();
                 final int y = (int) event.getY();
 
-                for (Vertice vertice : mapaVertices.values()) {
-                    if (vertice.isSelecionado()) {
-                        vertice.setBackgroundResource(R.drawable.vertice_button);
-                        vertice.setSelecionado(false);
-                    }
-                }
+                desmarcarVerticesSelecionados();
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    final Vertice vertice = new Vertice(getActivity());
-                    verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
-                    verticeParams.setMargins(x - metadeTamanhoVertice, y - metadeTamanhoVertice, 0, 0);
-                    vertice.setLayoutParams(verticeParams);
-                    vertice.setBackgroundResource(R.drawable.vertice_button);
-                    vertice.setText(String.valueOf(contadorVertices));
-                    vertice.setId(contadorVertices);
-                    vertice.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                                case MotionEvent.ACTION_DOWN:
-                                    vertice.setSelecionado(true);
-                                    break;
-
-                                case MotionEvent.ACTION_MOVE:
-                                    verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
-                                    verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
-                                    vertice.setLayoutParams(verticeParams);
-                                    vertice.setSelecionado(false);
-                                    break;
-
-                                case MotionEvent.ACTION_UP:
-                                    if (vertice.isSelecionado()) {
-                                        Vertice verticeSelecionado = vertice;
-                                        pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
-                                        vertice.setBackgroundResource(R.drawable.fab_oval);
-
-                                        for (Vertice vertice : mapaVertices.values()) {
-                                            if (vertice.isSelecionado() && verticeSelecionado != vertice) {
-                                                pointB = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
-
-                                                if (mapaArestas.isEmpty()) {
-                                                    final Aresta novaAresta = new Aresta(getActivity());
-                                                    arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                                    novaAresta.setLayoutParams(arestaParams);
-                                                    novaAresta.setPointA(pointA);
-                                                    novaAresta.setPointB(pointB);
-                                                    novaAresta.setVerticeInicial(vertice);
-                                                    novaAresta.setVerticeFinal(verticeSelecionado);
-                                                    mapaArestas.put(String.valueOf(contadorArestas), novaAresta);
-                                                    grafoLayout.addView(novaAresta);
-                                                    contadorArestas++;
-                                                } else {
-                                                    for (Aresta aresta : mapaArestas.values()) {
-                                                        if (!((aresta.getVerticeInicial() == vertice && aresta.getVerticeFinal() == verticeSelecionado)
-                                                                || (aresta.getVerticeInicial() == verticeSelecionado && aresta.getVerticeFinal() == vertice))) {
-                                                            final Aresta novaAresta = new Aresta(getActivity());
-                                                            arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                                            novaAresta.setLayoutParams(arestaParams);
-                                                            novaAresta.setPointA(pointA);
-                                                            novaAresta.setPointB(pointB);
-                                                            novaAresta.setVerticeInicial(vertice);
-                                                            novaAresta.setVerticeFinal(verticeSelecionado);
-                                                            mapaArestas.put(String.valueOf(contadorArestas), novaAresta);
-                                                            grafoLayout.addView(novaAresta);
-                                                            contadorArestas++;
-                                                        }
-                                                    }
-                                                }
-                                                vertice.setBackgroundResource(R.drawable.vertice_button);
-                                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
-                                                vertice.setSelecionado(false);
-                                                verticeSelecionado.setSelecionado(false);
-                                            }
-                                        }
-                                    }
-                                    break;
-                            }
-                            return false;
-                        }
-                    });
-                    mapaVertices.put(String.valueOf(contadorVertices), vertice);
-                    grafoLayout.addView(vertice);
-                    contadorVertices ++;
+                    criarVertice(x, y);
                 }
                 return false;
             }
-        });
+        };
+    }
+
+    private void criarVertice(int posicaoX, int posicaoY) {
+        final Vertice vertice = new Vertice(getActivity());
+        verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+        verticeParams.setMargins(posicaoX - metadeTamanhoVertice, posicaoY - metadeTamanhoVertice, 0, 0);
+        vertice.setLayoutParams(verticeParams);
+        vertice.setBackgroundResource(R.drawable.vertice_button);
+        vertice.setText(String.valueOf(matrizAdjacencias.getQuantidadeVertices()));
+        vertice.setId(matrizAdjacencias.getQuantidadeVertices());
+
+        vertice.setOnTouchListener(onClickVertice(vertice));
+
+        matrizAdjacencias.adicionarVertice(vertice);
+        grafoLayout.addView(vertice);
+    }
+
+    private View.OnTouchListener onClickVertice(final Vertice vertice) {
+        return new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                    case MotionEvent.ACTION_DOWN:
+                        vertice.setSelecionado(true);
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
+                        verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
+                        vertice.setLayoutParams(verticeParams);
+                        vertice.setSelecionado(false);
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        if (vertice.isSelecionado()) {
+                            Vertice verticeSelecionado = vertice;
+                            vertice.setBackgroundResource(R.drawable.fab_oval);
+
+                            //Adicionar condição para criar o vertice
+                            /*
+                            for (Vertice vertice : mapaVertices.values()) {
+                                if (vertice.isSelecionado() && verticeSelecionado != vertice) {
+                                    criarAresta(verticeSelecionado, vertice);
+
+
+                                    vertice.setBackgroundResource(R.drawable.vertice_button);
+                                    verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                    vertice.setSelecionado(false);
+                                    verticeSelecionado.setSelecionado(false);
+                                }
+                            }
+                            */
+                        }
+                        break;
+                }
+                return false;
+            }
+        };
+    }
+
+    private void criarAresta(Vertice verticeA, Vertice verticeB) {
+        pointA = new PointF(verticeA.getX() + metadeTamanhoVertice, verticeA.getY() + metadeTamanhoVertice);
+        pointB = new PointF(verticeB.getX() + metadeTamanhoVertice, verticeB.getY() + metadeTamanhoVertice);
+        final Aresta aresta = new Aresta(getActivity());
+        arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        aresta.setLayoutParams(arestaParams);
+        aresta.setPointA(pointA);
+        aresta.setPointB(pointB);
+        aresta.setVerticeInicial(verticeA);
+        aresta.setVerticeFinal(verticeB);
+        matrizAdjacencias.adicionarAresta(aresta, false);
+        grafoLayout.addView(aresta);
+    }
+
+    private void desmarcarVerticesSelecionados() {
+        for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
+            if (vertice.isSelecionado()) {
+                vertice.setBackgroundResource(R.drawable.vertice_button);
+                vertice.setSelecionado(false);
+            }
+        }
     }
 }
 
