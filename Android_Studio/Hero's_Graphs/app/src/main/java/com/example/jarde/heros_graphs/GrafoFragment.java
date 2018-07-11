@@ -62,9 +62,12 @@ public class GrafoFragment extends Fragment {
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
+        grafoLayout = (FrameLayout) view.findViewById(R.id.grafoLayout);
+        matrizAdjacencias = new MatrizAdjacencias();
 
         grafoLayout.setOnTouchListener(onClickTela());
     }
+
 
     private View.OnTouchListener onClickTela() {
         return new View.OnTouchListener() {
@@ -74,7 +77,7 @@ public class GrafoFragment extends Fragment {
                 final int x = (int) event.getX();
                 final int y = (int) event.getY();
 
-                desmarcarVerticesSelecionados();
+                //desmarcarVerticesSelecionados();
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     criarVertice(x, y);
@@ -105,7 +108,7 @@ public class GrafoFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
-                        vertice.setSelecionado(true);
+                        vertice.setSelecionado(!vertice.isSelecionado());
                         break;
 
                     case MotionEvent.ACTION_MOVE:
@@ -113,6 +116,7 @@ public class GrafoFragment extends Fragment {
                         verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
                         vertice.setLayoutParams(verticeParams);
                         vertice.setSelecionado(false);
+                        desmarcarVerticesSelecionados();
                         break;
 
                     case MotionEvent.ACTION_UP:
@@ -120,20 +124,24 @@ public class GrafoFragment extends Fragment {
                             Vertice verticeSelecionado = vertice;
                             vertice.setBackgroundResource(R.drawable.fab_oval);
 
-                            //Adicionar condição para criar o vertice
-                            /*
-                            for (Vertice vertice : mapaVertices.values()) {
+                            for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
                                 if (vertice.isSelecionado() && verticeSelecionado != vertice) {
-                                    criarAresta(verticeSelecionado, vertice);
-
-
-                                    vertice.setBackgroundResource(R.drawable.vertice_button);
-                                    verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
-                                    vertice.setSelecionado(false);
-                                    verticeSelecionado.setSelecionado(false);
+                                    if (matrizAdjacencias.getmapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
+                                        desmarcarVerticesSelecionados();
+                                        vertice.setSelecionado(false);
+                                        verticeSelecionado.setSelecionado(false);
+                                    }
+                                    else {
+                                        criarAresta(verticeSelecionado, vertice);
+                                        desmarcarVerticesSelecionados();
+                                        vertice.setSelecionado(false);
+                                        verticeSelecionado.setSelecionado(false);
+                                    }
                                 }
                             }
-                            */
+                        }
+                        else {
+                            vertice.setBackgroundResource(R.drawable.vertice_button);
                         }
                         break;
                 }
@@ -165,65 +173,3 @@ public class GrafoFragment extends Fragment {
         }
     }
 }
-
-
-    
-/*
-
-    private final class ChoiceTouchListener implements View.OnTouchListener {
-        public boolean onTouch(View view, MotionEvent event) {
-            final int X = (int) event.getRawX();
-            final int Y = (int) event.getRawY();
-            switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                case MotionEvent.ACTION_DOWN:
-                    RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
-                    _xDelta = X - lParams.leftMargin;
-                    _yDelta = Y - lParams.topMargin;
-                    break;
-                case MotionEvent.ACTION_UP:
-                    break;
-                case MotionEvent.ACTION_POINTER_DOWN:
-                    break;
-                case MotionEvent.ACTION_POINTER_UP:
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view
-                            .getLayoutParams();
-                    layoutParams.leftMargin = X - _xDelta;
-                    layoutParams.topMargin = Y - _yDelta;
-                    layoutParams.rightMargin = -250;
-                    layoutParams.bottomMargin = -250;
-                    view.setLayoutParams(layoutParams);
-                    break;
-            }
-            grafoLayout.invalidate();
-            return true;
-        }
-    }
-}
-
-
-        rootLayout = (ViewGroup) findViewById(R.id.rootLayout);
-        vertice = (Button) rootLayout.findViewById(R.id.vetice1);
-        vertice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Teste click", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(150, 150);
-        vertice.setLayoutParams(layoutParams);
-        vertice.setOnTouchListener(new ChoiceTouchListener());
-
-        rootLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Longo click", Toast.LENGTH_SHORT).show();
-            }
-        });
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        GrafoFragment grafoFragment = new GrafoFragment();
-        fragmentTransaction.add(R.id.rootLayout, grafoFragment, "Fragmento");
- */

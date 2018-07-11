@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class MatrizAdjacencias {
     private ArrayList<Vertice> listaVertices = new ArrayList<>();
     private ArrayList<Aresta> listaArestas = new ArrayList<>();
-    private HashMap<Vertice, ArrayList> verticesAdjacentes = new HashMap<>();
+    private HashMap<Vertice, ArrayList> mapaVerticesAdjacentes = new HashMap<>();
 
     public ArrayList<Vertice> getListaVertices() {
         return listaVertices;
@@ -16,29 +16,29 @@ public class MatrizAdjacencias {
         return listaArestas;
     }
 
-    public HashMap<Vertice, ArrayList> getVerticesAdjacentes() {
-        return verticesAdjacentes;
+    public HashMap<Vertice, ArrayList> getmapaVerticesAdjacentes() {
+        return mapaVerticesAdjacentes;
     }
 
     public void adicionarVertice(Vertice vertice) {
         listaVertices.add(vertice);
-        verticesAdjacentes.put(vertice, null);
+        mapaVerticesAdjacentes.put(vertice, new ArrayList());
 
     }
 
     public void adicionarAresta(Aresta aresta, boolean direcionado) {
         listaArestas.add(aresta);
-        ArrayList verticeInicialListaAdjacentes = verticesAdjacentes.get(aresta.getVerticeInicial());
-        ArrayList verticeFinalListaAdjacentes = verticesAdjacentes.get(aresta.getVerticeFinal());
+        ArrayList verticeInicialListaAdjacentes = mapaVerticesAdjacentes.get(aresta.getVerticeInicial());
+        ArrayList verticeFinalListaAdjacentes = mapaVerticesAdjacentes.get(aresta.getVerticeFinal());
         if (direcionado) {
             verticeInicialListaAdjacentes.add(aresta.getVerticeFinal());
-            verticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
+            mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
         }
         else {
-            verticeInicialListaAdjacentes.add(aresta.getVerticeFinal());
-            verticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
+            verticeInicialListaAdjacentes.add(aresta.getVerticeInicial());
+            mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
             verticeFinalListaAdjacentes.add(aresta.getVerticeFinal());
-            verticesAdjacentes.put(aresta.getVerticeFinal(),verticeFinalListaAdjacentes);
+            mapaVerticesAdjacentes.put(aresta.getVerticeFinal(),verticeFinalListaAdjacentes);
         }
     }
 
@@ -53,13 +53,13 @@ public class MatrizAdjacencias {
     @Override
     public String toString() {
         String matrizAdjacencias = null;
-        for (Vertice vertice : verticesAdjacentes.keySet()) {
+        for (Vertice vertice : mapaVerticesAdjacentes.keySet()) {
             matrizAdjacencias += vertice.getText();
             matrizAdjacencias += ' ';
         }
         matrizAdjacencias += '\n';
 
-        for (Vertice vertice : verticesAdjacentes.keySet()) {
+        for (Vertice vertice : mapaVerticesAdjacentes.keySet()) {
             matrizAdjacencias += vertice.getText();
 
 
