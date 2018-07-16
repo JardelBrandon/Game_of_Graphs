@@ -8,17 +8,6 @@ public class MatrizAdjacencias {
     private ArrayList<Aresta> listaArestas = new ArrayList<>();
     private HashMap<Vertice, ArrayList> mapaVerticesAdjacentes = new HashMap<>();
 
-    public ArrayList<Vertice> getListaVertices() {
-        return listaVertices;
-    }
-
-    public ArrayList<Aresta> getListaArestas() {
-        return listaArestas;
-    }
-
-    public HashMap<Vertice, ArrayList> getmapaVerticesAdjacentes() {
-        return mapaVerticesAdjacentes;
-    }
 
     public void adicionarVertice(Vertice vertice) {
         listaVertices.add(vertice);
@@ -35,9 +24,9 @@ public class MatrizAdjacencias {
             mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
         }
         else {
-            verticeInicialListaAdjacentes.add(aresta.getVerticeInicial());
+            verticeInicialListaAdjacentes.add(aresta.getVerticeFinal());
             mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
-            verticeFinalListaAdjacentes.add(aresta.getVerticeFinal());
+            verticeFinalListaAdjacentes.add(aresta.getVerticeInicial());
             mapaVerticesAdjacentes.put(aresta.getVerticeFinal(),verticeFinalListaAdjacentes);
         }
     }
@@ -49,22 +38,42 @@ public class MatrizAdjacencias {
     public int getQuantidadeArestas() {
         return listaArestas.size();
     }
-    /*
+
+    public ArrayList<Vertice> getListaVertices() {
+        return listaVertices;
+    }
+
+    public ArrayList<Aresta> getListaArestas() {
+        return listaArestas;
+    }
+
+    public HashMap<Vertice, ArrayList> getMapaVerticesAdjacentes() {
+        return mapaVerticesAdjacentes;
+    }
+
     @Override
     public String toString() {
-        String matrizAdjacencias = null;
-        for (Vertice vertice : mapaVerticesAdjacentes.keySet()) {
+        String matrizAdjacencias = "Tabela matriz de adjacências entre os vertices \n";
+        matrizAdjacencias += "  ";
+        for (Vertice vertice : listaVertices) {
             matrizAdjacencias += vertice.getText();
             matrizAdjacencias += ' ';
         }
         matrizAdjacencias += '\n';
 
-        for (Vertice vertice : mapaVerticesAdjacentes.keySet()) {
+        for (Vertice vertice : listaVertices) {
             matrizAdjacencias += vertice.getText();
-
-
+            for (Vertice verticeVerficarAdjacencia : listaVertices) {
+                matrizAdjacencias += ' ';
+                if (mapaVerticesAdjacentes.get(vertice).contains(verticeVerficarAdjacencia)) {
+                    matrizAdjacencias += '1';
+                }
+                else {
+                    matrizAdjacencias += '0';
+                }
+            }
+            matrizAdjacencias += '\n';
         }
-        return super.toString();
+        return matrizAdjacencias;
     }
-    */
 }

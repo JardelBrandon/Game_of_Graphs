@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -77,7 +78,7 @@ public class GrafoFragment extends Fragment {
                 final int x = (int) event.getX();
                 final int y = (int) event.getY();
 
-                //desmarcarVerticesSelecionados();
+                desmarcarVerticesSelecionados();
 
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     criarVertice(x, y);
@@ -100,6 +101,7 @@ public class GrafoFragment extends Fragment {
 
         matrizAdjacencias.adicionarVertice(vertice);
         grafoLayout.addView(vertice);
+        Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
     }
 
     private View.OnTouchListener onClickVertice(final Vertice vertice) {
@@ -112,11 +114,29 @@ public class GrafoFragment extends Fragment {
                         break;
 
                     case MotionEvent.ACTION_MOVE:
+                        desmarcarVerticesSelecionados();
                         verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
                         verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
                         vertice.setLayoutParams(verticeParams);
                         vertice.setSelecionado(false);
-                        desmarcarVerticesSelecionados();
+                        for (Aresta aresta : matrizAdjacencias.getListaArestas()) {
+                            if (aresta.getVerticeInicial() == vertice) {
+                                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
+                                pointB = new PointF(aresta.getVerticeFinal().getX() + metadeTamanhoVertice, aresta.getVerticeFinal().getY() + metadeTamanhoVertice);
+                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                aresta.setLayoutParams(arestaParams);
+                                aresta.setPointA(pointA);
+                                aresta.setPointB(pointB);
+                            }
+                            else if(aresta.getVerticeFinal() == vertice) {
+                                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
+                                pointB = new PointF(aresta.getVerticeInicial().getX() + metadeTamanhoVertice, aresta.getVerticeInicial().getY() + metadeTamanhoVertice);
+                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                aresta.setLayoutParams(arestaParams);
+                                aresta.setPointA(pointA);
+                                aresta.setPointB(pointB);
+                            }
+                        }
                         break;
 
                     case MotionEvent.ACTION_UP:
@@ -126,7 +146,7 @@ public class GrafoFragment extends Fragment {
 
                             for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
                                 if (vertice.isSelecionado() && verticeSelecionado != vertice) {
-                                    if (matrizAdjacencias.getmapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
+                                    if (matrizAdjacencias.getMapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
                                         desmarcarVerticesSelecionados();
                                         vertice.setSelecionado(false);
                                         verticeSelecionado.setSelecionado(false);
@@ -162,6 +182,7 @@ public class GrafoFragment extends Fragment {
         aresta.setVerticeFinal(verticeB);
         matrizAdjacencias.adicionarAresta(aresta, false);
         grafoLayout.addView(aresta);
+        Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
     }
 
     private void desmarcarVerticesSelecionados() {
