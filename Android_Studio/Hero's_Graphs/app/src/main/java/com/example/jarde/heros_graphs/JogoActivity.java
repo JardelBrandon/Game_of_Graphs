@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
+import android.widget.FrameLayout;
 
 public class JogoActivity extends AppCompatActivity {
-    private LinearLayout jogoLayout;
-    private LinearLayout.LayoutParams verticeParams;
+    private FrameLayout jogoLayout;
+    private FrameLayout.LayoutParams verticeParams;
     private int tamanhoVertice;
     private int x, y;
 
@@ -20,21 +21,27 @@ public class JogoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jogo);
 
         //Inserindo um vertice dinamicamente e aleatoriamente para demonstração
-        jogoLayout = (LinearLayout) findViewById(R.id.jogoLayout);
+        jogoLayout = (FrameLayout) findViewById(R.id.jogoLayout);
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
-        x = 100;
-        y = 200;
+        x = 0;
+        y = 0;
 
-        final Vertice vertice = new Vertice(getApplicationContext());
-        verticeParams = new LinearLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
-        verticeParams.setMargins(x, y, 0, 0);
-        vertice.setLayoutParams(verticeParams);
-        vertice.setBackgroundResource(R.drawable.vertice_button);
-        vertice.setGravity(Gravity.CENTER);
-        vertice.setText("0");
-        vertice.setId(0);
-        jogoLayout.addView(vertice);
-
+        for(int i=0;i<10;i++) {
+            for(int j = 0;j<10;j++) {
+                final Vertice vertice = new Vertice(getApplicationContext());
+                verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+                //verticeParams.setMargins(x, y, 0, 0);
+                vertice.setLayoutParams(verticeParams);
+                vertice.setTranslationX(x);
+                vertice.setTranslationY(y);
+                vertice.setBackgroundResource(R.drawable.vertice_button);
+                vertice.setGravity(Gravity.CENTER);
+                y += 70;
+                jogoLayout.addView(vertice);
+            }
+            x+=70;
+            y=0;
+        }
         Button teste1 = (Button) findViewById(R.id.teste1);
         teste1.setOnClickListener(new View.OnClickListener() {
             @Override
