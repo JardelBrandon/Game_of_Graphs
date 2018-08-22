@@ -2,7 +2,9 @@ package com.example.jardel.grafostudio;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.Point;
 import android.graphics.PointF;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -93,68 +95,72 @@ public class GrafoFragment extends Fragment {
 
     private View.OnTouchListener onClickVertice(final Vertice vertice) {
         return new View.OnTouchListener() {
+            private Rect rect;
+            private PointF pointCentroVertice;
+            private PointF pointToqueNaTela;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
                         vertice.setSelecionado(!vertice.isSelecionado());
+                        rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                        pointCentroVertice = new PointF(v.getX() + metadeTamanhoVertice, v.getY() + metadeTamanhoVertice);
                         break;
 
                     case MotionEvent.ACTION_MOVE:
-                        desmarcarVerticesSelecionados();
-                        verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
-                        verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
-                        vertice.setLayoutParams(verticeParams);
-                        vertice.setSelecionado(false);
-                        for (Aresta aresta : matrizAdjacencias.getListaArestas()) {
-                            if (aresta.getVerticeInicial() == vertice) {
-                                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
-                                pointB = new PointF(aresta.getVerticeFinal().getX() + metadeTamanhoVertice, aresta.getVerticeFinal().getY() + metadeTamanhoVertice);
-                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                aresta.setLayoutParams(arestaParams);
-                                aresta.setPointA(pointA);
-                                aresta.setPointB(pointB);
-                            }
-                            else if(aresta.getVerticeFinal() == vertice) {
-                                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
-                                pointB = new PointF(aresta.getVerticeInicial().getX() + metadeTamanhoVertice, aresta.getVerticeInicial().getY() + metadeTamanhoVertice);
-                                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                aresta.setLayoutParams(arestaParams);
-                                aresta.setPointA(pointA);
-                                aresta.setPointB(pointB);
-                            }
+                        pointToqueNaTela = new PointF(event.getX() + v.getX(), event.getY() + v.getY());
+                        if(!pointDentroDoVertice(pointToqueNaTela, pointCentroVertice, v.getWidth(), v.getHeight())) {
+                            desmarcarVerticesSelecionados();
+                            moverVertice(vertice, v, event);
+                            vertice.setSelecionado(false);
+                            moverArestas(vertice);
                         }
                         break;
 
                     case MotionEvent.ACTION_UP:
-                        if (vertice.isSelecionado()) {
-                            Vertice verticeSelecionado = vertice;
-                            vertice.setBackgroundResource(R.drawable.vertice_button_pressed);
-
-                            for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
-                                if (vertice.isSelecionado() && verticeSelecionado != vertice) {
-                                    if (matrizAdjacencias.getMapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
-                                        desmarcarVerticesSelecionados();
-                                        vertice.setSelecionado(false);
-                                        verticeSelecionado.setSelecionado(false);
-                                    }
-                                    else {
-                                        criarAresta(verticeSelecionado, vertice);
-                                        desmarcarVerticesSelecionados();
-                                        vertice.setSelecionado(false);
-                                        verticeSelecionado.setSelecionado(false);
-                                    }
-                                }
-                            }
-                        }
-                        else {
-                            vertice.setBackgroundResource(R.drawable.vertice_button);
-                        }
+                        verificarVerticesSelecionados(vertice);
                         break;
                 }
                 return false;
             }
         };
+    }
+
+    public boolean pointDentroDoVertice(PointF test, PointF center, float width, float height) {
+        float dx = test.x - center.x;
+        float dy = test.y - center.y;
+        return ((dx * dx) / (width * width) + (dy * dy) / (height * height)) * 4 <= 1;
+    }
+
+    private void moverVertice(Vertice vertice, View v, MotionEvent event) {
+        verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
+        verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
+        vertice.setLayoutParams(verticeParams);
+    }
+
+    private void verificarVerticesSelecionados(Vertice verticeSelecionado) {
+        if (verticeSelecionado.isSelecionado()) {
+            verticeSelecionado.setBackgroundResource(R.drawable.vertice_button_pressed);
+
+            for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
+                if (vertice.isSelecionado() && verticeSelecionado != vertice) {
+                    if (matrizAdjacencias.getMapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
+                        desmarcarVerticesSelecionados();
+                        vertice.setSelecionado(false);
+                        verticeSelecionado.setSelecionado(false);
+                    }
+                    else {
+                        criarAresta(verticeSelecionado, vertice);
+                        desmarcarVerticesSelecionados();
+                        vertice.setSelecionado(false);
+                        verticeSelecionado.setSelecionado(false);
+                    }
+                }
+            }
+        }
+        else {
+            verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+        }
     }
 
     private void criarAresta(Vertice verticeA, Vertice verticeB) {
@@ -170,6 +176,27 @@ public class GrafoFragment extends Fragment {
         matrizAdjacencias.adicionarAresta(aresta, false);
         grafoLayout.addView(aresta);
         Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
+    }
+
+    private void moverArestas(Vertice vertice) { //Mover as arestas ligadas ao vertice passado como argumento
+        for (Aresta aresta : matrizAdjacencias.getListaArestas()) {
+            if (aresta.getVerticeInicial() == vertice) {
+                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
+                pointB = new PointF(aresta.getVerticeFinal().getX() + metadeTamanhoVertice, aresta.getVerticeFinal().getY() + metadeTamanhoVertice);
+                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                aresta.setLayoutParams(arestaParams);
+                aresta.setPointA(pointA);
+                aresta.setPointB(pointB);
+            }
+            else if(aresta.getVerticeFinal() == vertice) {
+                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
+                pointB = new PointF(aresta.getVerticeInicial().getX() + metadeTamanhoVertice, aresta.getVerticeInicial().getY() + metadeTamanhoVertice);
+                arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                aresta.setLayoutParams(arestaParams);
+                aresta.setPointA(pointA);
+                aresta.setPointB(pointB);
+            }
+        }
     }
 
     private void desmarcarVerticesSelecionados() {
