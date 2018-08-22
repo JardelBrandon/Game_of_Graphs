@@ -9,6 +9,7 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
     private Color cor;
     private boolean visitado;
     private boolean selecionado;
+    private Vertice[] verticesAdjacentes;
 
     public String getNome() {
         return nome;
@@ -58,7 +59,6 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
         this.verticesAdjacentes = verticesAdjacentes;
     }
 
-    private Vertice[] verticesAdjacentes;
 
     public Vertice(Context context) {
         super(context);

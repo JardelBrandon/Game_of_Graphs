@@ -20,8 +20,6 @@ import android.widget.FrameLayout;
  */
 public class GrafoFragment extends Fragment {
     private FrameLayout grafoLayout;
-    private int _xDelta;
-    private int _yDelta;
     private int tamanhoVertice;
     private int metadeTamanhoVertice;
     private int dobroTamanhoVertice;
@@ -52,7 +50,7 @@ public class GrafoFragment extends Fragment {
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
-        grafoLayout = (FrameLayout) view.findViewById(R.id.grafoLayout);
+        grafoLayout = view.findViewById(R.id.grafoLayout);
         matrizAdjacencias = new MatrizAdjacencias();
 
         grafoLayout.setOnTouchListener(onClickTela());
@@ -131,7 +129,7 @@ public class GrafoFragment extends Fragment {
                     case MotionEvent.ACTION_UP:
                         if (vertice.isSelecionado()) {
                             Vertice verticeSelecionado = vertice;
-                            vertice.setBackgroundResource(R.drawable.fab_oval);
+                            vertice.setBackgroundResource(R.drawable.vertice_button_pressed);
 
                             for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
                                 if (vertice.isSelecionado() && verticeSelecionado != vertice) {
