@@ -143,7 +143,6 @@ public class GrafoFragment extends Fragment {
                         if (vertice.isSelecionado()) {
                             Vertice verticeSelecionado = vertice;
                             vertice.setBackgroundResource(R.drawable.fab_oval);
-
                             for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
                                 if (vertice.isSelecionado() && verticeSelecionado != vertice) {
                                     if (matrizAdjacencias.getMapaVerticesAdjacentes().get(verticeSelecionado).contains(vertice)) {
