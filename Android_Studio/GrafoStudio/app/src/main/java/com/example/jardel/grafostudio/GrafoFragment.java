@@ -5,9 +5,11 @@ import android.annotation.SuppressLint;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -175,7 +177,16 @@ public class GrafoFragment extends Fragment {
         aresta.setVerticeFinal(verticeB);
         matrizAdjacencias.adicionarAresta(aresta, false);
         grafoLayout.addView(aresta);
+        moverViewParaBaixo(aresta);
         Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
+    }
+
+    public static void moverViewParaBaixo(final View child) {
+        final ViewGroup parent = (ViewGroup)child.getParent();
+        if (null != parent) {
+            parent.removeView(child);
+            parent.addView(child, 0);
+        }
     }
 
     private void moverArestas(Vertice vertice) { //Mover as arestas ligadas ao vertice passado como argumento
@@ -189,8 +200,8 @@ public class GrafoFragment extends Fragment {
                 aresta.setPointB(pointB);
             }
             else if(aresta.getVerticeFinal() == vertice) {
-                pointA = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
-                pointB = new PointF(aresta.getVerticeInicial().getX() + metadeTamanhoVertice, aresta.getVerticeInicial().getY() + metadeTamanhoVertice);
+                pointA = new PointF(aresta.getVerticeInicial().getX() + metadeTamanhoVertice, aresta.getVerticeInicial().getY() + metadeTamanhoVertice);
+                pointB = new PointF(vertice.getX() + metadeTamanhoVertice, vertice.getY() + metadeTamanhoVertice);
                 arestaParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 aresta.setLayoutParams(arestaParams);
                 aresta.setPointA(pointA);
@@ -198,7 +209,7 @@ public class GrafoFragment extends Fragment {
             }
         }
     }
-
+    
     private void desmarcarVerticesSelecionados() {
         for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
             if (vertice.isSelecionado()) {

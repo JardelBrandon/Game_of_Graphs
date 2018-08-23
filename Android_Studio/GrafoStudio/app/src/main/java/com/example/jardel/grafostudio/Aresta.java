@@ -3,8 +3,11 @@ package com.example.jardel.grafostudio;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.PointF;
+import android.graphics.Shader;
+import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -36,7 +39,7 @@ public class Aresta extends View {
     public void onDraw(Canvas canvas) {
         paint = new Paint();
         larguraAresta = 10;
-        paint.setColor(Color.RED);
+        paint.setColor(getResources().getColor(R.color.colorPrimaryDark));
         paint.setStrokeWidth(larguraAresta);
         canvas.drawLine(pointA.x, pointA.y, pointB.x, pointB.y, paint);
         super.onDraw(canvas);
