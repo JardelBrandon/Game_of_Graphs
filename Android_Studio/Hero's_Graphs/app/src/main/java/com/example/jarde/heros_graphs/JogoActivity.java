@@ -23,25 +23,47 @@ public class JogoActivity extends AppCompatActivity {
         //Inserindo um vertice dinamicamente e aleatoriamente para demonstração
         jogoLayout = (FrameLayout) findViewById(R.id.jogoLayout);
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
-        x = 0;
-        y = 0;
 
-        for(int i=0;i<10;i++) {
-            for(int j = 0;j<10;j++) {
-                final Vertice vertice = new Vertice(getApplicationContext());
-                verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
-                //verticeParams.setMargins(x, y, 0, 0);
-                vertice.setLayoutParams(verticeParams);
-                vertice.setTranslationX(x);
-                vertice.setTranslationY(y);
-                vertice.setBackgroundResource(R.drawable.vertice_button);
-                vertice.setGravity(Gravity.CENTER);
-                y += 70;
-                jogoLayout.addView(vertice);
+        Mapa mapaJogo = new Mapa(5);
+        mapaJogo.gerarCaminhos();
+        int n = mapaJogo.mapa.size();
+        int n_maior = mapaJogo.maiorNumeroVertice;
+        int lastX = 110, lastY = 110;
+        int altura = 580;
+        int largura = 1150;
+
+        for(int cont= 0;cont<n;cont++){
+            int v = mapaJogo.mapa.get(cont).length;
+            if (v==1){
+                lastY = altura/2;
+            }else {
+                lastY = (altura/2)-((v-1)*30/2);
             }
-            x+=70;
-            y=0;
+            for(int i = 0; i<v;i++){
+                if (v==1){
+                    final Vertice verticeX = new Vertice(getApplicationContext());
+                    verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+                    verticeX.setLayoutParams(verticeParams);
+                    verticeX.setTranslationX(lastX);
+                    verticeX.setTranslationY(lastY);
+                    verticeX.setBackgroundResource(R.drawable.vertice_button);
+                    verticeX.setGravity(Gravity.CENTER);
+                    jogoLayout.addView(verticeX);
+                }else{
+                    final Vertice verticeX = new Vertice(getApplicationContext());
+                    verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
+                    verticeX.setLayoutParams(verticeParams);
+                    verticeX.setTranslationX(lastX);
+                    verticeX.setTranslationY(lastY);
+                    verticeX.setBackgroundResource(R.drawable.vertice_button);
+                    verticeX.setGravity(Gravity.CENTER);
+                    jogoLayout.addView(verticeX);
+                }
+                lastY+=60;
+            }
+            lastX+=100;
         }
+        /*
         Button teste1 = (Button) findViewById(R.id.teste1);
         teste1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +82,6 @@ public class JogoActivity extends AppCompatActivity {
                 startActivity(intentMonitoria);
             }
         });
+        */
     }
 }

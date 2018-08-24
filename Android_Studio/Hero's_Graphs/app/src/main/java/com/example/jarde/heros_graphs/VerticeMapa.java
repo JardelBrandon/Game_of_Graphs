@@ -8,6 +8,7 @@ public class VerticeMapa {
     private String cor;
     public boolean entrada;
     public boolean saida;
+    public Vertice v;
 
     public VerticeMapa(){ }
 

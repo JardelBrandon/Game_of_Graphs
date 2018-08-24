@@ -209,7 +209,7 @@ public class GrafoFragment extends Fragment {
             }
         }
     }
-    
+
     private void desmarcarVerticesSelecionados() {
         for (Vertice vertice : matrizAdjacencias.getListaVertices()) {
             if (vertice.isSelecionado()) {
