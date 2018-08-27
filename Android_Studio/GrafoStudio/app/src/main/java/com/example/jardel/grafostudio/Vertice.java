@@ -2,6 +2,7 @@ package com.example.jardel.grafostudio;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Point;
 
 public class Vertice extends android.support.v7.widget.AppCompatButton{
     private String nome;

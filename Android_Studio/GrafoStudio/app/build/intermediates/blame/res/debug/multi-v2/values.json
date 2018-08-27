@@ -130,11 +130,11 @@
                 {
                     "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/res/values/colors.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,6,-1",
-                        "startColumns": "-1,-1,-1,4,-1",
-                        "startOffsets": "-1,-1,-1,241,-1",
-                        "endColumns": "-1,-1,-1,47,-1",
-                        "endOffsets": "-1,-1,-1,284,-1"
+                        "startLines": "-1,2,-1,-1,-1",
+                        "startColumns": "-1,4,-1,-1,-1",
+                        "startOffsets": "-1,55,-1,-1,-1",
+                        "endColumns": "-1,46,-1,-1,-1",
+                        "endOffsets": "-1,97,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "118,119,120,174,175",

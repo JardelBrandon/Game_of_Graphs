@@ -3,6 +3,7 @@ package com.example.jardel.grafostudio;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        calcularDPI();
     }
 
     @Override
@@ -97,5 +99,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void calcularDPI() {
+        float scala = getResources().getDisplayMetrics().density;
+        int valor = (int) (scala + 0.5f);
+        Log.i("DPI", "DP: " + valor);
     }
 }

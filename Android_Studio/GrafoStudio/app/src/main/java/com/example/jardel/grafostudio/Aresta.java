@@ -17,12 +17,14 @@ public class Aresta extends View {
     private Color cor;
     private float peso;
     private float larguraAresta;
+    private int raio;
     private Vertice verticeInicial;
     private Vertice verticeFinal;
-    private Paint paint;
+    private Paint paintLinha;
+    private Paint paintCirculos;
     private PointF pointA, pointB;
 
-     public Aresta(Context context) {
+    public Aresta(Context context) {
         super(context);
     }
 
@@ -37,11 +39,16 @@ public class Aresta extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
-        paint = new Paint();
+        paintLinha = new Paint();
+        paintCirculos = new Paint();
+        paintCirculos.setColor(getResources().getColor(R.color.colorPrimary));
+        paintLinha.setColor(getResources().getColor(R.color.colorPrimaryDark));
         larguraAresta = 10;
-        paint.setColor(getResources().getColor(R.color.colorPrimaryDark));
-        paint.setStrokeWidth(larguraAresta);
-        canvas.drawLine(pointA.x, pointA.y, pointB.x, pointB.y, paint);
+        raio = 10;
+        paintLinha.setStrokeWidth(larguraAresta);
+        canvas.drawLine(pointA.x, pointA.y, pointB.x, pointB.y, paintLinha);
+        canvas.drawCircle(pointA.x, pointA.y, raio, paintCirculos);
+        canvas.drawCircle(pointB.x, pointB.y, raio, paintCirculos);
         super.onDraw(canvas);
     }
 
@@ -86,11 +93,11 @@ public class Aresta extends View {
     }
 
     public Paint getPaint() {
-        return paint;
+        return paintLinha;
     }
 
-    public void setPaint(Paint paint) {
-        this.paint = paint;
+    public void setPaint(Paint paintLinha) {
+        this.paintLinha = paintLinha;
     }
 
     public PointF getPointA() {
