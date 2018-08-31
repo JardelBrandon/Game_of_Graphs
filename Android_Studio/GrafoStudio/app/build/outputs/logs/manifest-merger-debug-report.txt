@@ -1,42 +1,52 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-MERGED from [com.android.support:design:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/7cb6e51ef677c0b8f275a284f4eb8382/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/AndroidManifest.xml:17:1-22:12
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.mikepenz:materialdrawer:6.0.9] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.8.aar/eb71c41e57fe5f27aa472e4e2fedc8b6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.2.8.aar/5cfa9c34b680c66f687c0c19b9c02505/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:fastadapter:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.8.aar/d00628684e3b7206e11ed494ca065500/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/03962382fd708ee157c2f735a06e07b9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19abc7f3ae2b328725cdc708d0ddef2d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/71ebe864b4cc4e6b0c6e6e3f79c0c026/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/eb8a4f5759289ba997dd25d60c7d2044/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9f20d472ccc03e875223dab8b9bd01e4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/21ea886df7dda4ac224ee4b6c8d76957/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/f994404312a32bead720bb88cd325ba7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2f555ab116148bf9b0e08b229a819cbb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/502750c9b5f3649db7c16b0db9ef09de/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a98b2e29d01ec4a22052abc4abe815cb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/22d7a7833067fd72f68e73bdac0ca3f5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/cbe554ee70d2ffaf1ff66dba2815da59/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f60cd4b2b0d45eb6c2163944c6fc42d8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/45fe9b9fa9359959fcff660318e44735/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/35e6f7d162d485ec432707e881e7e58a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/9061a91e32a9a1b0d47abba5db12eaed/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/22d9bc3ee2de9fe9dbbcef6b6c5a7293/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/5393c86c74883fa1c31d5498c0d7d6a1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/4c64c157eb2e9814935d6c2af81578d8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/ffdc7e693d9f7174557f0d0aa1b72dc0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/36261a57e9fe23c43591d1c071667ad5/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+MERGED from [com.mikepenz:materialize:1.1.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/e9ac50b2bb790c740f53b79a5d93ae9e/AndroidManifest.xml:2:1-12:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c4a54a595bb4ac90b12e2469f03587f6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/1af7083ba6008a976f037e2aa6e3696b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3ed71e25f69cff2ce6d1029881a0cb8c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a05bacdeffd05ca3112990d07c3b252b/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:5:5-22:19
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:5:5-26:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -69,38 +79,68 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:19:27-74
+activity#com.example.jardel.grafostudio.MenuAlgoritmosActivity
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:22:9-24:59
+	android:theme
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:24:13-56
+	android:name
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:23:13-51
+activity#com.example.jardel.grafostudio.AlgoritmosActivity
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:25:9-65
+	android:name
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:25:19-53
 uses-sdk
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/7cb6e51ef677c0b8f275a284f4eb8382/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/7cb6e51ef677c0b8f275a284f4eb8382/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/AndroidManifest.xml:20:5-44
+MERGED from [com.mikepenz:materialdrawer:6.0.9] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialdrawer:6.0.9] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.8.aar/eb71c41e57fe5f27aa472e4e2fedc8b6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.8.aar/eb71c41e57fe5f27aa472e4e2fedc8b6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.2.8.aar/5cfa9c34b680c66f687c0c19b9c02505/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.2.8.aar/5cfa9c34b680c66f687c0c19b9c02505/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.8.aar/d00628684e3b7206e11ed494ca065500/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.8.aar/d00628684e3b7206e11ed494ca065500/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/03962382fd708ee157c2f735a06e07b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/03962382fd708ee157c2f735a06e07b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19abc7f3ae2b328725cdc708d0ddef2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19abc7f3ae2b328725cdc708d0ddef2d/AndroidManifest.xml:20:5-44
+MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/71ebe864b4cc4e6b0c6e6e3f79c0c026/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/71ebe864b4cc4e6b0c6e6e3f79c0c026/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/eb8a4f5759289ba997dd25d60c7d2044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/eb8a4f5759289ba997dd25d60c7d2044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9f20d472ccc03e875223dab8b9bd01e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9f20d472ccc03e875223dab8b9bd01e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/21ea886df7dda4ac224ee4b6c8d76957/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/21ea886df7dda4ac224ee4b6c8d76957/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/f994404312a32bead720bb88cd325ba7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/f994404312a32bead720bb88cd325ba7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2f555ab116148bf9b0e08b229a819cbb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2f555ab116148bf9b0e08b229a819cbb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/502750c9b5f3649db7c16b0db9ef09de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/502750c9b5f3649db7c16b0db9ef09de/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a98b2e29d01ec4a22052abc4abe815cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a98b2e29d01ec4a22052abc4abe815cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/22d7a7833067fd72f68e73bdac0ca3f5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/22d7a7833067fd72f68e73bdac0ca3f5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/cbe554ee70d2ffaf1ff66dba2815da59/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/cbe554ee70d2ffaf1ff66dba2815da59/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f60cd4b2b0d45eb6c2163944c6fc42d8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f60cd4b2b0d45eb6c2163944c6fc42d8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/45fe9b9fa9359959fcff660318e44735/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/45fe9b9fa9359959fcff660318e44735/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/35e6f7d162d485ec432707e881e7e58a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/35e6f7d162d485ec432707e881e7e58a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/9061a91e32a9a1b0d47abba5db12eaed/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/9061a91e32a9a1b0d47abba5db12eaed/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/22d9bc3ee2de9fe9dbbcef6b6c5a7293/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/22d9bc3ee2de9fe9dbbcef6b6c5a7293/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/5393c86c74883fa1c31d5498c0d7d6a1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/5393c86c74883fa1c31d5498c0d7d6a1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/4c64c157eb2e9814935d6c2af81578d8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/4c64c157eb2e9814935d6c2af81578d8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/ffdc7e693d9f7174557f0d0aa1b72dc0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/ffdc7e693d9f7174557f0d0aa1b72dc0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/36261a57e9fe23c43591d1c071667ad5/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/36261a57e9fe23c43591d1c071667ad5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.mikepenz:materialize:1.1.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/e9ac50b2bb790c740f53b79a5d93ae9e/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:materialize:1.1.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/e9ac50b2bb790c740f53b79a5d93ae9e/AndroidManifest.xml:8:5-10:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c4a54a595bb4ac90b12e2469f03587f6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c4a54a595bb4ac90b12e2469f03587f6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/1af7083ba6008a976f037e2aa6e3696b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/1af7083ba6008a976f037e2aa6e3696b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3ed71e25f69cff2ce6d1029881a0cb8c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3ed71e25f69cff2ce6d1029881a0cb8c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a05bacdeffd05ca3112990d07c3b252b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a05bacdeffd05ca3112990d07c3b252b/AndroidManifest.xml:20:5-44
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

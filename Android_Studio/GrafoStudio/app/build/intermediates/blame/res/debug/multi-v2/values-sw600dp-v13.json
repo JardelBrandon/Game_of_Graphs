@@ -4,7 +4,34 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/7cb6e51ef677c0b8f275a284f4eb8382/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/e9ac50b2bb790c740f53b79a5d93ae9e/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "1234",
+                        "endColumns": "54",
+                        "endOffsets": "1284"
+                    }
+                },
+                {
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -14,22 +41,29 @@
                         "endOffsets": "110,180,251,323,381,439,545,609,672,854"
                     },
                     "to": {
-                        "startLines": "10,11,12,13,14,15,16,17,18,19",
+                        "startLines": "10,11,12,13,14,15,16,17,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "611,671,741,812,884,942,1000,1106,1170,1233",
-                        "endLines": "10,11,12,13,14,15,16,17,18,22",
+                        "startOffsets": "611,671,741,812,884,942,1000,1106,1289,1352",
+                        "endLines": "10,11,12,13,14,15,16,17,20,24",
                         "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "666,736,807,879,937,995,1101,1165,1228,1410"
+                        "endOffsets": "666,736,807,879,937,995,1101,1165,1347,1529"
                     }
                 },
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "1170",
+                        "endColumns": "63",
+                        "endOffsets": "1229"
                     }
                 }
             ]

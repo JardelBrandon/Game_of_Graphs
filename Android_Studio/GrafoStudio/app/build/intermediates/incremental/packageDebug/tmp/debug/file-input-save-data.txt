@@ -1,7 +1,11 @@
 #Internal package file, do not edit.
-#Mon Aug 27 15:20:25 BRT 2018
+#Fri Aug 31 17:51:44 BRT 2018
+1.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/assets/debug
 0.baseType=DIRECTORY
-0.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/transforms/dexMerger/debug/221
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
 0.path=classes.dex
 0.set=DEX
-count=1
+0.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/transforms/dexMerger/debug/255
+1.path=fonts/materialdrawerfont-font-v5.0.0.ttf

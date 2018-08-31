@@ -1,5 +1,6 @@
 package com.example.jardel.grafostudio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         calcularDPI();
+
     }
 
     @Override
@@ -71,6 +73,9 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.action_menu_algoritmos) {
+            Intent intentMenuAlgoritmos = new Intent(getApplicationContext(), MenuAlgoritmosActivity.class);
+            startActivity(intentMenuAlgoritmos);
         }
 
         return super.onOptionsItemSelected(item);
@@ -82,11 +87,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_abrir) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_salvar) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_algoritmos) {
+            Intent intentMenuAlgoritmos = new Intent(getApplicationContext(), MenuAlgoritmosActivity.class);
+            startActivity(intentMenuAlgoritmos);
 
         } else if (id == R.id.nav_manage) {
 

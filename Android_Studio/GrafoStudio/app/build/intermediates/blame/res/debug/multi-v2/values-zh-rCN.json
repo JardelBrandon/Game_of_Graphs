@@ -4,7 +4,17 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/ffdc7e693d9f7174557f0d0aa1b72dc0/res/values-zh-rCN/values-zh-rCN.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/values-zh-rCN/values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,201,296,396,478,575,681,757,833,911,1007,1103,1198,1295,1390,1488,1637,1731",
+                        "endColumns": "95,94,99,81,96,105,75,75,77,95,95,94,96,94,97,148,93,77",
+                        "endOffsets": "196,291,391,473,570,676,752,828,906,1002,1098,1193,1290,1385,1483,1632,1726,1804"
+                    }
+                },
+                {
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/values-zh-rCN/values-zh-rCN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1809",
                         "endColumns": "100",
                         "endOffsets": "1905"
-                    }
-                },
-                {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/res/values-zh-rCN/values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,201,296,396,478,575,681,757,833,911,1007,1103,1198,1295,1390,1488,1637,1731",
-                        "endColumns": "95,94,99,81,96,105,75,75,77,95,95,94,96,94,97,148,93,77",
-                        "endOffsets": "196,291,391,473,570,676,752,828,906,1002,1098,1193,1290,1385,1483,1632,1726,1804"
                     }
                 }
             ]

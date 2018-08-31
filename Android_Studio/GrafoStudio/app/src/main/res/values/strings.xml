@@ -5,5 +5,16 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="abrir">Abrir</string>
+    <string name="salvar">Salvar</string>
+    <string name="algoritmos">Algoritmos</string>
+    <string name="ferramentas">Ferramentas</string>
+    <string name="grid_layout">Grid Layout</string>
+    <string name="grid_1_1">Me</string>
+    <string name="grid_1_2">Family</string>
+    <string name="grid_2_1">Lovely</string>
+    <string name="grid_2_2">Team</string>
+    <string name="grid_3_1">Friends</string>
+    <string name="grid_3_2">Calendar</string>
 </resources>

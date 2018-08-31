@@ -9,6 +9,13 @@
     <dimen name="fab_margem_direita">16dp</dimen>
     <dimen name="tamanho_vertice">50dp</dimen>
     <dimen name="borda_vertice">8dp</dimen>
-    <dimen name="borda_aresta">10</dimen>
+    <dimen name="borda_aresta">10</dimen>]
+    <dimen name="borda_navigation_drawer">15dp</dimen>
     <dimen name="monitoria_margem_inferior">60dp</dimen>
+    <dimen name="tamanho_text_grid">34sp</dimen>
+    <dimen name="margem_grid_layout">14dp</dimen>
+    <dimen name="margem_card_view">16dp</dimen>
+    <dimen name="elevacao_card_view">8dp</dimen>
+    <dimen name="raio_card_view">8dp</dimen>
+    <dimen name="tamanho_texto_card">18sp</dimen>
 </resources>

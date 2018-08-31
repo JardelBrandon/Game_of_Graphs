@@ -4,17 +4,7 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/ffdc7e693d9f7174557f0d0aa1b72dc0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/55d3939a32b55900d1182115f7ce0d30/res/values-v16/values-v16.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
