@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [com.mikepenz:materialdrawer:6.0.9] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.8.aar/eb71c41e57fe5f27aa472e4e2fedc8b6/AndroidManifest.xml:2:1-11:12
 MERGED from [com.mikepenz:fastadapter-commons:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.2.8.aar/5cfa9c34b680c66f687c0c19b9c02505/AndroidManifest.xml:2:1-11:12
@@ -13,6 +13,7 @@ MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/robotica/.gradle/
 MERGED from [com.android.support:cardview-v7:27.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19abc7f3ae2b328725cdc708d0ddef2d/AndroidManifest.xml:17:1-22:12
 MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/71ebe864b4cc4e6b0c6e6e3f79c0c026/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:gridlayout-v7:23.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-23.1.1.aar/e5e5bccc4937f95c9ac413751ee5b935/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/eb8a4f5759289ba997dd25d60c7d2044/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9f20d472ccc03e875223dab8b9bd01e4/AndroidManifest.xml:17:1-22:12
@@ -28,25 +29,27 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/robotica/.gradle/
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/1af7083ba6008a976f037e2aa6e3696b/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3ed71e25f69cff2ce6d1029881a0cb8c/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /home/robotica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a05bacdeffd05ca3112990d07c3b252b/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:5:5-26:19
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:gridlayout-v7:23.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-23.1.1.aar/e5e5bccc4937f95c9ac413751ee5b935/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:gridlayout-v7:23.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-23.1.1.aar/e5e5bccc4937f95c9ac413751ee5b935/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/5101eccdae634eecda1a242b6ff65618/AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -79,16 +82,6 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:19:27-74
-activity#com.example.jardel.grafostudio.MenuAlgoritmosActivity
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:22:9-24:59
-	android:theme
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:24:13-56
-	android:name
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:23:13-51
-activity#com.example.jardel.grafostudio.AlgoritmosActivity
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:25:9-65
-	android:name
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml:25:19-53
 uses-sdk
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/AndroidManifest.xml
@@ -111,6 +104,8 @@ MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/tran
 MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/71ebe864b4cc4e6b0c6e6e3f79c0c026/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:23.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-23.1.1.aar/e5e5bccc4937f95c9ac413751ee5b935/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:gridlayout-v7:23.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-23.1.1.aar/e5e5bccc4937f95c9ac413751ee5b935/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/84aa8de30309f3ce672e7ea3f0495c06/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/eb8a4f5759289ba997dd25d60c7d2044/AndroidManifest.xml:20:5-44

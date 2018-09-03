@@ -27,10 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.jardel.grafostudio.MenuAlgoritmosActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.jardel.grafostudio.AlgoritmosActivity" />
     </application>
 
 </manifest>

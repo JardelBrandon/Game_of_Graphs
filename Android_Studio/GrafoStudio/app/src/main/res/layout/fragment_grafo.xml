@@ -7,4 +7,14 @@
     tools:context=".GrafoFragment"
     android:clickable="true"
     android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/borda_navigation_drawer"
+        android:src="@drawable/ic_more_vert_black"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        android:background="@drawable/side_nav_bar"
+        android:layout_width="@dimen/borda_navigation_drawer"
+        android:layout_height="match_parent" />
 </FrameLayout>
