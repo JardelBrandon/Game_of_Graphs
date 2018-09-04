@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         } else if (id == R.id.action_menu_algoritmos) {
             MenuAlgoritmosFragment menuAlgoritmosFragment = new MenuAlgoritmosFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_fragment, menuAlgoritmosFragment, "menu");
             fragmentTransaction.addToBackStack("pilha");
             fragmentTransaction.commit();
@@ -88,13 +88,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_abrir) {
-            // Handle the camera action
-        } else if (id == R.id.nav_salvar) {
+        if (id == R.id.nav_estudio) {
+            GrafoFragment grafoFragment = new GrafoFragment();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.main_fragment, grafoFragment, "menu");
+            fragmentTransaction.addToBackStack("pilha");
+            fragmentTransaction.commit();
+        } else if (id == R.id.nav_grafos_pre_definidos) {
 
         } else if (id == R.id.nav_algoritmos) {
             MenuAlgoritmosFragment menuAlgoritmosFragment = new MenuAlgoritmosFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.main_fragment, menuAlgoritmosFragment, "menu");
             fragmentTransaction.addToBackStack("pilha");
             fragmentTransaction.commit();
@@ -102,7 +106,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_abrir) {
+
+        } else if (id == R.id.nav_salvar) {
+
+        } else if (id == R.id.nav_exportar) {
 
         } else if (id == R.id.nav_send) {
 

@@ -184,6 +184,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-ldpi/ic_menu_exportar.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/drawable-v21/notification_action_background.xml"
     },
@@ -228,12 +232,12 @@
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -336,6 +340,10 @@
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_menu_studio.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -374,6 +382,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_menu_criar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_more_vert_black.png.flat",
@@ -418,6 +430,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-mdpi/ic_menu_exportar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -500,6 +516,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/res/color/design_error.xml"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_menu_exportar.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_friends.png.flat",
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/res/drawable-xxxhdpi/friends.png"
     },
@@ -578,6 +598,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_menu_studio.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/color_switch_thumb_material_light.xml.flat",
@@ -796,6 +820,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-mdpi/ic_menu_criar.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
@@ -808,16 +836,20 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/layout-v21/notification_template_custom_big.xml"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a98b2e29d01ec4a22052abc4abe815cb/res/layout/notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_menu_exportar.xml.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_menu_exportar.xml"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -826,6 +858,14 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-ldpi/ic_menu_criar.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-mdpi/ic_menu_studio.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -972,12 +1012,12 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_material_drawer_item_expandable_badge.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/8647d31e6629fc93aef641b8c941ddf2/res/layout/material_drawer_item_expandable_badge.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/anim_abc_tooltip_exit.xml.flat",
@@ -1224,6 +1264,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_menu_criar.xml.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_menu_criar.xml"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_abc_search_view.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/layout/abc_search_view.xml"
     },
@@ -1246,6 +1290,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-ldpi/ic_menu_studio.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -1318,6 +1366,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_notification_template_custom_big.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9a5a4f9628f217d9fa73392a0bd4a066/res/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_menu_criar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -1394,6 +1446,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/17b4e1277cb0811e31693e4f2b60552c/res/drawable-xhdpi-v4/design_ic_visibility.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_menu_criar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -1556,6 +1612,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_menu_criar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-hdpi/ic_menu_criar.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_icon.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/layout/abc_list_menu_item_icon.xml"
     },
@@ -1610,6 +1670,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-hdpi/ic_menu_exportar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable_material_drawer_shadow_right.9.png.flat",
@@ -1770,6 +1834,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_menu_exportar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
@@ -1940,6 +2008,10 @@
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-hdpi/ic_menu_studio.png"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
@@ -1978,6 +2050,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_menu_studio.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_menu_studio.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -2054,6 +2130,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/color_switch_thumb_material_dark.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9cf6b966e1a65529b63c5ea0bbf3d12c/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_menu_studio.xml.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_menu_studio.xml"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable_abc_switch_thumb_material.xml.flat",
@@ -2150,6 +2230,10 @@
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_calendar.png.flat",
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/src/main/res/drawable-xxxhdpi/calendar.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_menu_exportar.png.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_menu_exportar.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",

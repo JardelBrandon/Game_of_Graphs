@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_fragment">
         <item
-            android:id="@+id/nav_abrir"
-            android:icon="@drawable/ic_menu_abrir"
-            android:title="@string/abrir" />
+            android:id="@+id/nav_estudio"
+            android:icon="@drawable/ic_menu_criar"
+            android:title="@string/estudio"
+            android:checked="true"/>
         <item
-            android:id="@+id/nav_salvar"
-            android:icon="@drawable/ic_menu_salvar"
-            android:title="@string/salvar" />
+            android:id="@+id/nav_grafos_pre_definidos"
+            android:icon="@drawable/ic_menu_studio"
+            android:title="@string/pre_definidos" />
         <item
             android:id="@+id/nav_algoritmos"
             android:icon="@drawable/ic_menu_slideshow"
@@ -22,7 +24,24 @@
             android:title="@string/ferramentas" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/arquivos">
+        <menu>
+            <item
+                android:id="@+id/nav_abrir"
+                android:icon="@drawable/ic_menu_abrir"
+                android:title="@string/abrir" />
+            <item
+                android:id="@+id/nav_salvar"
+                android:icon="@drawable/ic_menu_salvar"
+                android:title="@string/salvar" />
+            <item
+                android:id="@+id/nav_exportar"
+                android:icon="@drawable/ic_menu_exportar"
+                android:title="@string/exportar" />
+        </menu>
+    </item>
+
+    <item android:title="@string/comunicar">
         <menu>
             <item
                 android:id="@+id/nav_share"
