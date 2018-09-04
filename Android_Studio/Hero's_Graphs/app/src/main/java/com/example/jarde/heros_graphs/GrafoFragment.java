@@ -179,8 +179,8 @@ public class GrafoFragment extends Fragment {
         aresta.setPointB(pointB);
         aresta.setVerticeInicial(verticeA);
         aresta.setVerticeFinal(verticeB);
-        matrizAdjacencias.adicionarAresta(aresta, false);
         grafoLayout.addView(aresta);
+        matrizAdjacencias.adicionarAresta(aresta, false);
         Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
     }
 

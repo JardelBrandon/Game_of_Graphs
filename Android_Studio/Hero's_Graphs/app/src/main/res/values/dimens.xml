@@ -2,7 +2,7 @@
 <resources>
     <dimen name="fab_margem_inferior">16dp</dimen>
     <dimen name="fab_margem_direita">16dp</dimen>
-    <dimen name="tamanho_vertice">25dp</dimen>
+    <dimen name="tamanho_vertice">20dp</dimen>
     <dimen name="borda_vertice">8dp</dimen>
     <dimen name="borda_aresta">10</dimen>
     <dimen name="monitoria_margem_inferior">60dp</dimen>

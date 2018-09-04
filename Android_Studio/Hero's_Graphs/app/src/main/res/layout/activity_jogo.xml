@@ -32,6 +32,9 @@
         android:layout_height="wrap_content"
         android:text="@string/teste2"
         android:layout_gravity="center"/>
-
-
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom"
+        android:src="@mipmap/ic_hexagono_foreground"/>
 </FrameLayout>
