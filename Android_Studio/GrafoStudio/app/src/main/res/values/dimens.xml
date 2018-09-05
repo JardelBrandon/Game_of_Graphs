@@ -18,4 +18,5 @@
     <dimen name="elevacao_card_view">8dp</dimen>
     <dimen name="raio_card_view">8dp</dimen>
     <dimen name="tamanho_texto_card">18sp</dimen>
+    <dimen name="tamanho_sliding_view">270dp</dimen>
 </resources>

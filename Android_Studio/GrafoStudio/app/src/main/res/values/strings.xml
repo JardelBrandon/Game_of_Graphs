@@ -25,4 +25,12 @@
     <string name="exportar">Exportar</string>
     <string name="estudio">Estúdio</string>
     <string name="pre_definidos">Pré-Definidos</string>
+    <string name="comecar">Começar</string>
+    <string name="retroceder">Retroceder</string>
+    <string name="anterior">Anterior</string>
+    <string name="parar">Parar</string>
+    <string name="proximo">Próximo</string>
+    <string name="avancar">Avançar</string>
+    <string name="pausar">Pausar</string>
+    <string name="registro">Registro</string>
 </resources>

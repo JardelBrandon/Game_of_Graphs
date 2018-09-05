@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_registro"
+        android:title="@string/registro"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        app:showAsAction="always" />
+    <group android:id="@+id/algoritmos_group">
+    <item
+        android:id="@+id/action_avancar"
+        android:title="@string/avancar"
+        android:icon="@drawable/ic_fast_forward_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_proximo"
+        android:title="@string/proximo"
+        android:icon="@drawable/ic_skip_next_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_comecar"
+        android:title="@string/comecar"
+        android:icon="@drawable/ic_play_arrow_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_pausar"
+        android:title="@string/pausar"
+        android:icon="@drawable/ic_pause_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_parar"
+        android:title="@string/parar"
+        android:icon="@drawable/ic_stop_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_anterior"
+        android:title="@string/anterior"
+        android:icon="@drawable/ic_skip_previous_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_retroceder"
+        android:title="@string/retroceder"
+        android:icon="@drawable/ic_fast_rewind_black_24dp"
+        app:showAsAction="always" />
+    </group>
+
+</menu>
