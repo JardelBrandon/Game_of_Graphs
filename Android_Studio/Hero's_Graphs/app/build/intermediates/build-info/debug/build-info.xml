@@ -7,37 +7,31 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.2.0-alpha15"
-    timestamp="1536073012604"
+    timestamp="1536171042913"
     token="5537124396671319822"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="126" />
+        duration="40" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="33" />
+        duration="9" />
     <task
         name="verifier"
-        duration="2" />
+        duration="1" />
 
-    <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
     <artifact
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1536072294060"
+        timestamp="1536166996198"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -52,6 +46,9 @@
             type="SPLIT" />
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -78,11 +75,8 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1536073012604"
+        timestamp="1536171042913"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero&apos;s_Graphs/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />

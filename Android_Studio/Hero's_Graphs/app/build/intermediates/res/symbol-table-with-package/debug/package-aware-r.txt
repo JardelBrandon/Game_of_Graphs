@@ -982,11 +982,8 @@ id submenuarrow
 id submit_area
 id tabMode
 id tag_transition_group
-id teste1
-id teste2
 id text
 id text2
-id textBemVindo
 id textSpacerNoButtons
 id textSpacerNoTitle
 id text_input_password_toggle

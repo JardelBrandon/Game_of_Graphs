@@ -26,22 +26,23 @@ public class JogoActivity extends AppCompatActivity {
         //Inserindo um vertice dinamicamente e aleatoriamente para demonstração
         jogoLayout = (FrameLayout) findViewById(R.id.jogoLayout);
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
-        int metadeTamanhoVertice = 10;
+        int metadeTamanhoVertice = 20;
 
         Mapa mapaJogo = new Mapa(5);
         mapaJogo.gerarCaminhos();
         int n = mapaJogo.mapa.size();
         int n_maior = mapaJogo.maiorNumeroVertice;
-        int lastX = 110, lastY = 110;
-        int altura = 580;
-        int largura = 1150;
+        int lastX = 50, lastY = 50
+                ;
+        int altura = 660;
+        int largura = 1120;
 
         for(int cont= 0;cont<n;cont++){
             int v = mapaJogo.mapa.get(cont).length;
             if (v==1){
                 lastY = altura/2;
             }else {
-                lastY = (altura/2)-((v-1)*30/2);
+                lastY = (altura/2)-((v-1)*50/2);
             }
             for(int i = 0; i<v;i++){
                 if (v==1){
@@ -69,9 +70,9 @@ public class JogoActivity extends AppCompatActivity {
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
                 }
-                lastY+=60;
+                lastY+=100;
             }
-            lastX+=100;
+            lastX+=180;
         }
 
         int n_caminhos = mapaJogo.caminhos.size();

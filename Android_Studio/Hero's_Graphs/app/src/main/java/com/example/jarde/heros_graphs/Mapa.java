@@ -13,7 +13,7 @@ public class Mapa {
 
     public Mapa(int min){
         //valor variavel
-        int x =6 - min;
+        int x =6;
         Random dado = new Random();
 
         int quant_niveis=2*(dado.nextInt(x)+min);

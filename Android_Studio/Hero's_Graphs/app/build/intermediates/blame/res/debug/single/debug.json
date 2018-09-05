@@ -60,12 +60,12 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/66c6e9313f3d16ebfbed07a91ad8c7c3/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_check.png.flat",
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/src/main/res/mipmap-xxxhdpi/ic_check.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable_default_scroll_handle_right.xml.flat",
@@ -156,12 +156,12 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/43af0ae79b63d55ba04ed68e7c9751e1/res/layout/design_bottom_sheet_dialog.xml"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/43af0ae79b63d55ba04ed68e7c9751e1/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
@@ -180,12 +180,12 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_dark.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -416,28 +416,28 @@
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/src/main/res/mipmap-mdpi/ic_hexagono_round.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable_abc_ic_search_api_material.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable/abc_ic_search_api_material.xml"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_hexagono_foreground.png.flat",
         "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/src/main/res/mipmap-xxhdpi/ic_hexagono_foreground.png"
     },
     {
-        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/66c6e9313f3d16ebfbed07a91ad8c7c3/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/85a0c50b251b0d5dee2937756b3d4e6d/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_hexagono.xml.flat",
