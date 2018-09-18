@@ -33,4 +33,6 @@
     <string name="avancar">Avançar</string>
     <string name="pausar">Pausar</string>
     <string name="registro">Registro</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="enviar">Enviar</string>
 </resources>

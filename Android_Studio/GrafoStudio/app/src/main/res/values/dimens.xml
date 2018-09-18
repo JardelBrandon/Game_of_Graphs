@@ -18,5 +18,7 @@
     <dimen name="elevacao_card_view">8dp</dimen>
     <dimen name="raio_card_view">8dp</dimen>
     <dimen name="tamanho_texto_card">18sp</dimen>
-    <dimen name="tamanho_sliding_view">270dp</dimen>
+    <dimen name="margem_ic_registro">25dp</dimen>
+    <dimen name="margem_ic_parar">10dp</dimen>
+    <dimen name="borda_sliding_panel">17dp</dimen>
 </resources>

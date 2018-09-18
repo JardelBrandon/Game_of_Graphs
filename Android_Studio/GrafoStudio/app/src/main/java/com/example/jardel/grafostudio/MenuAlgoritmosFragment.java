@@ -33,7 +33,7 @@ public class MenuAlgoritmosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mainGrid = (GridLayout) view.findViewById(R.id.mainGrid);
+        mainGrid = (GridLayout) view.findViewById(R.id.mainGridAlgoritmos);
 
         setSingleEvent(mainGrid);
     }

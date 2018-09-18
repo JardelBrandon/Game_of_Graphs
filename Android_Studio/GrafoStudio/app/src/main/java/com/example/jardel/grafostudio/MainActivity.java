@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
         }
 
+
     }
 
     @Override
@@ -70,6 +72,11 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            ContainerOpcoesFragment containerOpcoesFragment = new ContainerOpcoesFragment();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.main_fragment, containerOpcoesFragment, "menu");
+            fragmentTransaction.addToBackStack("pilha");
+            fragmentTransaction.commit();
             return true;
         } else if (id == R.id.action_menu_algoritmos) {
             MenuAlgoritmosFragment menuAlgoritmosFragment = new MenuAlgoritmosFragment();
@@ -94,7 +101,13 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.main_fragment, grafoFragment, "menu");
             fragmentTransaction.addToBackStack("pilha");
             fragmentTransaction.commit();
+
         } else if (id == R.id.nav_grafos_pre_definidos) {
+            MenuPreDefinidosFragment menuPreDefinidosFragment = new MenuPreDefinidosFragment();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.main_fragment, menuPreDefinidosFragment, "menu");
+            fragmentTransaction.addToBackStack("pilha");
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_algoritmos) {
             MenuAlgoritmosFragment menuAlgoritmosFragment = new MenuAlgoritmosFragment();
@@ -103,17 +116,23 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.addToBackStack("pilha");
             fragmentTransaction.commit();
 
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_opcoes) {
+            ContainerOpcoesFragment containerOpcoesFragment = new ContainerOpcoesFragment();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.main_fragment, containerOpcoesFragment, "menu");
+            fragmentTransaction.addToBackStack("pilha");
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_abrir) {
-
+            Toast.makeText(getApplicationContext(), "Abrir", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_salvar) {
-
+            Toast.makeText(getApplicationContext(), "Salvar", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_exportar) {
-
-        } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getApplicationContext(), "Exportar", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_compartilhar) {
+            Toast.makeText(getApplicationContext(), "Compartilhar", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_enviar) {
+            Toast.makeText(getApplicationContext(), "Enviar", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

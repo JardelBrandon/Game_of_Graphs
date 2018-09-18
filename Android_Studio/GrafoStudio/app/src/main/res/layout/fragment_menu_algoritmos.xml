@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuAlgoritmosActivity">
+    tools:context=".MenuAlgoritmosFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,7 +19,7 @@
             android:layout_height="0dp">
 
             <TextView
-                android:id="@+id/textGrid"
+                android:id="@+id/textGridAlgoritmos"
                 android:text="@string/grid_layout"
                 android:textSize="@dimen/tamanho_text_grid"
                 android:textColor="@color/white"
@@ -30,7 +30,7 @@
         </RelativeLayout>
 
         <android.support.v7.widget.GridLayout
-            android:id="@+id/mainGrid"
+            android:id="@+id/mainGridAlgoritmos"
             android:layout_weight="8"
             android:layout_width="match_parent"
             android:layout_height="0dp"
