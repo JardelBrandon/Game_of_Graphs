@@ -20,7 +20,7 @@
 
             <TextView
                 android:id="@+id/textGridPreDefinidos"
-                android:text="@string/grid_layout"
+                android:text="@string/grid_layout_pre_definidos"
                 android:textSize="@dimen/tamanho_text_grid"
                 android:textColor="@color/white"
                 android:layout_centerInParent="true"

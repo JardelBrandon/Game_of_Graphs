@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.otaliastudios.zoom.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/grafoLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GrafoFragment"
     android:clickable="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/contentGrafoLayout"
+    android:scrollbars="vertical|horizontal"
+    app:overScrollHorizontal="true"
+    app:overScrollVertical="true"
+    app:overPinchable="true"
+    app:horizontalPanEnabled="true"
+    app:verticalPanEnabled="true"
+    app:zoomEnabled="true"
+    app:minZoom="0.7"
+    app:minZoomType="zoom"
+    app:maxZoom="3.0"
+    app:maxZoomType="zoom"
+    app:hasClickableChildren="false">
 
-    <ImageView
-        android:id="@+id/borda_navigation_drawer"
-        android:src="@drawable/ic_more_vert_black"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="visible"
-        android:background="@drawable/side_nav_bar"
-        android:layout_width="@dimen/borda_navigation_drawer"
-        android:layout_height="match_parent" />
-</FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/grafoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"></FrameLayout>
+
+
+</com.otaliastudios.zoom.ZoomLayout>

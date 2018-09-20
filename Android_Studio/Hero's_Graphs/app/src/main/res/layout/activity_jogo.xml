@@ -8,6 +8,7 @@
     tools:context=".JogoActivity"
     tools:layout_editor_absoluteY="73dp"
     android:orientation="vertical"
+    android:clickable="true"
     >
     <!--
     <TextView

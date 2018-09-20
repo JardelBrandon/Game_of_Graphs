@@ -32,13 +32,14 @@ public class JogoActivity extends AppCompatActivity {
         mapaJogo.gerarCaminhos();
         int n = mapaJogo.mapa.size();
         int n_maior = mapaJogo.maiorNumeroVertice;
-        int lastX = 50, lastY = 50
+        int lastX = 20, lastY = 50
                 ;
-        int altura = 660;
+        int altura = 0;
         int largura = 1120;
 
         for(int cont= 0;cont<n;cont++){
             int v = mapaJogo.mapa.get(cont).length;
+            altura = v*40;
             if (v==1){
                 lastY = altura/2;
             }else {
@@ -57,6 +58,14 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
+                    verticeX.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intentDesafio = new Intent(getApplicationContext(), GrafoFragment.class);
+                            startActivity(intentDesafio);
+                        }
+                    });
+
                 }else{
                     final Vertice verticeX = new Vertice(getApplicationContext());
                     //ImageView verticeX = new ImageView(getApplicationContext());
@@ -69,6 +78,13 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
+                        verticeX.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intentDesafio = new Intent(getApplicationContext(), GrafoFragment.class);
+                                startActivity(intentDesafio);
+                            }
+                        });
                 }
                 lastY+=100;
             }

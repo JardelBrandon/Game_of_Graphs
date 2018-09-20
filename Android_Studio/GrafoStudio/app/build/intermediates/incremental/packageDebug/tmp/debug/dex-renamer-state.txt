@@ -1,4 +1,4 @@
-#Tue Sep 18 13:24:07 BRT 2018
+#Wed Sep 19 17:00:40 BRT 2018
 base.0=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

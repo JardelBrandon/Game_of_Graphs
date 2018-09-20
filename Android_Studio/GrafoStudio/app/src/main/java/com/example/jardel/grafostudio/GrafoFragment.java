@@ -16,7 +16,12 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.otaliastudios.zoom.ZoomLayout;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,6 +33,7 @@ import java.util.List;
  */
 public class GrafoFragment extends Fragment {
     private FrameLayout grafoLayout;
+    private ZoomLayout contentGrafoLayout;
     private int tamanhoVertice;
     private int metadeTamanhoVertice;
     private int dobroTamanhoVertice;
@@ -65,9 +71,10 @@ public class GrafoFragment extends Fragment {
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
         grafoLayout = view.findViewById(R.id.grafoLayout);
+        contentGrafoLayout = view.findViewById(R.id.contentGrafoLayout);
         matrizAdjacencias = new MatrizAdjacencias();
 
-        grafoLayout.setOnTouchListener(onClickTela());
+        contentGrafoLayout.setOnTouchListener(onClickTela());
     }
 
 
