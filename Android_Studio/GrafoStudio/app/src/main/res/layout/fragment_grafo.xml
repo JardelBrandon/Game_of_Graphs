@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.otaliastudios.zoom.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.jardel.grafostudio.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grafoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GrafoFragment"
-    android:clickable="true"
-    android:orientation="vertical"
-    android:id="@+id/contentGrafoLayout"
-    android:scrollbars="vertical|horizontal"
-    app:overScrollHorizontal="true"
-    app:overScrollVertical="true"
-    app:overPinchable="true"
-    app:horizontalPanEnabled="true"
-    app:verticalPanEnabled="true"
-    app:zoomEnabled="true"
-    app:minZoom="0.7"
-    app:minZoomType="zoom"
-    app:maxZoom="3.0"
-    app:maxZoomType="zoom"
-    app:hasClickableChildren="false">
+    android:scrollbars="vertical|horizontal">
 
 
-    <FrameLayout
-        android:id="@+id/grafoLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000"></FrameLayout>
 
 
-</com.otaliastudios.zoom.ZoomLayout>
+</com.example.jardel.grafostudio.ZoomLayout>

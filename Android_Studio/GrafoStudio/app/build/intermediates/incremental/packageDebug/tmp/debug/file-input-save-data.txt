@@ -1,6 +1,6 @@
 #Internal package file, do not edit.
-#Wed Sep 19 17:00:40 BRT 2018
-1.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/assets/debug
+#Thu Sep 27 18:09:38 BRT 2018
+1.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2

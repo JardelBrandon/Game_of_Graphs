@@ -32,8 +32,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class GrafoFragment extends Fragment {
-    private FrameLayout grafoLayout;
-    private ZoomLayout contentGrafoLayout;
+    private com.example.jardel.grafostudio.ZoomLayout grafoLayout;
     private int tamanhoVertice;
     private int metadeTamanhoVertice;
     private int dobroTamanhoVertice;
@@ -70,26 +69,40 @@ public class GrafoFragment extends Fragment {
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
+        //grafoLayout = view.findViewById(R.id.grafoLayout);
         grafoLayout = view.findViewById(R.id.grafoLayout);
-        contentGrafoLayout = view.findViewById(R.id.contentGrafoLayout);
         matrizAdjacencias = new MatrizAdjacencias();
 
-        contentGrafoLayout.setOnTouchListener(onClickTela());
+        grafoLayout.setOnTouchListener(onClickTela());
     }
 
 
     private View.OnTouchListener onClickTela() {
         return new View.OnTouchListener() {
+            private Boolean moverTela = false;
+            private PointF pointCentroVertice;
+            private PointF pointToqueNaTela;
+
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                final int x = (int) event.getX();
-                final int y = (int) event.getY();
-
                 desmarcarVerticesSelecionados();
+                switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                    case MotionEvent.ACTION_DOWN:
+                        pointCentroVertice = new PointF(event.getX(), event.getY());
+                        moverTela = false;
+                        break;
 
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    criarVertice(x, y);
+
+                    case MotionEvent.ACTION_UP:
+                        pointToqueNaTela = new PointF(event.getX(), event.getY());
+                        if (pointDentroDoVertice(pointToqueNaTela, pointCentroVertice, metadeTamanhoVertice, metadeTamanhoVertice)) {
+                            event.transform(grafoLayout.getMatrixInverse());
+                            final int x = (int) event.getX();
+                            final int y = (int) event.getY();
+                            criarVertice(x, y);
+                        }
+                        break;
                 }
                 return false;
             }
@@ -104,7 +117,7 @@ public class GrafoFragment extends Fragment {
         vertice.setBackgroundResource(R.drawable.vertice_button);
         vertice.setText(String.valueOf(matrizAdjacencias.getQuantidadeVertices()));
         vertice.setId(matrizAdjacencias.getQuantidadeVertices());
-
+        
         vertice.setOnTouchListener(onClickVertice(vertice));
 
         matrizAdjacencias.adicionarVertice(vertice);
