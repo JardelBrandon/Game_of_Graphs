@@ -1,4 +1,1 @@
-#Wed Sep 05 13:51:32 BRT 2018
-base.0=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/dexMerger/debug/52
-path.0=classes.dex
-renamed.0=classes.dex
+#Thu Oct 04 12:50:01 BRT 2018

@@ -1,10 +1,4 @@
-#Tue Sep 04 11:12:23 BRT 2018
-path.2=classes.dex
-path.1=classes.dex
+#Thu Oct 04 12:58:38 BRT 2018
+base.0=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/dexMerger/debug/60
-base.1=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/dexMerger/debug/61
-base.0=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/dexMerger/debug/62

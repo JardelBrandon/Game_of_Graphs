@@ -8,9 +8,21 @@
     android:clickable="true">
 
 
+    <TextView
+        android:id="@+id/textTeste"
+        android:layout_width="161dp"
+        android:layout_height="60dp"
+        android:text="TextView" />
+
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.jarde.heros_graphs.GrafoFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/teste2"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:text="Button" />
 </FrameLayout>

@@ -32,7 +32,8 @@
             android:name="com.example.jarde.heros_graphs.JogoActivity"
             android:label="@string/mundoDosGrafos"
             android:parentActivityName="com.example.jarde.heros_graphs.MainActivity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.jarde.heros_graphs.PdfViewActivity"
             android:label="@string/monitor"

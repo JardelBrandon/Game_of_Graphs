@@ -1,7 +1,7 @@
 package com.example.jarde.heros_graphs;
 
 public class Jogador {
-    private String nome:
+    private String nome;
     private int energia;
     private Vertice posicao;
 

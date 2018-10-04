@@ -17,6 +17,26 @@ public class JogoActivity extends AppCompatActivity {
     private int x, y;
     private PointF pointA;
     private PointF pointB;
+    private Mapa mapaJogo;
+
+    public void gerarCaminhos() {
+        int n_caminhos = this.mapaJogo.caminhos.size();
+        for (int w = 0; w < n_caminhos; w++) {
+            for (int i = 0; i < mapaJogo.caminhos.get(w).length; i++) {
+                for (int j = 0; j < mapaJogo.caminhos.get(w)[i].length; j++) {
+                    if (mapaJogo.caminhos.get(w)[i][j] == 1) {
+                        final Aresta arestaX = new Aresta(getApplicationContext());
+                        pointA = new PointF(mapaJogo.mapa.get(w)[i].v.getX() + 20, mapaJogo.mapa.get(w)[i].v.getY() +20);
+                        pointB = new PointF(mapaJogo.mapa.get(w + 1)[j].v.getX() + 20, mapaJogo.mapa.get(w + 1)[j].v.getY() + 20);
+                        arestaX.setPointA(pointA);
+                        arestaX.setPointB(pointB);
+                        jogoLayout.addView(arestaX);
+
+                    }
+                }
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +45,11 @@ public class JogoActivity extends AppCompatActivity {
 
         //Inserindo um vertice dinamicamente e aleatoriamente para demonstração
         jogoLayout = (FrameLayout) findViewById(R.id.jogoLayout);
-        tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
+        this.tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         int metadeTamanhoVertice = 20;
 
         Mapa mapaJogo = new Mapa(5);
+        this.mapaJogo=mapaJogo;
         mapaJogo.gerarCaminhos();
         int n = mapaJogo.mapa.size();
         int n_maior = mapaJogo.maiorNumeroVertice;
@@ -58,14 +79,6 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
-                    verticeX.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intentDesafio = new Intent(getApplicationContext(), GrafoFragment.class);
-                            startActivity(intentDesafio);
-                        }
-                    });
-
                 }else{
                     final Vertice verticeX = new Vertice(getApplicationContext());
                     //ImageView verticeX = new ImageView(getApplicationContext());
@@ -78,34 +91,12 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
-                        verticeX.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intentDesafio = new Intent(getApplicationContext(), GrafoFragment.class);
-                                startActivity(intentDesafio);
-                            }
-                        });
                 }
                 lastY+=100;
             }
             lastX+=180;
         }
-
-        int n_caminhos = mapaJogo.caminhos.size();
-        for(int w=0;w<n_caminhos;w++){
-            for(int i=0;i<mapaJogo.caminhos.get(w).length;i++){
-                for(int j=0;j<mapaJogo.caminhos.get(w)[i].length;j++){
-                    if (mapaJogo.caminhos.get(w)[i][j]==1){
-                        final Aresta arestaX = new Aresta(getApplicationContext());
-                        pointA = new PointF(mapaJogo.mapa.get(w)[i].v.getX() + metadeTamanhoVertice, mapaJogo.mapa.get(w)[i].v.getY() + metadeTamanhoVertice);
-                        pointB = new PointF(mapaJogo.mapa.get(w+1)[j].v.getX() + metadeTamanhoVertice, mapaJogo.mapa.get(w+1)[j].v.getY() + metadeTamanhoVertice);
-                        arestaX.setPointA(pointA);
-                        arestaX.setPointB(pointB);
-                        jogoLayout.addView(arestaX);
-                    }
-                }
-            }
-        }
+        gerarCaminhos();
         /*
         Button teste1 = (Button) findViewById(R.id.teste1);
         teste1.setOnClickListener(new View.OnClickListener() {
@@ -121,10 +112,13 @@ public class JogoActivity extends AppCompatActivity {
         teste2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentMonitoria = new Intent(getApplicationContext(), MonitoriaActivity.class);
+                Intent intentMonitoria = new Intent(getApplicationContext(), DesafioActivity.class);
                 startActivity(intentMonitoria);
             }
         });
         */
+
+
+
     }
 }
