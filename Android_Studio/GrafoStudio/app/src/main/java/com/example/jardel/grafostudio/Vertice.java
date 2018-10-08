@@ -3,6 +3,7 @@ package com.example.jardel.grafostudio;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.view.MotionEvent;
 
 public class Vertice extends android.support.v7.widget.AppCompatButton{
     private String nome;
@@ -11,6 +12,8 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
     private boolean visitado;
     private boolean selecionado;
     private Vertice[] verticesAdjacentes;
+    private ZoomLayout grafoLayout = findViewById(R.id.grafoLayout);
+    private float[] mDispatchTouchEventWorkingArray = new float[2];
 
     public String getNome() {
         return nome;
@@ -64,4 +67,5 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
     public Vertice(Context context) {
         super(context);
     }
+
 }

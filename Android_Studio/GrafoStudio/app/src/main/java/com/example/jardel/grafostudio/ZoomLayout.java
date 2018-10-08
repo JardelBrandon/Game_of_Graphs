@@ -49,6 +49,9 @@ public class ZoomLayout extends FrameLayout
     private Matrix matrixInverse = new Matrix();
     private Matrix savedMatrix = new Matrix();
 
+    public float getScale() {
+        return scale;
+    }
 
     public ZoomLayout(Context context)
     {
@@ -75,7 +78,6 @@ public class ZoomLayout extends FrameLayout
         mGestureDetector = new GestureDetectorCompat(context, mGestureListener);
     }
 
-
     @Override
     protected void dispatchDraw(Canvas canvas)
     {
@@ -91,10 +93,10 @@ public class ZoomLayout extends FrameLayout
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev)
     {
-        //mDispatchTouchEventWorkingArray[0] = ev.getX();
-        //mDispatchTouchEventWorkingArray[1] = ev.getY();
-        //mDispatchTouchEventWorkingArray = screenPointsToScaledPoints(mDispatchTouchEventWorkingArray);
-        //ev.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
+        mDispatchTouchEventWorkingArray[0] = ev.getX();
+        mDispatchTouchEventWorkingArray[1] = ev.getY();
+        mDispatchTouchEventWorkingArray = screenPointsToScaledPoints(mDispatchTouchEventWorkingArray);
+        ev.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
         return super.dispatchTouchEvent(ev);
     }
 
@@ -102,6 +104,10 @@ public class ZoomLayout extends FrameLayout
     public boolean onTouchEvent(MotionEvent event)
     {
 
+        mDispatchTouchEventWorkingArray[0] = event.getX();
+        mDispatchTouchEventWorkingArray[1] = event.getY();
+        mDispatchTouchEventWorkingArray = scaledPointsToScreenPoints(mDispatchTouchEventWorkingArray);
+        event.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
         matrix.set(savedMatrix);
         boolean gestureDetected = mGestureDetector.onTouchEvent(event);
         if (event.getPointerCount() > 1)
@@ -208,7 +214,7 @@ public class ZoomLayout extends FrameLayout
         return a;
     }
 
-    private float[] screenPointsToScaledPoints(float[] a)
+    public float[] screenPointsToScaledPoints(float[] a)
     {
         matrixInverse.mapPoints(a);
         return a;

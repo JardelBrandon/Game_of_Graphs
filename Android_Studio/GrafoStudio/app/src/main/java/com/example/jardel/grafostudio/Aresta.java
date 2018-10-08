@@ -52,6 +52,10 @@ public class Aresta extends View {
         super.onDraw(canvas);
     }
 
+    protected void reDraw() {
+        this.invalidate();
+    }
+
     public String getNome() {
         return nome;
     }

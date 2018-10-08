@@ -11,11 +11,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationSet;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AbsoluteLayout;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -64,18 +69,18 @@ public class GrafoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        init(view);
+    }
 
-        //Inicializando Variávies
+    private void init(View view) {
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         metadeTamanhoVertice = tamanhoVertice / 2;
         dobroTamanhoVertice = tamanhoVertice * 2;
-        //grafoLayout = view.findViewById(R.id.grafoLayout);
         grafoLayout = view.findViewById(R.id.grafoLayout);
         matrizAdjacencias = new MatrizAdjacencias();
 
         grafoLayout.setOnTouchListener(onClickTela());
     }
-
 
     private View.OnTouchListener onClickTela() {
         return new View.OnTouchListener() {
@@ -97,10 +102,10 @@ public class GrafoFragment extends Fragment {
                     case MotionEvent.ACTION_UP:
                         pointToqueNaTela = new PointF(event.getX(), event.getY());
                         if (pointDentroDoVertice(pointToqueNaTela, pointCentroVertice, metadeTamanhoVertice, metadeTamanhoVertice)) {
-                            event.transform(grafoLayout.getMatrixInverse());
+                            //event.transform(grafoLayout.getMatrixInverse());
                             final int x = (int) event.getX();
                             final int y = (int) event.getY();
-                            criarVertice(x, y);
+                            criarVertice(x, y, event);
                         }
                         break;
                 }
@@ -109,7 +114,7 @@ public class GrafoFragment extends Fragment {
         };
     }
 
-    private void criarVertice(int posicaoX, int posicaoY) {
+    private void criarVertice(int posicaoX, int posicaoY, MotionEvent event) {
         final Vertice vertice = new Vertice(getActivity());
         verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
         verticeParams.setMargins(posicaoX - metadeTamanhoVertice, posicaoY - metadeTamanhoVertice, 0, 0);
@@ -117,7 +122,8 @@ public class GrafoFragment extends Fragment {
         vertice.setBackgroundResource(R.drawable.vertice_button);
         vertice.setText(String.valueOf(matrizAdjacencias.getQuantidadeVertices()));
         vertice.setId(matrizAdjacencias.getQuantidadeVertices());
-        
+
+        vertice.dispatchTouchEvent(event);
         vertice.setOnTouchListener(onClickVertice(vertice));
 
         matrizAdjacencias.adicionarVertice(vertice);
@@ -128,6 +134,7 @@ public class GrafoFragment extends Fragment {
 
     private View.OnTouchListener onClickVertice(final Vertice vertice) {
         return new View.OnTouchListener() {
+            float dX, dY;
             private PointF pointCentroVertice;
             private PointF pointToqueNaTela;
             @Override
@@ -136,13 +143,20 @@ public class GrafoFragment extends Fragment {
                     case MotionEvent.ACTION_DOWN:
                         vertice.setSelecionado(!vertice.isSelecionado());
                         pointCentroVertice = new PointF(v.getX() + metadeTamanhoVertice, v.getY() + metadeTamanhoVertice);
+                        dX = v.getX() - event.getRawX();
+                        dY = v.getY() - event.getRawY();
                         break;
 
                     case MotionEvent.ACTION_MOVE:
                         pointToqueNaTela = new PointF(event.getX() + v.getX(), event.getY() + v.getY());
                         if(!pointDentroDoVertice(pointToqueNaTela, pointCentroVertice, v.getWidth(), v.getHeight())) {
                             desmarcarVerticesSelecionados();
-                            moverVertice(vertice, v, event);
+                            //moverVertice(vertice, v, event);
+                            v.animate()
+                                    .x(event.getRawX() + dX)
+                                    .y(event.getRawY() + dY)
+                                    .setDuration(0)
+                                    .start();
                             vertice.setSelecionado(false);
                             moverArestas(vertice);
                         }
@@ -164,9 +178,24 @@ public class GrafoFragment extends Fragment {
     }
 
     private void moverVertice(Vertice vertice, View v, MotionEvent event) {
-        verticeParams = new FrameLayout.LayoutParams(v.getWidth(), v.getHeight());
-        verticeParams.setMargins((int) event.getRawX() - metadeTamanhoVertice, (int) event.getRawY() - dobroTamanhoVertice, 0, 0);
-        vertice.setLayoutParams(verticeParams);
+        DisplayMetrics dm = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics( dm );
+
+        int originalPos[] = new int[2];
+        v.getLocationOnScreen( originalPos );
+
+        int xDelta = (dm.widthPixels - v.getMeasuredWidth() - originalPos[0])/2;
+        int yDelta = (dm.heightPixels - v.getMeasuredHeight() - originalPos[1])/2;
+
+        AnimationSet animSet = new AnimationSet(true);
+        animSet.setFillAfter(true);
+        animSet.setDuration(1000);
+        animSet.setInterpolator(new BounceInterpolator());
+        TranslateAnimation translate = new TranslateAnimation( 0, xDelta , 0, yDelta);
+        animSet.addAnimation(translate);
+        ScaleAnimation scale = new ScaleAnimation(1f, 2f, 1f, 2f, ScaleAnimation.RELATIVE_TO_PARENT, .5f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
+        animSet.addAnimation(scale);
+        v.startAnimation(animSet);
     }
 
     private void verificarVerticesSelecionados(Vertice verticeSelecionado) {
