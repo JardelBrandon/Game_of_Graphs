@@ -10,7 +10,6 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
     private int grau;
     private Color cor;
     private boolean visitado;
-    private boolean selecionado;
     private Vertice[] verticesAdjacentes;
     private ZoomLayout grafoLayout = findViewById(R.id.grafoLayout);
     private float[] mDispatchTouchEventWorkingArray = new float[2];
@@ -45,14 +44,6 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
 
     public void setVisitado(boolean visitado) {
         this.visitado = visitado;
-    }
-
-    public boolean isSelecionado() {
-        return selecionado;
-    }
-
-    public void setSelecionado(boolean selecionado) {
-        this.selecionado = selecionado;
     }
 
     public Vertice[] getVerticesAdjacentes() {

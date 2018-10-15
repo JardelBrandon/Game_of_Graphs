@@ -49,10 +49,6 @@ public class ZoomLayout extends FrameLayout
     private Matrix matrixInverse = new Matrix();
     private Matrix savedMatrix = new Matrix();
 
-    public float getScale() {
-        return scale;
-    }
-
     public ZoomLayout(Context context)
     {
         super(context);
@@ -104,10 +100,10 @@ public class ZoomLayout extends FrameLayout
     public boolean onTouchEvent(MotionEvent event)
     {
 
-        mDispatchTouchEventWorkingArray[0] = event.getX();
-        mDispatchTouchEventWorkingArray[1] = event.getY();
-        mDispatchTouchEventWorkingArray = scaledPointsToScreenPoints(mDispatchTouchEventWorkingArray);
-        event.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
+        mOnTouchEventWorkingArray[0] = event.getX();
+        mOnTouchEventWorkingArray[1] = event.getY();
+        mOnTouchEventWorkingArray = scaledPointsToScreenPoints(mDispatchTouchEventWorkingArray);
+        event.setLocation(mOnTouchEventWorkingArray[0], mOnTouchEventWorkingArray[1]);
         matrix.set(savedMatrix);
         boolean gestureDetected = mGestureDetector.onTouchEvent(event);
         if (event.getPointerCount() > 1)
@@ -195,6 +191,8 @@ public class ZoomLayout extends FrameLayout
         }
     };
 
+
+
     private boolean checkScaleBounds()
     {
         float[] values = new float[9];
@@ -267,5 +265,23 @@ public class ZoomLayout extends FrameLayout
 
     public Matrix getMatrixInverse() {
         return matrixInverse;
+    }
+
+    public float getScaleX() {
+        float[] values = new float[9];
+        matrix.getValues(values);
+        float scaleX = values[Matrix.MSCALE_X] * scale;
+        return scaleX;
+    }
+
+    public float getScaleY() {
+        float[] values = new float[9];
+        matrix.getValues(values);
+        float scaleY = values[Matrix.MSCALE_Y] * scale;
+        return scaleY;
+    }
+
+    public float getScale() {
+        return scale;
     }
 }
