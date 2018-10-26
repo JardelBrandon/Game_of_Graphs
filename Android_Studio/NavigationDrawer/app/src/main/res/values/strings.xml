@@ -46,4 +46,9 @@
     <string name="drawer_item_contact">Contact</string>
     <string name="button_crossfade_drawe">Crossfade</string>
     <string name="button_mini_drawer">MiniDrawer</string>
+
+    <string name="selecionar">Selecionar</string>
+    <string name="add_vertice">Criar Vertice</string>
+    <string name="add_aresta">Criar Aresta</string>
+    <string name="remover">Remover</string>
 </resources>

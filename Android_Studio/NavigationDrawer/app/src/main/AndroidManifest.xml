@@ -20,12 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CrossfadeDrawerLayoutActvitiy"
-            android:theme="@style/MaterialDrawerTheme.TranslucentStatus" />
-        <activity
-            android:name=".MiniDrawerActivity"
-            android:theme="@style/MaterialDrawerTheme" />
     </application>
 
 </manifest>

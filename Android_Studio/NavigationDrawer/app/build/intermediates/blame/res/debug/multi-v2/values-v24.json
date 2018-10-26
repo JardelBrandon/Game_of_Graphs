@@ -4,7 +4,7 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/4862bf7e131526756d40ce7f8a2cb6de/res/values-v24/values-v24.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/6522c17b1f755cda6548fc0f4bbd00bc/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
