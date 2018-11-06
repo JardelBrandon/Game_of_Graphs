@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -26,9 +27,10 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class GrafoFragment extends Fragment {
-    private ZoomLayout grafoLayout;
+    private static ZoomLayout grafoLayout;
     private int tamanhoVertice;
     private int metadeTamanhoVertice;
+    private static int selecaoFerramentas;
     private FrameLayout.LayoutParams verticeParams;
     private FrameLayout.LayoutParams arestaParams;
     private Vertice verticeSelecionado;
@@ -72,6 +74,52 @@ public class GrafoFragment extends Fragment {
         grafoLayout.setOnTouchListener(onClickTela());
     }
 
+    public void ferramentasEstado(int estado) {
+        selecaoFerramentas = estado;
+        switch (estado) {
+            case 1: //Selecionar
+                break;
+            case 2: //Criar Vertice
+                final Snackbar snackBarVertice = Snackbar.make(grafoLayout, "Toque na tela para adicionar vertices", Snackbar.LENGTH_INDEFINITE);
+
+                snackBarVertice.setAction("Esconder", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackBarVertice.dismiss();
+                    }
+                });
+                snackBarVertice.show();
+
+                break;
+            case 3: //Criar Aresta
+                final Snackbar snackBarAresta = Snackbar.make(grafoLayout, "Selecione o vertice inicial", Snackbar.LENGTH_INDEFINITE);
+
+                snackBarAresta.setAction("Esconder", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackBarAresta.dismiss();
+                    }
+                });
+                snackBarAresta.show();
+
+                break;
+            case 4: //Excluir
+                final Snackbar snackBarExcluir = Snackbar.make(grafoLayout, "Selecione algum elemento para exluí-lo", Snackbar.LENGTH_INDEFINITE);
+
+                snackBarExcluir.setAction("Esconder", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackBarExcluir.dismiss();
+                    }
+                });
+                snackBarExcluir.show();
+
+                break;
+            default:
+                break;
+        }
+    }
+
     private View.OnTouchListener onClickTela() {
         return new View.OnTouchListener() {
             private PointF pontoCentral;
@@ -80,31 +128,33 @@ public class GrafoFragment extends Fragment {
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                    case MotionEvent.ACTION_DOWN:
-                        pontoCentral = new PointF(event.getRawX(), event.getRawY());
-                        if (verticeSelecionado != null) {
-                            verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
-                            verticeSelecionado = null;
-                        }
-                        break;
+                if (selecaoFerramentas == 2) {
+                    switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                        case MotionEvent.ACTION_DOWN:
+                            pontoCentral = new PointF(event.getRawX(), event.getRawY());
+                            if (verticeSelecionado != null) {
+                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                verticeSelecionado = null;
+                            }
+                            break;
 
 
-                    case MotionEvent.ACTION_UP:
-                        pontoCentralFinal = new PointF(event.getRawX(), event.getRawY());
-                        if (pontoDentroDoCirculo(pontoCentralFinal, pontoCentral, metadeTamanhoVertice, metadeTamanhoVertice)) {
-                            final int x = (int) event.getX();
-                            final int y = (int) event.getY();
-                            criarVertice(x, y, event);
-                        }
-                        break;
+                        case MotionEvent.ACTION_UP:
+                            pontoCentralFinal = new PointF(event.getRawX(), event.getRawY());
+                            if (pontoDentroDoCirculo(pontoCentralFinal, pontoCentral, metadeTamanhoVertice, metadeTamanhoVertice)) {
+                                final int x = (int) event.getX();
+                                final int y = (int) event.getY();
+                                criarVertice(x, y);
+                            }
+                            break;
+                    }
                 }
                 return false;
             }
         };
     }
 
-    private void criarVertice(int posicaoX, int posicaoY, MotionEvent event) {
+    private void criarVertice(int posicaoX, int posicaoY) {
         final Vertice vertice = new Vertice(getActivity());
         verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
         verticeParams.setMargins(posicaoX - metadeTamanhoVertice, posicaoY - metadeTamanhoVertice, 0, 0);
@@ -129,6 +179,20 @@ public class GrafoFragment extends Fragment {
             private boolean mover;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                switch (selecaoFerramentas) {
+                    case 1:
+                        //rotina para seleção
+                        break;
+                    case 2:
+                        //rotina para criação do vertice
+                        break;
+                    case 3:
+                        //rotina para criação da aresta
+                        break;
+                    case 4:
+                        //rotina para remoção do vertice
+                        break;
+                }
                 Vertice vertice = (Vertice) v;
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
@@ -201,6 +265,9 @@ public class GrafoFragment extends Fragment {
                 aresta.setPointB((PointF) interseccaoB.get(0));
                 aresta.setVerticeInicial(verticeA);
                 aresta.setVerticeFinal(verticeB);
+
+                aresta.setOnTouchListener(onClickAresta());
+
                 matrizAdjacencias.adicionarAresta(aresta, false);
                 grafoLayout.addView(aresta);
                 moverViewParaBaixo(verticeA);
@@ -208,10 +275,32 @@ public class GrafoFragment extends Fragment {
                 //Log.d("MatrizAdjacencias", matrizAdjacencias.toString());
             }
         });
-
-
     }
 
+    private View.OnTouchListener onClickAresta() {
+        return new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (selecaoFerramentas) {
+                    case 1:
+                        //rotina para seleção
+                        break;
+                    case 2:
+                        //rotina para criação do vertice
+                        break;
+                    case 3:
+                        //rotina para criação da aresta
+                        break;
+                    case 4:
+                        //rotina para remoção do vertice
+                        break;
+                }
+
+                return false;
+            }
+        };
+    }
     public static void moverViewParaBaixo(final View child) {
         final ViewGroup parent = (ViewGroup)child.getParent();
         if (null != parent) {

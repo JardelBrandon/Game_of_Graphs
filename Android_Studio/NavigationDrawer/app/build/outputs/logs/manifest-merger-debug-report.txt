@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [com.mikepenz:materialdrawer:6.0.9] /home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/91c5fb9a88d32af834b4f9a4f560ce52/AndroidManifest.xml:2:1-11:12
 MERGED from [com.mikepenz:iconics-core:3.0.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.4.aar/2556f8c3effde5a68d494ea194e65ab5/AndroidManifest.xml:2:1-11:12
 MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] /home/robotica/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.8.aar/6ec04d318f11faf73db020253b75eabd/AndroidManifest.xml:2:1-11:12
@@ -56,25 +56,25 @@ MERGED from [com.mikepenz:foundation-icons-typeface:3.0.0.4] /home/robotica/.gra
 MERGED from [com.mikepenz:ionicons-typeface:2.0.1.4] /home/robotica/.gradle/caches/transforms-1/files-1.1/ionicons-typeface-2.0.1.4.aar/fe82e647f85a13f53b698ea7f1773833/AndroidManifest.xml:17:1-29:12
 MERGED from [com.mikepenz:pixeden-7-stroke-typeface:1.2.0.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/pixeden-7-stroke-typeface-1.2.0.2.aar/e1da5dea3d9f5a0cefe01df855bd8f2c/AndroidManifest.xml:17:1-29:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/robotica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/66e81e842570bf99573de2db332ee936/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:3:5-52
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:5:5-23:19
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:5:5-22:19
 MERGED from [com.android.support:design:28.0.0-rc01] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-28.0.0-rc01.aar/0352cc93ada18cd98cd65f10da13f6b8/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0-rc01] /home/robotica/.gradle/caches/transforms-1/files-1.1/design-28.0.0-rc01.aar/0352cc93ada18cd98cd65f10da13f6b8/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-compat:28.0.0-rc02] /home/robotica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc02.aar/72a752713795f840d8cf91295947a4a8/AndroidManifest.xml:22:5-94
@@ -119,28 +119,26 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/robot
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:8:9-43
 	android:allowBackup
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:7:9-35
-	android:theme
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:12:9-69
 	android:name
 		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:6:9-42
 activity#com.example.robotica.navigationdrawer.MainActivity
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:13:9-22:20
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:12:9-21:20
 	android:label
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:15:13-45
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:14:13-45
 	android:theme
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:16:13-73
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:15:13-55
 	android:name
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:14:13-41
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:13:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/robotica/Documentos/Github/Grafos/Android_Studio/NavigationDrawer/app/src/main/AndroidManifest.xml

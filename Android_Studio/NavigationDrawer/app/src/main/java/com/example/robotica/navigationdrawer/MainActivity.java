@@ -49,11 +49,14 @@ public class MainActivity extends AppCompatActivity {
     private Drawer result = null;
     private MiniDrawer miniResult = null;
     private Crossfader crossFader;
+    private GrafoFragment grafoFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sample_dark_toolbar);
+
+        grafoFragment = new GrafoFragment();
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -129,10 +132,17 @@ public class MainActivity extends AppCompatActivity {
                         new ToggleDrawerItem().withName("Toggle").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false)
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    int estadoAnterior;
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         if (drawerItem instanceof Nameable) {
                             Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
+                        }
+                        int estadoAtual = (int) drawerItem.getIdentifier();
+                        if (estadoAnterior != estadoAtual) {
+                            if (0 < estadoAtual && estadoAtual < 4)
+                            estadoAnterior = estadoAtual;
+                            grafoFragment.ferramentasEstado(estadoAtual);
                         }
                         return false;
                     }
