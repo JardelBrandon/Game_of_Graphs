@@ -996,6 +996,10 @@
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/83d8bf7e85f67d9cd6ba0a95774e4d40/res/drawable/abc_ic_clear_material.xml"
     },
     {
+        "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/drawable_quadrado.xml.flat",
+        "source": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/src/main/res/drawable/quadrado.xml"
+    },
+    {
         "merged": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/009eb5c6ed0d7cdc1adb4664cdaead19/res/color/design_error.xml"
     },

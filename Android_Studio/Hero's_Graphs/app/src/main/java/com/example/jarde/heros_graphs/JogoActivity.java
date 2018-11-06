@@ -10,14 +10,17 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.graphics.PointF;
 
+import java.util.ArrayList;
+
 public class JogoActivity extends AppCompatActivity {
-    private FrameLayout jogoLayout;
+    private ZoomLayout jogoLayout;
     private FrameLayout.LayoutParams verticeParams;
     private int tamanhoVertice;
     private int x, y;
     private PointF pointA;
     private PointF pointB;
     private Mapa mapaJogo;
+    private ArrayList<int[][]> caminhos;
 
     public void gerarCaminhos() {
         int n_caminhos = this.mapaJogo.caminhos.size();
@@ -44,30 +47,42 @@ public class JogoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jogo);
 
         //Inserindo um vertice dinamicamente e aleatoriamente para demonstração
-        jogoLayout = (FrameLayout) findViewById(R.id.jogoLayout);
+        jogoLayout = (ZoomLayout) findViewById(R.id.jogoLayout);
         this.tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         int metadeTamanhoVertice = 20;
 
         Mapa mapaJogo = new Mapa(5);
         this.mapaJogo=mapaJogo;
         mapaJogo.gerarCaminhos();
+        this.caminhos=mapaJogo.caminhos;
         int n = mapaJogo.mapa.size();
         int n_maior = mapaJogo.maiorNumeroVertice;
-        int lastX = 20, lastY = 50
-                ;
-        int altura = 0;
-        int largura = 1120;
+        int lastX = 100, lastY = 100;
+        int altura = n_maior*20 + (n_maior-1)*100;
 
+        int largura = 2*lastX+ (n-1)*180;
+
+        jogoLayout.setContentSize(largura,altura);
         for(int cont= 0;cont<n;cont++){
             int v = mapaJogo.mapa.get(cont).length;
-            altura = v*40;
+
             if (v==1){
                 lastY = altura/2;
             }else {
-                lastY = (altura/2)-((v-1)*50/2);
+                lastY = (altura/2)-((v-1)*50);
             }
             for(int i = 0; i<v;i++){
                 if (v==1){
+                    if(cont==0){
+                        verticeParams = new FrameLayout.LayoutParams(2*tamanhoVertice,2*tamanhoVertice);
+                        final Vertice verticeX = new Vertice(getApplicationContext());
+                        verticeX.setLayoutParams(verticeParams);
+                        verticeX.setTranslationX(lastX);
+                        verticeX.setTranslationY(lastY);
+                        verticeX.setBackgroundResource(R.drawable.quadrado);
+                        verticeX.setGravity(Gravity.CENTER);
+                        jogoLayout.addView(verticeX);
+                    }
                     final Vertice verticeX = new Vertice(getApplicationContext());
                     //ImageView verticeX = new ImageView(getApplicationContext());
                     verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);

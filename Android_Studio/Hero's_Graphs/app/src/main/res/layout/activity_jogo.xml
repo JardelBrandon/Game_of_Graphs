@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/jogoLayout"
     android:layout_width="match_parent"
+    android:clipChildren="false"
     android:layout_height="match_parent"
     tools:context=".JogoActivity"
     tools:layout_editor_absoluteY="73dp"
