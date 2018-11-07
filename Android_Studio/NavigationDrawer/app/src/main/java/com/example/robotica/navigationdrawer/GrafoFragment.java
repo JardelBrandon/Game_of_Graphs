@@ -2,6 +2,7 @@ package com.example.robotica.navigationdrawer;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,9 +15,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.robotica.navigationdrawer.utils.ZoomLayout;
+import com.mikepenz.materialize.color.Material;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -33,11 +37,12 @@ public class GrafoFragment extends Fragment {
     private static int selecaoFerramentas;
     private FrameLayout.LayoutParams verticeParams;
     private FrameLayout.LayoutParams arestaParams;
-    private Vertice verticeSelecionado;
+    private static Vertice verticeSelecionado;
     private PointF pointCentroA;
     private PointF pointCentroB;
     private MatrizAdjacencias matrizAdjacencias;
     private Handler handler;
+    private Snackbar snackbar;
 
     public GrafoFragment() {
         // Required empty public constructor
@@ -76,48 +81,46 @@ public class GrafoFragment extends Fragment {
 
     public void ferramentasEstado(int estado) {
         selecaoFerramentas = estado;
+        if (verticeSelecionado != null) {
+            verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+            verticeSelecionado = null;
+        }
         switch (estado) {
             case 1: //Selecionar
                 break;
             case 2: //Criar Vertice
-                final Snackbar snackBarVertice = Snackbar.make(grafoLayout, "Toque na tela para adicionar vertices", Snackbar.LENGTH_INDEFINITE);
+                snackbar = Snackbar.make(grafoLayout, "Toque na tela para adicionar vertices", Snackbar.LENGTH_INDEFINITE);
 
-                snackBarVertice.setAction("Esconder", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        snackBarVertice.dismiss();
-                    }
-                });
-                snackBarVertice.show();
+                snackbar.setAction("Esconder", onClickSnackbarEsconder());
+                snackbar.show();
 
                 break;
             case 3: //Criar Aresta
-                final Snackbar snackBarAresta = Snackbar.make(grafoLayout, "Selecione o vertice inicial", Snackbar.LENGTH_INDEFINITE);
+                snackbar = Snackbar.make(grafoLayout, "Selecione o vertice inicial", Snackbar.LENGTH_INDEFINITE);
 
-                snackBarAresta.setAction("Esconder", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        snackBarAresta.dismiss();
-                    }
-                });
-                snackBarAresta.show();
+                snackbar.setAction("Esconder", onClickSnackbarEsconder());
+                snackbar.show();
 
                 break;
             case 4: //Excluir
-                final Snackbar snackBarExcluir = Snackbar.make(grafoLayout, "Selecione algum elemento para exluí-lo", Snackbar.LENGTH_INDEFINITE);
+                snackbar = Snackbar.make(grafoLayout, "Selecione algum elemento para exluí-lo", Snackbar.LENGTH_INDEFINITE);
 
-                snackBarExcluir.setAction("Esconder", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        snackBarExcluir.dismiss();
-                    }
-                });
-                snackBarExcluir.show();
+                snackbar.setAction("Esconder", onClickSnackbarEsconder());
+                snackbar.show();
 
                 break;
             default:
                 break;
         }
+    }
+
+    private View.OnClickListener onClickSnackbarEsconder() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snackbar.dismiss();
+            }
+        };
     }
 
     private View.OnTouchListener onClickTela() {
@@ -149,6 +152,7 @@ public class GrafoFragment extends Fragment {
                             break;
                     }
                 }
+
                 return false;
             }
         };
@@ -179,63 +183,83 @@ public class GrafoFragment extends Fragment {
             private boolean mover;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch (selecaoFerramentas) {
-                    case 1:
-                        //rotina para seleção
-                        break;
-                    case 2:
-                        //rotina para criação do vertice
-                        break;
-                    case 3:
-                        //rotina para criação da aresta
-                        break;
-                    case 4:
-                        //rotina para remoção do vertice
-                        break;
-                }
                 Vertice vertice = (Vertice) v;
-                switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                    case MotionEvent.ACTION_DOWN:
-                        pontoCentralVertice = new PointF(v.getX() + metadeTamanhoVertice, v.getY() + metadeTamanhoVertice);
-                        dX = v.getX() - (event.getRawX()) / grafoLayout.getScaleX();
-                        dY = v.getY() - (event.getRawY()) / grafoLayout.getScaleY();
-                        mover = false;
-                        break;
-
-                    case MotionEvent.ACTION_MOVE:
-                        pontoToqueNaTela = new PointF(event.getX() + v.getX(), event.getY() + v.getY());
-                        if(!pontoDentroDoCirculo(pontoToqueNaTela, pontoCentralVertice, v.getWidth(), v.getHeight())) {
-
-                            v.animate() // Mover Vertice
-                                    .x(dX + (event.getRawX() / grafoLayout.getScaleX()))
-                                    .y(dY + (event.getRawY() / grafoLayout.getScaleY()))
-                                    .setDuration(0)
-                                    .start();
-
-                            mover = true;
-                            moverArestas(vertice);
+                ArrayList<Aresta> removerArestas = new ArrayList<>();
+                if (selecaoFerramentas == 4) {
+                    //remover o vertice selecionado
+                    for (Aresta aresta : matrizAdjacencias.getListaArestas()) {
+                        if (aresta.getVerticeInicial() == vertice) {
+                            removerArestas.add(aresta);
+                            grafoLayout.removeView(aresta);
                         }
-                        break;
+                        else if(aresta.getVerticeFinal() == vertice) {
+                            removerArestas.add(aresta);
+                            grafoLayout.removeView(aresta);
+                        }
+                    }
+                    for (Aresta aresta : removerArestas) {
+                        matrizAdjacencias.removerAresta(aresta);
+                    }
+                    matrizAdjacencias.removerVertice(vertice);
+                    grafoLayout.removeView(vertice);
+                }
+                else {
+                    switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                        case MotionEvent.ACTION_DOWN:
+                            pontoCentralVertice = new PointF(v.getX() + metadeTamanhoVertice, v.getY() + metadeTamanhoVertice);
+                            dX = v.getX() - (event.getRawX()) / grafoLayout.getScaleX();
+                            dY = v.getY() - (event.getRawY()) / grafoLayout.getScaleY();
+                            mover = false;
+                            break;
 
-                    case MotionEvent.ACTION_UP:
-                        if (verticeSelecionado == null) {
-                            if (!mover) {
-                                verticeSelecionado = vertice;
-                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button_pressed);
+                        case MotionEvent.ACTION_MOVE:
+                            pontoToqueNaTela = new PointF(event.getX() + v.getX(), event.getY() + v.getY());
+                            if (!pontoDentroDoCirculo(pontoToqueNaTela, pontoCentralVertice, v.getWidth(), v.getHeight())) {
+
+                                v.animate() // Mover Vertice
+                                        .x(dX + (event.getRawX() / grafoLayout.getScaleX()))
+                                        .y(dY + (event.getRawY() / grafoLayout.getScaleY()))
+                                        .setDuration(0)
+                                        .start();
+
+                                mover = true;
+                                moverArestas(vertice);
                             }
-                        }
-                        else {
-                            if (!mover && verticeSelecionado != vertice) {
-                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
-                                criarAresta(verticeSelecionado, vertice);
-                                verticeSelecionado = null;
+                            break;
+
+                        case MotionEvent.ACTION_UP:
+                            if (selecaoFerramentas == 2) {
+                                break;
                             }
-                            else {
-                                verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
-                                verticeSelecionado = null;
+                            if (verticeSelecionado == null) {
+                                if (!mover) {
+                                    verticeSelecionado = vertice;
+                                    verticeSelecionado.setBackgroundResource(R.drawable.vertice_button_pressed);
+                                    snackbar = Snackbar.make(grafoLayout, "Selecione o vertice final", Snackbar.LENGTH_INDEFINITE);
+                                    snackbar.setAction("Esconder", onClickSnackbarEsconder());
+                                    snackbar.show();
+                                }
+                            } else {
+                                if (!mover && verticeSelecionado != vertice) {
+                                    if (selecaoFerramentas == 3) {
+                                        verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                        criarAresta(verticeSelecionado, vertice);
+                                        verticeSelecionado = null;
+                                        snackbar = Snackbar.make(grafoLayout, "Selecione o vertice inicial", Snackbar.LENGTH_INDEFINITE);
+                                        snackbar.setAction("Esconder", onClickSnackbarEsconder());
+                                        snackbar.show();
+                                    } else {
+                                        verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                        verticeSelecionado = vertice;
+                                        verticeSelecionado.setBackgroundResource(R.drawable.vertice_button_pressed);
+                                    }
+                                } else {
+                                    verticeSelecionado.setBackgroundResource(R.drawable.vertice_button);
+                                    verticeSelecionado = null;
+                                }
                             }
-                        }
-                        break;
+                            break;
+                    }
                 }
                 return false;
             }
@@ -266,8 +290,6 @@ public class GrafoFragment extends Fragment {
                 aresta.setVerticeInicial(verticeA);
                 aresta.setVerticeFinal(verticeB);
 
-                aresta.setOnTouchListener(onClickAresta());
-
                 matrizAdjacencias.adicionarAresta(aresta, false);
                 grafoLayout.addView(aresta);
                 moverViewParaBaixo(verticeA);
@@ -277,30 +299,6 @@ public class GrafoFragment extends Fragment {
         });
     }
 
-    private View.OnTouchListener onClickAresta() {
-        return new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (selecaoFerramentas) {
-                    case 1:
-                        //rotina para seleção
-                        break;
-                    case 2:
-                        //rotina para criação do vertice
-                        break;
-                    case 3:
-                        //rotina para criação da aresta
-                        break;
-                    case 4:
-                        //rotina para remoção do vertice
-                        break;
-                }
-
-                return false;
-            }
-        };
-    }
     public static void moverViewParaBaixo(final View child) {
         final ViewGroup parent = (ViewGroup)child.getParent();
         if (null != parent) {
@@ -351,6 +349,7 @@ public class GrafoFragment extends Fragment {
         if (disc < 0) {
             return Collections.emptyList();
         }
+
         // if disc == 0 ... dealt with later
         float tmpSqrt = (float) Math.sqrt(disc);
         float abScalingFactor1 = -pBy2 + tmpSqrt;

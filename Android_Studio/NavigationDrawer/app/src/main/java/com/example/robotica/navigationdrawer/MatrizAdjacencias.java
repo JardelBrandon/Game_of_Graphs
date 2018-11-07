@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class MatrizAdjacencias {
     private ArrayList<Vertice> listaVertices = new ArrayList<>();
     private ArrayList<Aresta> listaArestas = new ArrayList<>();
-    private HashMap<Vertice, ArrayList> mapaVerticesAdjacentes = new HashMap<>();
+    private HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes = new HashMap<>();
 
 
     public void adicionarVertice(Vertice vertice) {
@@ -31,6 +31,15 @@ public class MatrizAdjacencias {
         }
     }
 
+    public void removerVertice(Vertice vertice) {
+        listaVertices.remove(vertice);
+        mapaVerticesAdjacentes.remove(vertice);
+    }
+
+    public void removerAresta(Aresta aresta) {
+        listaArestas.remove(aresta);
+    }
+
     public int getQuantidadeVertices() {
         return listaVertices.size();
     }
@@ -47,7 +56,7 @@ public class MatrizAdjacencias {
         return listaArestas;
     }
 
-    public HashMap<Vertice, ArrayList> getMapaVerticesAdjacentes() {
+    public HashMap<Vertice, ArrayList<Vertice>> getMapaVerticesAdjacentes() {
         return mapaVerticesAdjacentes;
     }
 

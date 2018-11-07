@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         int estadoAtual = (int) drawerItem.getIdentifier();
                         if (estadoAnterior != estadoAtual) {
-                            if (0 < estadoAtual && estadoAtual < 4)
+                            if (0 < estadoAtual && estadoAtual < 5)
                             estadoAnterior = estadoAtual;
                             grafoFragment.ferramentasEstado(estadoAtual);
                         }
