@@ -2,8 +2,8 @@ package com.example.robotica.navigationdrawer;
 
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.graphics.PointF;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -18,7 +18,6 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.robotica.navigationdrawer.utils.ZoomLayout;
-import com.mikepenz.materialize.color.Material;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,10 +151,68 @@ public class GrafoFragment extends Fragment {
                             break;
                     }
                 }
+                else if (selecaoFerramentas == 4) {
+                    switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                        case MotionEvent.ACTION_DOWN:
+                            // Excluir aresta
+                            pontoCentral = new PointF(event.getX(), event.getY());
+                            for (Vertice vertice: matrizAdjacencias.getMapaVerticesAdjacentes().keySet()) {
+                                for (Vertice verticeAdjacente : matrizAdjacencias.getMapaVerticesAdjacentes().get(vertice)) {
+                                    int[] lados = calcularRetanguloDaAresta(vertice, verticeAdjacente);
+                                    RectF rect = new RectF(lados[0], lados[1], lados[2], lados[3]);
+
+                                    if (rect.contains(pontoCentral.x, pontoCentral.y)) {
+                                        for (Aresta aresta : matrizAdjacencias.getListaArestas()) {
+                                            if (aresta.getVerticeInicial() == vertice && aresta.getVerticeFinal() == verticeAdjacente) {
+                                                if (pontoToqueSobreAresta(aresta.getPointA(), aresta.getPointB(), pontoCentral)) {
+                                                    matrizAdjacencias.removerAresta(aresta);
+                                                    grafoLayout.removeView(aresta);
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                    }
+                }
 
                 return false;
             }
         };
+    }
+
+    private int[] calcularRetanguloDaAresta(Vertice v1, Vertice v2) {
+        int[] ladosDoRetangulo = new int[4];
+        if (v1.getX() <= v2.getX()) {
+            ladosDoRetangulo[0] = (int) v1.getX();
+            ladosDoRetangulo[2] = (int) v2.getX() + tamanhoVertice;
+        }
+        else {
+            ladosDoRetangulo[0] = (int) v2.getX();
+            ladosDoRetangulo[2] = (int) v1.getX() + tamanhoVertice;
+        }
+        if (v1.getY() <= v2.getY()) {
+            ladosDoRetangulo[1] = (int) v1.getY();
+            ladosDoRetangulo[3] = (int) v2.getY() + tamanhoVertice;
+        }
+        else {
+            ladosDoRetangulo[1] = (int) v2.getY();
+            ladosDoRetangulo[3] = (int) v1.getY() + tamanhoVertice;
+        }
+        return ladosDoRetangulo;
+    }
+
+    private boolean pontoToqueSobreAresta(PointF pontoInicial, PointF pontoFinal, PointF pontoTeste) {
+        int larguraAresta = 15;
+        if (Math.abs(pontoInicial.x - pontoFinal.x) < 45) {
+            return (pontoTeste.x < (pontoFinal.x + larguraAresta)) && (pontoTeste.x > (pontoFinal.x - larguraAresta));
+        }
+        else {
+            float y = pontoInicial.y + ((pontoFinal.y - pontoInicial.y) / (pontoFinal.x - pontoInicial.x)) * (pontoTeste.x - pontoInicial.x);
+            return pontoTeste.y < (y + larguraAresta) && pontoTeste.y > (y - larguraAresta);
+        }
     }
 
     private void criarVertice(int posicaoX, int posicaoY) {
