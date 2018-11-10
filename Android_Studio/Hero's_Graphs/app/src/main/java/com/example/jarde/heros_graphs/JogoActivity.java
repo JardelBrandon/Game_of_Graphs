@@ -15,12 +15,19 @@ import java.util.ArrayList;
 public class JogoActivity extends AppCompatActivity {
     private ZoomLayout jogoLayout;
     private FrameLayout.LayoutParams verticeParams;
+    private FrameLayout.LayoutParams jogadorParams;
     private int tamanhoVertice;
     private int x, y;
     private PointF pointA;
     private PointF pointB;
     private Mapa mapaJogo;
     private ArrayList<int[][]> caminhos;
+
+
+    public void verificarCaminho(Vertice v1, Vertice v2){
+        
+    }
+
 
     public void gerarCaminhos() {
         int n_caminhos = this.mapaJogo.caminhos.size();
@@ -73,16 +80,6 @@ public class JogoActivity extends AppCompatActivity {
             }
             for(int i = 0; i<v;i++){
                 if (v==1){
-                    if(cont==0){
-                        verticeParams = new FrameLayout.LayoutParams(2*tamanhoVertice,2*tamanhoVertice);
-                        final Vertice verticeX = new Vertice(getApplicationContext());
-                        verticeX.setLayoutParams(verticeParams);
-                        verticeX.setTranslationX(lastX);
-                        verticeX.setTranslationY(lastY);
-                        verticeX.setBackgroundResource(R.drawable.quadrado);
-                        verticeX.setGravity(Gravity.CENTER);
-                        jogoLayout.addView(verticeX);
-                    }
                     final Vertice verticeX = new Vertice(getApplicationContext());
                     //ImageView verticeX = new ImageView(getApplicationContext());
                     verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
@@ -94,6 +91,14 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
+                    if(cont==0){
+                        jogadorParams = new FrameLayout.LayoutParams(2*tamanhoVertice ,2*tamanhoVertice );
+                        final Jogador X = new Jogador(getApplicationContext(), verticeX);
+                        X.setLayoutParams(jogadorParams);
+                        X.setBackgroundResource(R.drawable.quadrado);
+                        X.setGravity(Gravity.CENTER);
+                        jogoLayout.addView(X);
+                    }
                 }else{
                     final Vertice verticeX = new Vertice(getApplicationContext());
                     //ImageView verticeX = new ImageView(getApplicationContext());
@@ -106,6 +111,7 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
+
                 }
                 lastY+=100;
             }
