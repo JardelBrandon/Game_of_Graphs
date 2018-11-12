@@ -11,6 +11,13 @@ public class Mapa {
 
     public int maiorNumeroVertice;
 
+    public void verificarCaminho(Jogador player,Vertice v1, Vertice v2){
+        ArrayList<int[][]> m = this.caminhos;
+        if(m.get(v1.nivel)[v1.posicao][v2.posicao] == 1){
+            player.setPosicao(v2);
+        }
+    }
+
     public Mapa(int min){
         //valor variavel
         int x =6;

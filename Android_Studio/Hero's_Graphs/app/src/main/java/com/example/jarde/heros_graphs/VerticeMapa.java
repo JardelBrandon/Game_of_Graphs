@@ -10,6 +10,7 @@ public class VerticeMapa {
     public boolean saida;
     public Vertice v;
 
+
     public VerticeMapa(){ }
 
     public VerticeMapa(String nome){
@@ -17,6 +18,7 @@ public class VerticeMapa {
         this.saida=false;
         this.entrada=false;
     }
+
 
     public void setNome(String nome){
         this.nome = nome;

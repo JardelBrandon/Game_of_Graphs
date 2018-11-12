@@ -4,7 +4,7 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/fb8195da585bcf55c5620b21a39ea4d3/res/values-v23/values-v23.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/16708cd97ae284c9d55cd69176028162/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/83d8bf7e85f67d9cd6ba0a95774e4d40/res/values-v23/values-v23.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/961ef9e146f0b3daeb016acd68655289/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

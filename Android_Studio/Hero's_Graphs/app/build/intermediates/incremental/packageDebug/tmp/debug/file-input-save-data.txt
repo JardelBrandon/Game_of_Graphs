@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 06 15:30:13 BRT 2018
+#Mon Nov 12 18:58:15 BRT 2018
 5.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/transforms/mergeJniLibs/debug/0
 22.path=lib/armeabi-v7a/libjniPdfium.so
 32.set=DEX

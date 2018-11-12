@@ -9,6 +9,8 @@ public class Vertice extends android.support.v7.widget.AppCompatButton{
     private Color cor;
     private boolean visitado;
     private boolean selecionado;
+    public int nivel;
+    public int posicao;
 
     public String getNome() {
         return nome;

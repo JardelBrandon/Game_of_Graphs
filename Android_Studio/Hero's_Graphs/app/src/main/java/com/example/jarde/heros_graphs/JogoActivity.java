@@ -24,9 +24,6 @@ public class JogoActivity extends AppCompatActivity {
     private ArrayList<int[][]> caminhos;
 
 
-    public void verificarCaminho(Vertice v1, Vertice v2){
-        
-    }
 
 
     public void gerarCaminhos() {
@@ -69,6 +66,7 @@ public class JogoActivity extends AppCompatActivity {
 
         int largura = 2*lastX+ (n-1)*180;
 
+
         jogoLayout.setContentSize(largura,altura);
         for(int cont= 0;cont<n;cont++){
             int v = mapaJogo.mapa.get(cont).length;
@@ -81,23 +79,23 @@ public class JogoActivity extends AppCompatActivity {
             for(int i = 0; i<v;i++){
                 if (v==1){
                     final Vertice verticeX = new Vertice(getApplicationContext());
-                    //ImageView verticeX = new ImageView(getApplicationContext());
                     verticeParams = new FrameLayout.LayoutParams(tamanhoVertice, tamanhoVertice);
-                    //verticeX.setImageResource(R.drawable.hexagono);
                     verticeX.setLayoutParams(verticeParams);
                     verticeX.setTranslationX(lastX);
                     verticeX.setTranslationY(lastY);
                     verticeX.setBackgroundResource(R.drawable.vertice_button);
                     verticeX.setGravity(Gravity.CENTER);
                     jogoLayout.addView(verticeX);
+                    verticeX.nivel=cont;
+                    verticeX.posicao=i;
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
                     if(cont==0){
                         jogadorParams = new FrameLayout.LayoutParams(2*tamanhoVertice ,2*tamanhoVertice );
-                        final Jogador X = new Jogador(getApplicationContext(), verticeX);
-                        X.setLayoutParams(jogadorParams);
-                        X.setBackgroundResource(R.drawable.quadrado);
-                        X.setGravity(Gravity.CENTER);
-                        jogoLayout.addView(X);
+                        final Jogador playerX = new Jogador(getApplicationContext(), verticeX);
+                        playerX.setLayoutParams(jogadorParams);
+                        playerX.setBackgroundResource(R.drawable.quadrado);
+                        playerX.setGravity(Gravity.CENTER);
+                        jogoLayout.addView(playerX);
                     }
                 }else{
                     final Vertice verticeX = new Vertice(getApplicationContext());
@@ -109,8 +107,17 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setTranslationY(lastY);
                     verticeX.setBackgroundResource(R.drawable.vertice_button);
                     verticeX.setGravity(Gravity.CENTER);
+                    verticeX.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    });
                     jogoLayout.addView(verticeX);
+                    verticeX.nivel=cont;
+                    verticeX.posicao=i;
                     mapaJogo.mapa.get(cont)[i].v=verticeX;
+
 
                 }
                 lastY+=100;

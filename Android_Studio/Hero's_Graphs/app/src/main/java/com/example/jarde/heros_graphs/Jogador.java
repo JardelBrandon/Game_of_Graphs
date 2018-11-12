@@ -25,4 +25,5 @@ public class Jogador extends android.support.v7.widget.AppCompatButton {
     public Vertice getPosicao() {
         return posicao;
     }
+
 }
