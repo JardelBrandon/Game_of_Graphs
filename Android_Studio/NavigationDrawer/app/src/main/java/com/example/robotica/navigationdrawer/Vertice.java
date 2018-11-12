@@ -2,8 +2,9 @@ package com.example.robotica.navigationdrawer;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.AppCompatButton;
 
-public class Vertice extends android.support.v7.widget.AppCompatButton{
+public class Vertice extends AppCompatButton implements Grafo {
     private String nome;
     private int grau;
     private Color cor;

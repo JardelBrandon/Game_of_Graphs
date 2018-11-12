@@ -25,7 +25,6 @@ import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.MiniDrawer;
-import com.mikepenz.materialdrawer.holder.BadgeStyle;
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
@@ -49,14 +48,14 @@ public class MainActivity extends AppCompatActivity {
     private Drawer result = null;
     private MiniDrawer miniResult = null;
     private Crossfader crossFader;
-    private GrafoFragment grafoFragment;
+    private CompositeSubjectGrafoFragment compositeSubjectGrafoFragment; //Verificar necessidade desse atributo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_dark_toolbar);
 
-        grafoFragment = new GrafoFragment();
+        compositeSubjectGrafoFragment = new CompositeSubjectGrafoFragment();
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -142,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                         if (estadoAnterior != estadoAtual) {
                             if (0 < estadoAtual && estadoAtual < 5)
                             estadoAnterior = estadoAtual;
-                            grafoFragment.ferramentasEstado(estadoAtual);
+                            compositeSubjectGrafoFragment.ferramentasEstado(estadoAtual);
                         }
                         return false;
                     }

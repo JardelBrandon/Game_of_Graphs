@@ -9,7 +9,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class Aresta extends View {
+public class Aresta extends View implements Grafo {
     private String nome;
     private Color cor;
     private float peso;

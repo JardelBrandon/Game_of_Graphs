@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    tools:context=".GrafoFragment"
+    tools:context=".CompositeSubjectGrafoFragment"
     android:scrollbars="vertical|horizontal">
 </com.example.robotica.navigationdrawer.utils.ZoomLayout>
