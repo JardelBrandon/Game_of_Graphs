@@ -11,6 +11,8 @@ public class Vertice extends AppCompatButton implements Grafo {
     private boolean visitado;
     private boolean selecionado;
     private Vertice[] verticesAdjacentes;
+    private int tamanhoVertice;
+    private int metadeTamanhoVertice;
 
     public String getNome() {
         return nome;
@@ -60,8 +62,29 @@ public class Vertice extends AppCompatButton implements Grafo {
         this.verticesAdjacentes = verticesAdjacentes;
     }
 
+    public int getTamanhoVertice() {
+        return tamanhoVertice;
+    }
+
+    public void setTamanhoVertice(int tamanhoVertice) {
+        this.tamanhoVertice = tamanhoVertice;
+    }
+
+    public int getMetadeTamanhoVertice() {
+        return this.tamanhoVertice / 2;
+    }
+
 
     public Vertice(Context context) {
         super(context);
+
+        tamanhoVertice = R.dimen.tamanho_vertice;
+        metadeTamanhoVertice = tamanhoVertice / 2;
+    }
+
+    @Override
+    public Object clone() {
+
+        return null;
     }
 }

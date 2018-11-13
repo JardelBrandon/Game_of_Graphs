@@ -2,6 +2,7 @@ package com.example.robotica.navigationdrawer.utils;
 
 import android.graphics.PointF;
 
+import com.example.robotica.navigationdrawer.Aresta;
 import com.example.robotica.navigationdrawer.Vertice;
 
 import java.util.Arrays;
@@ -47,7 +48,20 @@ public class Calculos {
         return ((dx * dx) / (width * width) + (dy * dy) / (height * height)) * 4 <= 1;
     }
 
-    public List<PointF> getPontoInterseccao(PointF pointA, PointF pointB, PointF center, float radius) {
+
+    public List<PointF> getPontoInterseccaoAresta(Aresta aresta) {
+        Vertice verticeInicial = aresta.getVerticeInicial();
+        Vertice verticeFinal = aresta.getVerticeFinal();
+        int metadeTamanhoVerticeA = verticeInicial.getMetadeTamanhoVertice();
+        int metadeTamanhoVerticeB = verticeInicial.getMetadeTamanhoVertice();
+        PointF pointCentroA = new PointF(verticeInicial.getX() + metadeTamanhoVerticeA, verticeInicial.getY() + metadeTamanhoVerticeA);
+        PointF pointCentroB = new PointF(verticeFinal.getX() + metadeTamanhoVerticeB, verticeFinal.getY() + metadeTamanhoVerticeB);
+        List interseccaoA = getPontoInterseccaoVertice(pointCentroA, pointCentroB, pointCentroA, metadeTamanhoVerticeA);
+        List interseccaoB = getPontoInterseccaoVertice(pointCentroA, pointCentroB, pointCentroB, metadeTamanhoVerticeB);
+        return Arrays.asList((PointF) interseccaoA.get(1), (PointF) interseccaoB.get(0));
+    }
+
+    private List<PointF> getPontoInterseccaoVertice(PointF pointA, PointF pointB, PointF center, float radius) {
         float baX = pointB.x - pointA.x;
         float baY = pointB.y - pointA.y;
         float caX = center.x - pointA.x;
@@ -77,4 +91,5 @@ public class Calculos {
         PointF p2 = new PointF(pointA.x - baX * abScalingFactor2, pointA.y - baY * abScalingFactor2);
         return Arrays.asList(p1, p2);
     }
+
 }

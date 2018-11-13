@@ -112,4 +112,14 @@ public class Aresta extends View implements Grafo {
     public void setPointB(PointF pointB) {
         this.pointB = pointB;
     }
+
+    @Override
+    public Object clone() {
+        try {
+            super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
