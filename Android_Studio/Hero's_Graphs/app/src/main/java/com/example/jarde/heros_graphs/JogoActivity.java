@@ -21,6 +21,7 @@ public class JogoActivity extends AppCompatActivity {
     private PointF pointA;
     private PointF pointB;
     private Mapa mapaJogo;
+    private Jogador jog;
     private ArrayList<int[][]> caminhos;
 
 
@@ -55,7 +56,7 @@ public class JogoActivity extends AppCompatActivity {
         this.tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         int metadeTamanhoVertice = 20;
 
-        Mapa mapaJogo = new Mapa(5);
+        final Mapa mapaJogo = new Mapa(5);
         this.mapaJogo=mapaJogo;
         mapaJogo.gerarCaminhos();
         this.caminhos=mapaJogo.caminhos;
@@ -95,6 +96,7 @@ public class JogoActivity extends AppCompatActivity {
                         playerX.setLayoutParams(jogadorParams);
                         playerX.setBackgroundResource(R.drawable.quadrado);
                         playerX.setGravity(Gravity.CENTER);
+                        this.jog=playerX;
                         jogoLayout.addView(playerX);
                     }
                 }else{
@@ -110,7 +112,7 @@ public class JogoActivity extends AppCompatActivity {
                     verticeX.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-
+                            mapaJogo.verificarCaminho(jog,verticeX);
                         }
                     });
                     jogoLayout.addView(verticeX);
