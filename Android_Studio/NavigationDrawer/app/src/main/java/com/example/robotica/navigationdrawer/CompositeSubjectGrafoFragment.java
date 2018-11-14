@@ -30,13 +30,13 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Subject {
-    private ArrayList<Grafo> folhasGrafo;
-    private ArrayList<Vertice> listaVertices = new ArrayList<>();
-    private ArrayList<Aresta> listaArestas = new ArrayList<>();
-    private HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes = new HashMap<>();
+    private static ArrayList<Grafo> folhasGrafo;
+    private static ArrayList<Vertice> listaVertices = new ArrayList<>();
+    private static ArrayList<Aresta> listaArestas = new ArrayList<>();
+    private static HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes = new HashMap<>();
     private static ZoomLayout grafoLayout;
-    private Vertice verticeSelecionado;
-    private boolean direcionado;
+    private static Vertice verticeSelecionado;
+    private static boolean direcionado;
 
     public CompositeSubjectGrafoFragment() {
         // Required empty public constructor
@@ -46,9 +46,6 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRetainInstance(true);
-        grafoLayout = grafoLayout.findViewById(R.id.grafoLayout);
-        grafoLayout.setOnTouchListener(new ClickTela());
-        direcionado = false;
     }
 
     @Override
@@ -62,6 +59,17 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        init(view);
+    }
+
+    private void init(final View view) {
+        folhasGrafo = new ArrayList<>();
+        listaVertices = new ArrayList<>();
+        listaVertices = new ArrayList<>();
+        mapaVerticesAdjacentes = new HashMap<>();
+        grafoLayout = view.findViewById(R.id.grafoLayout);
+        grafoLayout.setOnTouchListener(new ClickTela());
+        direcionado = false;
     }
 
     public void addElemento(Grafo elemento) {

@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.robotica.navigationdrawer.utils.CrossfadeWrapper;
@@ -42,9 +44,8 @@ import com.mikepenz.octicons_typeface_library.Octicons;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PROFILE_SETTING = 1;
-    private SingletonFerramentas singletonFerramentas;
-    //private CompositeSubjectGrafoFragment compositeSubjectGrafoFragment; //Verificar necessidade desse atributo
-
+    private SingletonFacade facade;
+    
     //save our header or result
     private AccountHeader headerResult = null;
     private Drawer result = null;
@@ -57,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_dark_toolbar);
 
-        //compositeSubjectGrafoFragment = new CompositeSubjectGrafoFragment();
-        singletonFerramentas = SingletonFerramentas.getInstancia();
+        facade = SingletonFacade.getInstancia();
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
                         }
                         int estadoAtual = (int) drawerItem.getIdentifier();
-                        singletonFerramentas.setEstado(estadoAtual);
+                        facade.setEstadoFerramentas(estadoAtual);
 
                         return false;
                     }

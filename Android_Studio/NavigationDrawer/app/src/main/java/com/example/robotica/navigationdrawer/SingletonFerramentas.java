@@ -6,13 +6,8 @@ import android.view.View;
 public class SingletonFerramentas {
     private static SingletonFerramentas instancia = null;
     private int estado;
-    private SingletonFacade facade = null;
     private Snackbar snackbar;
 
-    private SingletonFerramentas() {
-        this.facade = SingletonFacade.getInstancia();
-
-    }
 
     public static SingletonFerramentas getInstancia() {
         if (instancia == null) {
@@ -34,7 +29,6 @@ public class SingletonFerramentas {
     }
 
     private void mudancaDeEstado(int estado) {
-        facade.deselecionarVertice();
         String mensagem;
         switch (estado) {
             case 1: //Selecionar
@@ -61,7 +55,7 @@ public class SingletonFerramentas {
     }
 
     public void setupSnackBar(String mensagem) {
-        snackbar = Snackbar.make(facade.getGrafoLayout(), mensagem, Snackbar.LENGTH_INDEFINITE);
+        snackbar = Snackbar.make(CompositeSubjectGrafoFragment.getGrafoLayout(), mensagem, Snackbar.LENGTH_INDEFINITE);
 
         snackbar.setAction("Esconder", onClickSnackbarEsconder());
         snackbar.show();

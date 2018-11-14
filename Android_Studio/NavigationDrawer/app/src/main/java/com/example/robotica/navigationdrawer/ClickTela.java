@@ -11,12 +11,10 @@ import com.example.robotica.navigationdrawer.utils.Calculos;
 public class ClickTela implements View.OnTouchListener {
     private PointF pontoCentral;
     private PointF pontoCentralFinal;
-    private SingletonFerramentas ferramentas;
     private SingletonFacade facade;
     private Calculos calculos;
 
     public ClickTela() {
-        ferramentas = SingletonFerramentas.getInstancia();
         facade = SingletonFacade.getInstancia();
         calculos = new Calculos();
     }
@@ -24,7 +22,7 @@ public class ClickTela implements View.OnTouchListener {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        if (ferramentas.getEstado() == 2) {
+        if (facade.getEstadoFerramentas() == 2) {
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
                     pontoCentral = new PointF(event.getRawX(), event.getRawY());
@@ -40,7 +38,7 @@ public class ClickTela implements View.OnTouchListener {
                     }
                     break;
             }
-        } else if (ferramentas.getEstado() == 4) {
+        } else if (facade.getEstadoFerramentas() == 4) {
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
                     // Excluir aresta

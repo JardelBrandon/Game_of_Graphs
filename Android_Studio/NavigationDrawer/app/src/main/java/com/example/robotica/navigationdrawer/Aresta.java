@@ -11,7 +11,6 @@ import android.view.View;
 
 public class Aresta extends View implements Grafo {
     private String nome;
-    private Color cor;
     private float peso;
     private float larguraAresta;
     private int raio;
@@ -55,14 +54,6 @@ public class Aresta extends View implements Grafo {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Color getCor() {
-        return cor;
-    }
-
-    public void setCor(Color cor) {
-        this.cor = cor;
     }
 
     public float getPeso() {
@@ -116,7 +107,10 @@ public class Aresta extends View implements Grafo {
     @Override
     public Object clone() {
         try {
-            super.clone();
+            Aresta cloneAresta = (Aresta) super.clone();
+            cloneAresta.setVerticeInicial((Vertice) verticeInicial.clone());
+            cloneAresta.setVerticeFinal((Vertice) verticeFinal.clone());
+            return cloneAresta;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
