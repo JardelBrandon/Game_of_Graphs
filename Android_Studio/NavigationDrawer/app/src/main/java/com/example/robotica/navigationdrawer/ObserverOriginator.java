@@ -17,7 +17,7 @@ public class ObserverOriginator implements Observer {
     @Override
     public void atualizar(Subject sujeito) {
         CompositeSubjectGrafoFragment grafoSujeio = (CompositeSubjectGrafoFragment) sujeito;
-        grafo = grafoSujeio.getGrafo();
+        grafo = grafoSujeio.getFolhasGrafo();
         salvar();
     }
 }

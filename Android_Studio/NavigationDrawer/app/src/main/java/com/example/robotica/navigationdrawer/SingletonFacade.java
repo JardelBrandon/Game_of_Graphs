@@ -3,14 +3,11 @@ package com.example.robotica.navigationdrawer;
 import android.graphics.PointF;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.robotica.navigationdrawer.utils.Calculos;
 import com.example.robotica.navigationdrawer.utils.ZoomLayout;
 
 public class SingletonFacade {
     private static SingletonFacade instancia = null;
     private static CompositeSubjectGrafoFragment grafoFragment;
-    private PrototypeFactory prototypeFactory;
-    private Calculos calculos;
     private SingletonFerramentas ferramentas;
 
     private SingletonFacade() {
@@ -18,9 +15,6 @@ public class SingletonFacade {
     }
 
     private void init() {
-        calculos = new Calculos();
-        grafoFragment = new CompositeSubjectGrafoFragment();
-        prototypeFactory = new PrototypeFactory(CompositeSubjectGrafoFragment.getGrafoLayout().getContext());
         ferramentas = SingletonFerramentas.getInstancia();
     }
 
@@ -32,31 +26,11 @@ public class SingletonFacade {
     }
 
     public void criarVertice(PointF ponto) {
-        final Vertice vertice = prototypeFactory.getVerticePrototipo();
-        vertice.setX(ponto.x - vertice.getMetadeTamanhoVertice());
-        vertice.setY(ponto.y - vertice.getMetadeTamanhoVertice());
-        vertice.setText(String.valueOf(grafoFragment.getListaVertices().size()));
-        vertice.setId(grafoFragment.getListaVertices().size());
-
-        vertice.setOnTouchListener(new ClickVertice());
-
-        grafoFragment.addElemento(vertice);
-        moverViewParaBaixo(vertice);
-        //verticeParams.setMargins(posicaoX - metadeTamanhoVertice, posicaoY - metadeTamanhoVertice, 0, 0);
+        grafoFragment.criarVertice(ponto);
     }
 
     public void criarAresta(Vertice verticeInicial, Vertice verticeFinal) {
-        final Aresta aresta = prototypeFactory.getArestaPrototipo();
-        aresta.setPointA(calculos.getPontoInterseccaoAresta(aresta).get(0));
-        aresta.setPointB(calculos.getPontoInterseccaoAresta(aresta).get(1));
-        aresta.setVerticeInicial(verticeInicial);
-        aresta.setVerticeFinal(verticeFinal);
-        aresta.setId(grafoFragment.getListaArestas().size());
-
-        grafoFragment.addElemento(aresta);
-        moverViewParaBaixo(verticeInicial);
-        moverViewParaBaixo(verticeFinal);
-
+        grafoFragment.criarAresta(verticeInicial, verticeFinal);
     }
 
     public void setEstadoFerramentas(int estadoFerramentas) {
@@ -73,34 +47,29 @@ public class SingletonFacade {
     }
 
     public void removerVertice(Vertice vertice) {
-        grafoFragment.removerElemento(vertice);
+        grafoFragment.removerElemento((Grafo) vertice);
     }
 
     public void removerAresta(Aresta aresta) {
-        grafoFragment.removerElemento(aresta);
+        grafoFragment.removerElemento((Grafo) aresta);
     }
 
     public void selecionarVertice(Vertice vertice) {
-        grafoFragment.getVerticeSelecionado().setBackgroundResource(R.drawable.vertice_button_pressed);
+        if (grafoFragment.getVerticeSelecionado() != null) {
+            deselecionarVertice();
+        }
+        vertice.selecionar();
         grafoFragment.setVerticeSelecionado(vertice);
     }
 
     public void deselecionarVertice() {
         if (grafoFragment.getVerticeSelecionado() != null) {
-            grafoFragment.getVerticeSelecionado().setBackgroundResource(R.drawable.vertice_button);
+            grafoFragment.getVerticeSelecionado().deselecionar();
             grafoFragment.setVerticeSelecionado(null);
         }
     }
 
-    public CompositeSubjectGrafoFragment getGrafoFragment() {
-        return grafoFragment;
-    }
-
-    public static ZoomLayout getGrafoLayout() {
-        return grafoFragment.getGrafoLayout();
-    }
-
-    private static void moverViewParaBaixo(final View child) {
+    public void moverViewParaBaixo(final View child) {
         final ViewGroup parent = (ViewGroup)child.getParent();
         if (null != parent) {
             parent.removeView(child);
@@ -108,5 +77,16 @@ public class SingletonFacade {
         }
     }
 
+    public static CompositeSubjectGrafoFragment getGrafoFragment() {
+        return grafoFragment;
+    }
+
+    public static void setGrafoFragment(CompositeSubjectGrafoFragment grafoFragment) {
+        SingletonFacade.grafoFragment = grafoFragment;
+    }
+
+    public static ZoomLayout getGrafoLayout() {
+        return grafoFragment.getGrafoLayout();
+    }
 
 }

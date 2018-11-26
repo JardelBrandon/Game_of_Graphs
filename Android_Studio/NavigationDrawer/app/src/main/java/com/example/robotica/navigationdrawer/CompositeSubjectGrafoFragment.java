@@ -3,27 +3,18 @@ package com.example.robotica.navigationdrawer;
 
 import android.annotation.SuppressLint;
 import android.graphics.PointF;
-import android.graphics.RectF;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
 import com.example.robotica.navigationdrawer.utils.ZoomLayout;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
-
 
 
 /**
@@ -31,11 +22,12 @@ import java.util.List;
  */
 public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Subject {
     private static ArrayList<Grafo> folhasGrafo;
-    private static ArrayList<Vertice> listaVertices = new ArrayList<>();
-    private static ArrayList<Aresta> listaArestas = new ArrayList<>();
-    private static HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes = new HashMap<>();
+    private static ArrayList<Vertice> listaVertices;
+    private static ArrayList<Aresta> listaArestas;
+    private static HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes;
     private static ZoomLayout grafoLayout;
     private static Vertice verticeSelecionado;
+    private static ThemeFactory themeFactory;
     private static boolean direcionado;
 
     public CompositeSubjectGrafoFragment() {
@@ -45,7 +37,7 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setRetainInstance(true);
+        setRetainInstance(true);
     }
 
     @Override
@@ -65,11 +57,22 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     private void init(final View view) {
         folhasGrafo = new ArrayList<>();
         listaVertices = new ArrayList<>();
-        listaVertices = new ArrayList<>();
+        listaArestas = new ArrayList<>();
         mapaVerticesAdjacentes = new HashMap<>();
         grafoLayout = view.findViewById(R.id.grafoLayout);
         grafoLayout.setOnTouchListener(new ClickTela());
         direcionado = false;
+        SingletonFacade.setGrafoFragment(this);
+    }
+
+    public void criarVertice(PointF ponto) {
+        Vertice vertice = themeFactory.criarVertice(getActivity(), ponto);
+        addElemento((Grafo) vertice);
+    }
+
+    public void criarAresta(Vertice verticeInicial, Vertice verticeFinal) {
+        Aresta aresta = themeFactory.criarAresta(getActivity(), verticeInicial, verticeFinal);
+        addElemento((Grafo) aresta);
     }
 
     public void addElemento(Grafo elemento) {
@@ -129,7 +132,7 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
             }
         }
         for (Aresta aresta : arestasConectadas) {
-            removerElemento(aresta);
+            removerElemento((Grafo) aresta);
         }
 
         listaVertices.remove(vertice);
@@ -144,6 +147,14 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
             mapaVerticesAdjacentes.get(aresta.getVerticeFinal()).remove(aresta.getVerticeInicial());
         }
         listaArestas.remove(aresta);
+    }
+
+    public void moverViewParaBaixo(final View child) {
+        final ViewGroup parent = (ViewGroup)child.getParent();
+        if (null != parent) {
+            parent.removeView(child);
+            parent.addView(child, 0);
+        }
     }
 
     public boolean isDirecionado() {
@@ -162,7 +173,7 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         this.folhasGrafo = folhasGrafo;
     }
 
-    public ArrayList<Vertice> getListaVertices() {
+    public static ArrayList<Vertice> getListaVertices() {
         return listaVertices;
     }
 
@@ -174,8 +185,8 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         return listaArestas;
     }
 
-    public void setListaArestas(ArrayList<Aresta> listaArestas) {
-        this.listaArestas = listaArestas;
+    public void setListaArestas(ArrayList<Aresta> listaAresta) {
+        this.listaArestas = listaAresta;
     }
 
     public Vertice getVerticeSelecionado() {
@@ -202,8 +213,12 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         this.mapaVerticesAdjacentes = mapaVerticesAdjacentes;
     }
 
-    public ArrayList<Grafo> getGrafo() {
-        return folhasGrafo;
+    public static ThemeFactory getThemeFactory() {
+        return themeFactory;
+    }
+
+    public static void setThemeFactory(ThemeFactory themeFactory) {
+        CompositeSubjectGrafoFragment.themeFactory = themeFactory;
     }
 
     @Override

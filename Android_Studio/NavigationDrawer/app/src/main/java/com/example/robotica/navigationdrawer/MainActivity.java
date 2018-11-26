@@ -4,7 +4,6 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -13,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.robotica.navigationdrawer.utils.CrossfadeWrapper;
@@ -59,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sample_dark_toolbar);
 
         facade = SingletonFacade.getInstancia();
+        facade.getGrafoFragment().setThemeFactory(new DarkTheme());
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -173,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
         //define a shadow (this is only for normal LTR layouts if you have a RTL app you need to define the other one
         crossFader.getCrossFadeSlidingPaneLayout().setShadowResourceLeft(R.drawable.material_drawer_shadow_left);
+
     }
 
     private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {

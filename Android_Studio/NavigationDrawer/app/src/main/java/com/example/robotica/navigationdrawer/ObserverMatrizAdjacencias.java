@@ -1,9 +1,7 @@
 package com.example.robotica.navigationdrawer;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 
 public class ObserverMatrizAdjacencias implements Observer {
     private HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes = new HashMap<>();
