@@ -4,7 +4,17 @@
             "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/f0c2bdca2de52fe9ba07cc80cb1049e1/res/values-v23/values-v23.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/4db6358b94354b23ad9f29576f8249a7/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                },
+                {
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0-rc01.aar/6f4ef6963add893a86267ae0f542dd47/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,17 +33,7 @@
                     }
                 },
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/9ca14154fdfc0b16014db2f307724552/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "51",
-                        "endOffsets": "102"
-                    }
-                },
-                {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/83d8bf7e85f67d9cd6ba0a95774e4d40/res/values-v23/values-v23.xml",
+                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/6522c17b1f755cda6548fc0f4bbd00bc/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

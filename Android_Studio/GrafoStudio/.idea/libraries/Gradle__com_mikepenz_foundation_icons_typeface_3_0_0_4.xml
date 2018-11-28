@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mikepenz:foundation-icons-typeface-3.0.0.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/foundation-icons-typeface-3.0.0.4.aar/9e96f81a04e0257ecd8c2ba8e97dcff7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/foundation-icons-typeface-3.0.0.4.aar/9e96f81a04e0257ecd8c2ba8e97dcff7/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/foundation-icons-typeface/3.0.0.4/82c7aee4a4d15b9565d7a225371d1d7d560a8479/foundation-icons-typeface-3.0.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

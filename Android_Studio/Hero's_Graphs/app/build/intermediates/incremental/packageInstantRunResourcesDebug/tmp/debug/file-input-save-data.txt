@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Nov 14 19:28:07 BRT 2018
+0.baseType=DIRECTORY
+0.base=/home/robotica/Documentos/Github/Grafos/Android_Studio/Hero's_Graphs/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+0.path=Teoria dos Grafos.pdf
+0.set=ASSET
+count=1

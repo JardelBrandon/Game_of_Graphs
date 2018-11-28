@@ -23,7 +23,7 @@ public class ZoomLayout extends FrameLayout
 
     private ScaleGestureDetector mScaleGestureDetector;
     private GestureDetectorCompat mGestureDetector;
-    private static final float MIN_ZOOM = 0.8f;
+    private static final float MIN_ZOOM = 0.1f;
     private static final float MAX_ZOOM = 10.0f;
     private float scale = 1f;
     // Parameters for zooming.
@@ -45,7 +45,6 @@ public class ZoomLayout extends FrameLayout
     private Matrix matrix = new Matrix();
     private Matrix matrixInverse = new Matrix();
     private Matrix savedMatrix = new Matrix();
-
 
     public ZoomLayout(Context context)
     {
@@ -72,7 +71,6 @@ public class ZoomLayout extends FrameLayout
         mGestureDetector = new GestureDetectorCompat(context, mGestureListener);
     }
 
-
     @Override
     protected void dispatchDraw(Canvas canvas)
     {
@@ -88,10 +86,10 @@ public class ZoomLayout extends FrameLayout
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev)
     {
-        //mDispatchTouchEventWorkingArray[0] = ev.getX();
-        //mDispatchTouchEventWorkingArray[1] = ev.getY();
-        //mDispatchTouchEventWorkingArray = screenPointsToScaledPoints(mDispatchTouchEventWorkingArray);
-        //ev.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
+        mDispatchTouchEventWorkingArray[0] = ev.getX();
+        mDispatchTouchEventWorkingArray[1] = ev.getY();
+        mDispatchTouchEventWorkingArray = screenPointsToScaledPoints(mDispatchTouchEventWorkingArray);
+        ev.setLocation(mDispatchTouchEventWorkingArray[0], mDispatchTouchEventWorkingArray[1]);
         return super.dispatchTouchEvent(ev);
     }
 
@@ -99,6 +97,10 @@ public class ZoomLayout extends FrameLayout
     public boolean onTouchEvent(MotionEvent event)
     {
 
+        mOnTouchEventWorkingArray[0] = event.getX();
+        mOnTouchEventWorkingArray[1] = event.getY();
+        mOnTouchEventWorkingArray = scaledPointsToScreenPoints(mDispatchTouchEventWorkingArray);
+        event.setLocation(mOnTouchEventWorkingArray[0], mOnTouchEventWorkingArray[1]);
         matrix.set(savedMatrix);
         boolean gestureDetected = mGestureDetector.onTouchEvent(event);
         if (event.getPointerCount() > 1)
@@ -186,6 +188,8 @@ public class ZoomLayout extends FrameLayout
         }
     };
 
+
+
     private boolean checkScaleBounds()
     {
         float[] values = new float[9];
@@ -205,7 +209,7 @@ public class ZoomLayout extends FrameLayout
         return a;
     }
 
-    private float[] screenPointsToScaledPoints(float[] a)
+    public float[] screenPointsToScaledPoints(float[] a)
     {
         matrixInverse.mapPoints(a);
         return a;
@@ -258,5 +262,23 @@ public class ZoomLayout extends FrameLayout
 
     public Matrix getMatrixInverse() {
         return matrixInverse;
+    }
+
+    public float getScaleX() {
+        float[] values = new float[9];
+        matrix.getValues(values);
+        float scaleX = values[Matrix.MSCALE_X] * scale;
+        return scaleX;
+    }
+
+    public float getScaleY() {
+        float[] values = new float[9];
+        matrix.getValues(values);
+        float scaleY = values[Matrix.MSCALE_Y] * scale;
+        return scaleY;
+    }
+
+    public float getScale() {
+        return scale;
     }
 }
