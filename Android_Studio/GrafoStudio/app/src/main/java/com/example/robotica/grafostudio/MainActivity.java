@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_dark_toolbar);
+        setContentView(R.layout.activity_main);
 
         facade = SingletonFacade.getInstancia();
         facade.getGrafoFragment().setThemeFactory(new DarkTheme());
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Create a few sample profile
         // NOTE you have to define the loader logic too. See the CustomApplication for more details
-        final IProfile profile = new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com").withIcon("https://avatars3.githubusercontent.com/u/1476232?v=3&s=460");
-        final IProfile profile2 = new ProfileDrawerItem().withName("Bernat Borras").withEmail("alorma@github.com").withIcon(Uri.parse("https://avatars3.githubusercontent.com/u/887462?v=3&s=460"));
+        final IProfile profile = new ProfileDrawerItem().withName("Jardel Brandon").withEmail("jardelbrandon@gmail.com").withIcon("https://avatars3.githubusercontent.com/u/887462?v=3&s=460");
+        final IProfile profile2 = new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com").withIcon(Uri.parse("https://avatars3.githubusercontent.com/u/1476232?v=3&s=460"));
         final IProfile profile3 = new ProfileDrawerItem().withName("Max Muster").withEmail("max.mustermann@gmail.com").withIcon(getResources().getDrawable(R.drawable.profile2));
         final IProfile profile4 = new ProfileDrawerItem().withName("Felix House").withEmail("felix.house@gmail.com").withIcon(getResources().getDrawable(R.drawable.profile3));
         final IProfile profile5 = new ProfileDrawerItem().withName("Mr. X").withEmail("mister.x.super@gmail.com").withIcon(getResources().getDrawable(R.drawable.profile4)).withIdentifier(4);
@@ -120,17 +120,26 @@ public class MainActivity extends AppCompatActivity {
                 .withTranslucentStatusBar(false)
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.selecionar).withIcon(GoogleMaterial.Icon.gmd_touch_app).withIdentifier(1),
-                        //new PrimaryDrawerItem().withName(R.string.drawer_item_action_bar_drawer).withIcon(FontAwesome.Icon.faw_home).withBadge("22").withBadgeStyle(new BadgeStyle(Color.RED, Color.RED)).withIdentifier(2).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.add_vertice).withIcon(GoogleMaterial.Icon.gmd_add_circle_outline).withIdentifier(2),
-                        new PrimaryDrawerItem().withName(R.string.add_aresta).withIcon(GoogleMaterial.Icon.gmd_linear_scale).withIdentifier(3),
-                        new PrimaryDrawerItem().withName(R.string.remover).withIcon(GoogleMaterial.Icon.gmd_delete_forever).withIdentifier(4),
-                        new SectionDrawerItem().withName(R.string.drawer_item_section_header),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).withIcon(FontAwesome.Icon.faw_github).withSelectable(false),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_contact).withIcon(GoogleMaterial.Icon.gmd_format_color_fill).withTag("Bullhorn").withSelectable(false),
-                        new DividerDrawerItem(),
-                        new SwitchDrawerItem().withName("Switch").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false),
-                        new ToggleDrawerItem().withName("Toggle").withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false)
+                    new SectionDrawerItem().withName(R.string.drawer_item_ferramentas),
+                    new PrimaryDrawerItem().withName(R.string.selecionar).withIcon(GoogleMaterial.Icon.gmd_touch_app).withIdentifier(1),
+                    //new PrimaryDrawerItem().withName(R.string.drawer_item_action_bar_drawer).withIcon(FontAwesome.Icon.faw_home).withBadge("22").withBadgeStyle(new BadgeStyle(Color.RED, Color.RED)).withIdentifier(2).withSelectable(false),
+                    new PrimaryDrawerItem().withName(R.string.add_vertice).withIcon(GoogleMaterial.Icon.gmd_add_circle_outline).withIdentifier(2),
+                    new PrimaryDrawerItem().withName(R.string.add_aresta).withIcon(GoogleMaterial.Icon.gmd_linear_scale).withIdentifier(3),
+                    new PrimaryDrawerItem().withName(R.string.remover).withIcon(GoogleMaterial.Icon.gmd_delete_forever).withIdentifier(4),
+                    new DividerDrawerItem(),
+                    new SecondaryDrawerItem().withName(R.string.desfazer).withIcon(GoogleMaterial.Icon.gmd_undo).withIdentifier(5),
+                    new SecondaryDrawerItem().withName(R.string.refazer).withIcon(GoogleMaterial.Icon.gmd_redo).withIdentifier(6),
+                    new SectionDrawerItem().withName(R.string.drawer_item_grafos),
+                    new SecondaryDrawerItem().withName(R.string.algoritmos).withIcon(GoogleMaterial.Icon.gmd_slideshow).withIdentifier(7),
+                    new SecondaryDrawerItem().withName(R.string.pre_definidos).withIcon(GoogleMaterial.Icon.gmd_border_outer).withIdentifier(8),
+                    new SectionDrawerItem().withName(R.string.drawer_item_arquivos),
+                    new SecondaryDrawerItem().withName(R.string.abrir).withIcon(GoogleMaterial.Icon.gmd_folder_open).withIdentifier(9),
+                    new SecondaryDrawerItem().withName(R.string.salvar).withIcon(GoogleMaterial.Icon.gmd_save).withIdentifier(10),
+                    new SecondaryDrawerItem().withName(R.string.exportar).withIcon(GoogleMaterial.Icon.gmd_import_export).withIdentifier(11),
+                    new SectionDrawerItem().withName(R.string.drawer_item_configuracoes),
+                    new SecondaryDrawerItem().withName(R.string.opcoes).withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(12),
+                    new SwitchDrawerItem().withName(R.string.tema).withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false)
+
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     int estadoAnterior;
@@ -151,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 .buildView();
 
         //the MiniDrawer is managed by the Drawer and we just get it to hook it into the Crossfader
+        result.setSelection(1);
         miniResult = result.getMiniDrawer();
 
         //get the widths in px for the first and second panel

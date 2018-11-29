@@ -1,5 +1,7 @@
 package com.example.robotica.grafostudio;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -36,6 +38,7 @@ public class ObserverMatrizAdjacencias implements Observer {
     public void atualizar(Subject sujeito) {
         CompositeSubjectGrafoFragment grafoSujeio = (CompositeSubjectGrafoFragment) sujeito;
         mapaVerticesAdjacentes = grafoSujeio.getMapaVerticesAdjacentes();
+        Log.d("Matriz Adjacências", this.toString());
     }
 
 }

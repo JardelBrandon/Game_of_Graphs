@@ -777,20 +777,20 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f0e0024;
         public static final int abc_shareactionprovider_share_with_application = 0x7f0e0025;
         public static final int abc_toolbar_collapse_description = 0x7f0e0026;
-        public static final int define_crossfader = 0x7f0e0041;
-        public static final int library_crossfader_author = 0x7f0e00f1;
-        public static final int library_crossfader_authorWebsite = 0x7f0e00f2;
-        public static final int library_crossfader_isOpenSource = 0x7f0e00f3;
-        public static final int library_crossfader_libraryDescription = 0x7f0e00f4;
-        public static final int library_crossfader_libraryName = 0x7f0e00f5;
-        public static final int library_crossfader_libraryVersion = 0x7f0e00f6;
-        public static final int library_crossfader_libraryWebsite = 0x7f0e00f7;
-        public static final int library_crossfader_licenseId = 0x7f0e00f8;
-        public static final int library_crossfader_owner = 0x7f0e00f9;
-        public static final int library_crossfader_repositoryLink = 0x7f0e00fa;
-        public static final int library_crossfader_year = 0x7f0e00fb;
-        public static final int search_menu_title = 0x7f0e012c;
-        public static final int status_bar_notification_info_overflow = 0x7f0e012e;
+        public static final int define_crossfader = 0x7f0e0043;
+        public static final int library_crossfader_author = 0x7f0e00f9;
+        public static final int library_crossfader_authorWebsite = 0x7f0e00fa;
+        public static final int library_crossfader_isOpenSource = 0x7f0e00fb;
+        public static final int library_crossfader_libraryDescription = 0x7f0e00fc;
+        public static final int library_crossfader_libraryName = 0x7f0e00fd;
+        public static final int library_crossfader_libraryVersion = 0x7f0e00fe;
+        public static final int library_crossfader_libraryWebsite = 0x7f0e00ff;
+        public static final int library_crossfader_licenseId = 0x7f0e0100;
+        public static final int library_crossfader_owner = 0x7f0e0101;
+        public static final int library_crossfader_repositoryLink = 0x7f0e0102;
+        public static final int library_crossfader_year = 0x7f0e0103;
+        public static final int search_menu_title = 0x7f0e0138;
+        public static final int status_bar_notification_info_overflow = 0x7f0e013a;
     }
     public static final class style {
         private style() {}

@@ -40,6 +40,36 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
+        init();
+    }
+
+    private void init() {
+        folhasGrafo = new ArrayList<>();
+        listaVertices = new ArrayList<>();
+        listaArestas = new ArrayList<>();
+        mapaVerticesAdjacentes = new HashMap<>();
+
+        direcionado = false;
+        handler = new Handler();
+        SingletonFacade.setGrafoFragment(this);
+        cadastrarObservador(new ObserverMatrizAdjacencias());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        grafoLayout.removeAllViews();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        for (Vertice vertice : listaVertices) {
+            grafoLayout.addView((View) vertice);
+        }
+        for (Aresta aresta : listaArestas) {
+            grafoLayout.addView((View) aresta);
+        }
     }
 
     @Override
@@ -53,19 +83,10 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        init(view);
-    }
 
-    private void init(final View view) {
-        folhasGrafo = new ArrayList<>();
-        listaVertices = new ArrayList<>();
-        listaArestas = new ArrayList<>();
-        mapaVerticesAdjacentes = new HashMap<>();
         grafoLayout = view.findViewById(R.id.grafoLayout);
         grafoLayout.setOnTouchListener(new ClickTela());
-        direcionado = false;
-        handler = new Handler();
-        SingletonFacade.setGrafoFragment(this);
+
     }
 
     public void criarVertice(final PointF ponto) {
@@ -252,10 +273,5 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         for (Observer observer : OBSERVERS) {
             observer.atualizar(this);
         }
-    }
-
-    @Override
-    public Object clone() {
-        return null;
     }
 }

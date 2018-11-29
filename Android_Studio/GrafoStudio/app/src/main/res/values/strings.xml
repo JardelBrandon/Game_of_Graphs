@@ -15,8 +15,22 @@
     <string name="button_crossfade_drawe">Crossfade</string>
     <string name="button_mini_drawer">MiniDrawer</string>
 
+    <string name="drawer_item_ferramentas">Ferramentas</string>
+    <string name="drawer_item_grafos">Grafos</string>
+    <string name="drawer_item_arquivos">Arquivos</string>
+    <string name="drawer_item_configuracoes">Configurações</string>
+
     <string name="selecionar">Selecionar</string>
     <string name="add_vertice">Criar Vertice</string>
     <string name="add_aresta">Criar Aresta</string>
     <string name="remover">Remover</string>
+    <string name="desfazer">Desfazer</string>
+    <string name="refazer">Refazer</string>
+    <string name="algoritmos">Algoritmos</string>]
+    <string name="pre_definidos">Pré-Definidos</string>
+    <string name="abrir">Abrir</string>
+    <string name="salvar">Salvar</string>
+    <string name="exportar">Exportar</string>
+    <string name="tema">Tema (Escuro/Claro)</string>
+    <string name="opcoes">Opções</string>
 </resources>

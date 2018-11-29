@@ -2,33 +2,30 @@
 <instant-run
     abi="x86"
     api-level="27"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1543441142046"
+    timestamp="1543514099756"
     token="8793451177051337129"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="BINARY_MANIFEST_FILE_CHANGE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="737" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="108" />
+        duration="99" />
     <task
         name="verifier"
-        duration="3" />
+        duration="26" />
 
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
     <artifact
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
@@ -36,36 +33,36 @@
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
         location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
+        location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1543441142046"
+        timestamp="1543505553118"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -106,6 +103,47 @@
         <artifact
             location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1543514099756"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
