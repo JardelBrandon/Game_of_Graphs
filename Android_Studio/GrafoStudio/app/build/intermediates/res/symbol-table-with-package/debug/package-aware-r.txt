@@ -1647,7 +1647,6 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id container
-id container_grafo
 id content
 id contentPanel
 id content_layout
@@ -1925,9 +1924,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_sample_dark_toolbar
-layout content_main
-layout crossfade_drawer
 layout crossfader_base
 layout crossfader_gmail_style
 layout design_bottom_navigation_item

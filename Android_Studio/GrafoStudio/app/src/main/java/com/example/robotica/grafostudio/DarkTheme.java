@@ -27,7 +27,6 @@ public class DarkTheme extends ThemeFactory {
 
         verticeDark.setOnTouchListener(new ClickVertice());
 
-        //verticeParams.setMargins(posicaoX - metadeTamanhoVertice, posicaoY - metadeTamanhoVertice, 0, 0);
         return verticeDark;
     }
 

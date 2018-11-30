@@ -69,14 +69,6 @@ public class SingletonFacade {
         }
     }
 
-    public void moverViewParaBaixo(final View child) {
-        final ViewGroup parent = (ViewGroup)child.getParent();
-        if (null != parent) {
-            parent.removeView(child);
-            parent.addView(child, 0);
-        }
-    }
-
     public static CompositeSubjectGrafoFragment getGrafoFragment() {
         return grafoFragment;
     }

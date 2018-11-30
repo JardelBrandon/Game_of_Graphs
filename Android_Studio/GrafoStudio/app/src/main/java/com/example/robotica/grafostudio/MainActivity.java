@@ -1,7 +1,9 @@
 package com.example.robotica.grafostudio;
 
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.PointF;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,6 +42,9 @@ import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.materialize.util.SystemUtils;
 import com.mikepenz.octicons_typeface_library.Octicons;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
     private static final int PROFILE_SETTING = 1;
     private SingletonFacade facade;
@@ -50,14 +55,25 @@ public class MainActivity extends AppCompatActivity {
     private MiniDrawer miniResult = null;
     private Crossfader crossFader;
 
+    private static final String PREFS_NAME = "prefs";
+    private static final String PREF_DARK_THEME = "dark_theme";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME, true);
 
         facade = SingletonFacade.getInstancia();
-        facade.getGrafoFragment().setThemeFactory(new DarkTheme());
+
+        if(useDarkTheme) {
+            setTheme(R.style.MaterialDrawerTheme);
+            facade.getGrafoFragment().setThemeFactory(new DarkTheme());
+        }
+        else {
+            facade.getGrafoFragment().setThemeFactory(new LightTheme());
+        }
+        setContentView(R.layout.activity_main);
 
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -138,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     new SecondaryDrawerItem().withName(R.string.exportar).withIcon(GoogleMaterial.Icon.gmd_import_export).withIdentifier(11),
                     new SectionDrawerItem().withName(R.string.drawer_item_configuracoes),
                     new SecondaryDrawerItem().withName(R.string.opcoes).withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(12),
-                    new SwitchDrawerItem().withName(R.string.tema).withIcon(Octicons.Icon.oct_tools).withChecked(true).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false)
+                    new SwitchDrawerItem().withName(R.string.tema).withIcon(Octicons.Icon.oct_tools).withChecked(useDarkTheme).withOnCheckedChangeListener(onCheckedChangeListener).withSelectable(false).withIdentifier(13)
 
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -182,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
 
         //define a shadow (this is only for normal LTR layouts if you have a RTL app you need to define the other one
         crossFader.getCrossFadeSlidingPaneLayout().setShadowResourceLeft(R.drawable.material_drawer_shadow_left);
-
     }
 
     private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
@@ -193,8 +208,17 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Log.i("material-drawer", "toggleChecked: " + isChecked);
             }
+            toggleTheme(isChecked);
         }
     };
+
+    private void toggleTheme(boolean darkTheme) {
+        SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+        editor.putBoolean(PREF_DARK_THEME, darkTheme);
+        editor.apply();
+
+        recreate();
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

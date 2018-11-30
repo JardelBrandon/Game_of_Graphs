@@ -2,12 +2,15 @@ package com.example.robotica.grafostudio;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,8 @@ import com.example.robotica.grafostudio.utils.ZoomLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 /**
@@ -31,6 +36,8 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     private static ThemeFactory themeFactory;
     private static boolean direcionado;
     private Handler handler;
+    private static final String PREFS_NAME = "prefs";
+    private static final String PREF_DARK_THEME = "dark_theme";
 
     public CompositeSubjectGrafoFragment() {
         // Required empty public constructor
@@ -75,7 +82,6 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_grafo, container, false);
     }
 
@@ -86,7 +92,6 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
 
         grafoLayout = view.findViewById(R.id.grafoLayout);
         grafoLayout.setOnTouchListener(new ClickTela());
-
     }
 
     public void criarVertice(final PointF ponto) {

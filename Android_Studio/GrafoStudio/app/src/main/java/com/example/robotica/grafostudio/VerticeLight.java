@@ -48,11 +48,11 @@ public class VerticeLight extends AppCompatButton implements Grafo, Vertice {
 
     @Override
     public void selecionar() {
-        this.setBackgroundResource(R.drawable.vertice_dark_pressed);
+        this.setBackgroundResource(R.drawable.vertice_light_pressed);
     }
 
     @Override
     public void deselecionar() {
-        this.setBackgroundResource(R.drawable.vertice_dark);
+        this.setBackgroundResource(R.drawable.vertice_light);
     }
 }
