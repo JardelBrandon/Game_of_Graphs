@@ -2,42 +2,42 @@ package com.example.robotica.grafostudio;
 
 
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.robotica.grafostudio.utils.Ponto;
 import com.example.robotica.grafostudio.utils.ZoomLayout;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import static android.content.Context.MODE_PRIVATE;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Subject {
-    private static ArrayList<Grafo> folhasGrafo;
-    private static ArrayList<Vertice> listaVertices;
-    private static ArrayList<Aresta> listaArestas;
-    private static HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes;
+public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Subject, Serializable {
+    transient private ArrayList<Grafo> folhasGrafo;
+    transient private ArrayList<Vertice> listaVertices;
+    transient private ArrayList<Aresta> listaArestas;
+    transient private HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes;
+    transient private HashMap<Vertice, ArrayList<Aresta>> mapaVerticesArestas;
+    private HashMap<Ponto, ArrayList<Ponto>> mapaPontosArquivos;
     private static ZoomLayout grafoLayout;
     private static Vertice verticeSelecionado;
     private static ThemeFactory themeFactory;
     private static boolean direcionado;
-    private Handler handler;
+    transient private Handler handler;
     private static final String PREFS_NAME = "prefs";
     private static final String PREF_DARK_THEME = "dark_theme";
+    private static final long serialVersionUID = -6298516694275121291L;
 
     public CompositeSubjectGrafoFragment() {
         // Required empty public constructor
@@ -55,6 +55,8 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         listaVertices = new ArrayList<>();
         listaArestas = new ArrayList<>();
         mapaVerticesAdjacentes = new HashMap<>();
+        mapaVerticesArestas = new HashMap<>();
+        mapaPontosArquivos = new HashMap<>();
 
         direcionado = false;
         handler = new Handler();
@@ -94,7 +96,55 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         grafoLayout.setOnTouchListener(new ClickTela());
     }
 
-    public void criarVertice(final PointF ponto) {
+    public void carregarGrafo(final HashMap<Ponto, ArrayList<Ponto>> mapaDePontos) {
+        reiniciarGrafo();
+        for (Ponto pontoVertice : mapaDePontos.keySet()) {
+            criarVertice(pontoVertice);
+        }
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+
+                for (Vertice verticeInicial : listaVertices) {
+                    for (Ponto pontoInicial : mapaDePontos.keySet()) {
+                        if (verticeInicial.getX() == pontoInicial.x - 50 && verticeInicial.getY() == pontoInicial.y - 50) {
+                            for (Vertice verticeFinal : listaVertices) {
+                                for (Ponto pontoFinal : mapaDePontos.get(pontoInicial)) {
+                                    if (verticeFinal.getX() == pontoFinal.x - 50 && verticeFinal.getY() == pontoFinal.y - 50) {
+                                        criarAresta(verticeInicial, verticeFinal);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void reiniciarGrafo() {
+        folhasGrafo = new ArrayList<>();
+        listaVertices = new ArrayList<>();
+        listaArestas = new ArrayList<>();
+        mapaVerticesAdjacentes = new HashMap<>();
+        mapaVerticesArestas = new HashMap<>();
+        mapaPontosArquivos = new HashMap<>();
+        grafoLayout.removeAllViews();
+    }
+
+    public void salvarPontos() {
+        for (Vertice vertice : mapaVerticesAdjacentes.keySet()) {
+            Ponto ponto = new Ponto(vertice.getX(), vertice.getY());
+            mapaPontosArquivos.put(ponto, new ArrayList());
+            for (Vertice verticeAdjacente : mapaVerticesAdjacentes.get(vertice)) {
+                ArrayList pontoAdajacente = mapaPontosArquivos.get(ponto);
+                pontoAdajacente.add(new Ponto(verticeAdjacente.getX(), verticeAdjacente.getY()));
+                mapaPontosArquivos.put(ponto, pontoAdajacente);
+            }
+        }
+    }
+
+    public void criarVertice(final Ponto ponto) {
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -132,21 +182,33 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     private void addVertice(Vertice vertice) {
         listaVertices.add(vertice);
         mapaVerticesAdjacentes.put(vertice, new ArrayList());
+        mapaVerticesArestas.put(vertice, new ArrayList());
+//        mapaPontosArquivos.put(new Ponto(vertice.getX(), vertice.getY()), new ArrayList());
     }
 
     private void addAresta(Aresta aresta) {
         listaArestas.add(aresta);
+
         ArrayList verticeInicialListaAdjacentes = mapaVerticesAdjacentes.get(aresta.getVerticeInicial());
         ArrayList verticeFinalListaAdjacentes = mapaVerticesAdjacentes.get(aresta.getVerticeFinal());
+        ArrayList verticeInicialListaArestas = mapaVerticesArestas.get(aresta.getVerticeInicial());
+        ArrayList verticeFinalListaArestas = mapaVerticesArestas.get(aresta.getVerticeFinal());
         if (direcionado) {
             verticeInicialListaAdjacentes.add(aresta.getVerticeFinal());
+            verticeInicialListaArestas.add(aresta);
             mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
+            mapaVerticesArestas.put(aresta.getVerticeInicial(), verticeInicialListaArestas);
         }
         else {
             verticeInicialListaAdjacentes.add(aresta.getVerticeFinal());
+            verticeInicialListaArestas.add(aresta);
             mapaVerticesAdjacentes.put(aresta.getVerticeInicial(),verticeInicialListaAdjacentes);
+            mapaVerticesArestas.put(aresta.getVerticeInicial(), verticeInicialListaArestas);
+
             verticeFinalListaAdjacentes.add(aresta.getVerticeInicial());
+            verticeFinalListaArestas.add(aresta);
             mapaVerticesAdjacentes.put(aresta.getVerticeFinal(),verticeFinalListaAdjacentes);
+            mapaVerticesArestas.put(aresta.getVerticeFinal(), verticeFinalListaArestas);
         }
     }
 
@@ -184,9 +246,11 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     private void removerAresta(Aresta aresta) {
         if (mapaVerticesAdjacentes.get(aresta.getVerticeInicial()).contains(aresta.getVerticeFinal())) {
             mapaVerticesAdjacentes.get(aresta.getVerticeInicial()).remove(aresta.getVerticeFinal());
+            mapaVerticesArestas.get(aresta.getVerticeInicial()).remove(aresta);
         }
         if (mapaVerticesAdjacentes.get(aresta.getVerticeFinal()).contains(aresta.getVerticeInicial())) {
             mapaVerticesAdjacentes.get(aresta.getVerticeFinal()).remove(aresta.getVerticeInicial());
+            mapaVerticesArestas.get(aresta.getVerticeFinal()).remove(aresta);
         }
         listaArestas.remove(aresta);
     }
@@ -215,7 +279,7 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         this.folhasGrafo = folhasGrafo;
     }
 
-    public static ArrayList<Vertice> getListaVertices() {
+    public ArrayList<Vertice> getListaVertices() {
         return listaVertices;
     }
 
@@ -253,6 +317,14 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
 
     public void setMapaVerticesAdjacentes(HashMap<Vertice, ArrayList<Vertice>> mapaVerticesAdjacentes) {
         this.mapaVerticesAdjacentes = mapaVerticesAdjacentes;
+    }
+
+    public HashMap<Ponto, ArrayList<Ponto>> getMapaPontosArquivos() {
+        return mapaPontosArquivos;
+    }
+
+    public void setMapaPontosArquivos(HashMap<Ponto, ArrayList<Ponto>> mapaPontosArquivos) {
+        this.mapaPontosArquivos = mapaPontosArquivos;
     }
 
     public static ThemeFactory getThemeFactory() {

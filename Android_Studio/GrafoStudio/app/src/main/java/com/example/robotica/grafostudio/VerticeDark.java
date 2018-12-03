@@ -3,6 +3,8 @@ package com.example.robotica.grafostudio;
 import android.content.Context;
 import android.support.v7.widget.AppCompatButton;
 
+import java.io.Serializable;
+
 public class VerticeDark extends AppCompatButton implements Grafo, Vertice {
     private String nome;
     private boolean visitado;
@@ -35,7 +37,6 @@ public class VerticeDark extends AppCompatButton implements Grafo, Vertice {
     public int getMetadeTamanhoVertice() {
         return this.tamanhoVertice / 2;
     }
-
 
     public VerticeDark(Context context) {
         super(context);

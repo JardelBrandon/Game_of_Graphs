@@ -5,25 +5,28 @@ import android.graphics.PointF;
 import android.view.ViewGroup;
 
 import com.example.robotica.grafostudio.utils.Calculos;
+import com.example.robotica.grafostudio.utils.Ponto;
 
 public class DarkTheme extends ThemeFactory {
     ViewGroup.LayoutParams verticeParams;
     ViewGroup.LayoutParams arestaParams;
     private Calculos calculos;
+    private SingletonFacade facade;
 
     public DarkTheme() {
         calculos = new Calculos();
+        facade = SingletonFacade.getInstancia();
     }
 
     @Override
-    public Vertice criarVertice(Context contexto, PointF ponto) {
+    public Vertice criarVertice(Context contexto, Ponto ponto) {
         final VerticeDark verticeDark = new VerticeDark(contexto);
         int tamanhoVertice = verticeDark.getTamanhoVertice();
         verticeParams = new ViewGroup.LayoutParams(tamanhoVertice, tamanhoVertice);
         verticeDark.setLayoutParams(verticeParams);
         verticeDark.setX(ponto.x - verticeDark.getMetadeTamanhoVertice());
         verticeDark.setY(ponto.y - verticeDark.getMetadeTamanhoVertice());
-        verticeDark.setText(String.valueOf(CompositeSubjectGrafoFragment.getListaVertices().size()));
+        verticeDark.setText(String.valueOf(facade.getQuantidadeDeVertices()));
 
         verticeDark.setOnTouchListener(new ClickVertice());
 
@@ -38,8 +41,8 @@ public class DarkTheme extends ThemeFactory {
 
         arestaDark.setVerticeInicial(verticeInicial);
         arestaDark.setVerticeFinal(verticeFinal);
-        arestaDark.setPointA(calculos.getPontoInterseccaoAresta(arestaDark).get(0));
-        arestaDark.setPointB(calculos.getPontoInterseccaoAresta(arestaDark).get(1));
+        arestaDark.setPontoInicial(calculos.getPontoInterseccaoAresta(arestaDark).get(0));
+        arestaDark.setPontoFinal(calculos.getPontoInterseccaoAresta(arestaDark).get(1));
 
         return arestaDark;
     }

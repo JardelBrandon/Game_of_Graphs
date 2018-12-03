@@ -1,9 +1,9 @@
 package com.example.robotica.grafostudio;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.graphics.PointF;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,9 +17,9 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.example.robotica.grafostudio.utils.CrossfadeWrapper;
+import com.example.robotica.grafostudio.utils.Ponto;
 import com.mikepenz.crossfader.Crossfader;
 import com.mikepenz.crossfader.util.UIUtils;
-import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -35,19 +35,25 @@ import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
-import com.mikepenz.materialdrawer.model.ToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.materialize.util.SystemUtils;
 import com.mikepenz.octicons_typeface_library.Octicons;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PROFILE_SETTING = 1;
     private SingletonFacade facade;
+    private boolean salvarGrafo;
+    File file;
     
     //save our header or result
     private AccountHeader headerResult = null;
@@ -57,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "prefs";
     private static final String PREF_DARK_THEME = "dark_theme";
+    private static final String FILE_NAME = "grafo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +72,19 @@ public class MainActivity extends AppCompatActivity {
         boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME, true);
 
         facade = SingletonFacade.getInstancia();
+        salvarGrafo = false;
+        file = getFileStreamPath(FILE_NAME);
+
+        CompositeSubjectGrafoFragment grafo = lerGrafoArquivo();
+        if (grafo != null) {
+            if (facade.getGrafoFragment() != null) {
+                Log.d("Arquivos", "Carregou");
+                if (crossFader != null && crossFader.isCrossFaded()) {
+                    crossFader.crossFade();
+                }
+                facade.getGrafoFragment().carregarGrafo(grafo.getMapaPontosArquivos());
+            }
+        }
 
         if(useDarkTheme) {
             setTheme(R.style.MaterialDrawerTheme);
@@ -164,6 +184,9 @@ public class MainActivity extends AppCompatActivity {
                         if (drawerItem instanceof Nameable) {
                             Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
                         }
+                        if (drawerItem.getIdentifier() == 8) {
+                            Toast.makeText(getApplicationContext(), "Carregar pre-definidos", Toast.LENGTH_LONG).show();
+                        }
                         int estadoAtual = (int) drawerItem.getIdentifier();
                         facade.setEstadoFerramentas(estadoAtual);
 
@@ -217,6 +240,8 @@ public class MainActivity extends AppCompatActivity {
         editor.putBoolean(PREF_DARK_THEME, darkTheme);
         editor.apply();
 
+        salvarGrafo = true;
+        facade.getGrafoFragment().salvarPontos();
         recreate();
     }
 
@@ -263,6 +288,54 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (salvarGrafo) {
+            salvarGrafoArquivo(facade.getGrafoFragment());
+        }
+        else {
+            salvarGrafoArquivo(null);
+        }
+    }
+
+    public CompositeSubjectGrafoFragment lerGrafoArquivo() {
+        FileInputStream fis = null;
+        CompositeSubjectGrafoFragment grafo = null;
+        try {
+            fis = new FileInputStream(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try (ObjectInputStream ois = new ObjectInputStream(fis)) {
+            grafo = (CompositeSubjectGrafoFragment) ois.readObject();
+            fis.close();
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        finally {
+            return grafo;
+        }
+    }
+
+    public void salvarGrafoArquivo(CompositeSubjectGrafoFragment grafo) {
+        FileOutputStream fos = null;
+        try {
+            fos = openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(grafo);
+            fos.close();
+            oos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

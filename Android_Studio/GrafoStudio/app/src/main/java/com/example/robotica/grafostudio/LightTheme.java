@@ -5,25 +5,28 @@ import android.graphics.PointF;
 import android.view.ViewGroup;
 
 import com.example.robotica.grafostudio.utils.Calculos;
+import com.example.robotica.grafostudio.utils.Ponto;
 
 public class LightTheme extends ThemeFactory {
     ViewGroup.LayoutParams verticeParams;
     ViewGroup.LayoutParams arestaParams;
     private Calculos calculos;
+    private SingletonFacade facade;
 
     public LightTheme() {
         this.calculos = new Calculos();
+        facade = SingletonFacade.getInstancia();
     }
 
     @Override
-    public Vertice criarVertice(Context contexto, PointF ponto) {
+    public Vertice criarVertice(Context contexto, Ponto ponto) {
         final VerticeLight verticeLight = new VerticeLight(contexto);
         int tamanhoVertice = verticeLight.getTamanhoVertice();
         verticeParams = new ViewGroup.LayoutParams(tamanhoVertice, tamanhoVertice);
         verticeLight.setLayoutParams(verticeParams);
         verticeLight.setX(ponto.x - verticeLight.getMetadeTamanhoVertice());
         verticeLight.setY(ponto.y - verticeLight.getMetadeTamanhoVertice());
-        verticeLight.setText(String.valueOf(CompositeSubjectGrafoFragment.getListaVertices().size()));
+        verticeLight.setText(String.valueOf(facade.getQuantidadeDeVertices()));
 
         verticeLight.setOnTouchListener(new ClickVertice());
 
@@ -38,8 +41,8 @@ public class LightTheme extends ThemeFactory {
 
         arestaLight.setVerticeInicial(verticeInicial);
         arestaLight.setVerticeFinal(verticeFinal);
-        arestaLight.setPointA(calculos.getPontoInterseccaoAresta(arestaLight).get(0));
-        arestaLight.setPointB(calculos.getPontoInterseccaoAresta(arestaLight).get(1));
+        arestaLight.setPontoInicial(calculos.getPontoInterseccaoAresta(arestaLight).get(0));
+        arestaLight.setPontoFinal(calculos.getPontoInterseccaoAresta(arestaLight).get(1));
 
         return arestaLight;
     }

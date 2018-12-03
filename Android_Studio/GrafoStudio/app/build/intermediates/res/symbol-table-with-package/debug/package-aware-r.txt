@@ -1458,6 +1458,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen tamanho_text_grid
 dimen tamanho_vertice
 dimen tool_bar_top_padding
 dimen tooltip_corner_radius
@@ -1554,6 +1555,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1561,6 +1563,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable header
+drawable ic_border_outer_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1924,6 +1927,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_pre_definidos
 layout crossfader_base
 layout crossfader_gmail_style
 layout design_bottom_navigation_item
@@ -1980,6 +1984,7 @@ menu embedded
 menu example_menu
 menu fragment_menu
 menu main
+mipmap bg
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -2084,6 +2089,7 @@ string exportar
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fastadapter_lib_version
+string grid_layout_pre_definidos
 string hide_bottom_view_on_scroll_behavior
 string library_AndroidIconics_author
 string library_AndroidIconics_authorWebsite

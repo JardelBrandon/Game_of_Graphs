@@ -6,11 +6,12 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.robotica.grafostudio.utils.Calculos;
+import com.example.robotica.grafostudio.utils.Ponto;
 
 public class ClickVertice implements View.OnTouchListener {
     float dX, dY;
-    private PointF pontoCentralVertice;
-    private PointF pontoToqueNaTela;
+    private Ponto pontoCentralVertice;
+    private Ponto pontoToqueNaTela;
     private boolean mover;
     private SingletonFacade facade;
     private Calculos calculos;
@@ -30,14 +31,14 @@ public class ClickVertice implements View.OnTouchListener {
         else {
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
-                    pontoCentralVertice = new PointF(v.getX() + vertice.getMetadeTamanhoVertice(), v.getY() + vertice.getMetadeTamanhoVertice());
+                    pontoCentralVertice = new Ponto(v.getX() + vertice.getMetadeTamanhoVertice(), v.getY() + vertice.getMetadeTamanhoVertice());
                     dX = v.getX() - (event.getRawX()) / CompositeSubjectGrafoFragment.getGrafoLayout().getScaleX();
                     dY = v.getY() - (event.getRawY()) / CompositeSubjectGrafoFragment.getGrafoLayout().getScaleY();
                     mover = false;
                     break;
 
                 case MotionEvent.ACTION_MOVE:
-                    pontoToqueNaTela = new PointF(event.getX() + v.getX(), event.getY() + v.getY());
+                    pontoToqueNaTela = new Ponto(event.getX() + v.getX(), event.getY() + v.getY());
                     if (!calculos.pontoDentroDoCirculo(pontoToqueNaTela, pontoCentralVertice, v.getWidth(), v.getHeight())) {
                         float x = dX + (event.getRawX() / CompositeSubjectGrafoFragment.getGrafoLayout().getScaleX());
                         float y = dY + (event.getRawY() / CompositeSubjectGrafoFragment.getGrafoLayout().getScaleY());
@@ -94,14 +95,14 @@ public class ClickVertice implements View.OnTouchListener {
             if (aresta.getVerticeInicial() == vertice) {
                 arestaParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
                 aresta.setLayoutParams(arestaParams);
-                aresta.setPointA(calculos.getPontoInterseccaoAresta(aresta).get(0));
-                aresta.setPointB(calculos.getPontoInterseccaoAresta(aresta).get(1));
+                aresta.setPontoInicial(calculos.getPontoInterseccaoAresta(aresta).get(0));
+                aresta.setPontoFinal(calculos.getPontoInterseccaoAresta(aresta).get(1));
             }
             else if(aresta.getVerticeFinal() == vertice) {
                 arestaParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
                 aresta.setLayoutParams(arestaParams);
-                aresta.setPointA(calculos.getPontoInterseccaoAresta(aresta).get(1));
-                aresta.setPointB(calculos.getPontoInterseccaoAresta(aresta).get(0));
+                aresta.setPontoInicial(calculos.getPontoInterseccaoAresta(aresta).get(1));
+                aresta.setPontoFinal(calculos.getPontoInterseccaoAresta(aresta).get(0));
             }
         }
     }

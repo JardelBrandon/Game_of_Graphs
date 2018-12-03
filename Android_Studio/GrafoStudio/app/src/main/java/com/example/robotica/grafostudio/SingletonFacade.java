@@ -3,6 +3,8 @@ package com.example.robotica.grafostudio;
 import android.graphics.PointF;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.robotica.grafostudio.utils.Ponto;
 import com.example.robotica.grafostudio.utils.ZoomLayout;
 
 public class SingletonFacade {
@@ -25,7 +27,7 @@ public class SingletonFacade {
         return instancia;
     }
 
-    public void criarVertice(PointF ponto) {
+    public void criarVertice(Ponto ponto) {
         grafoFragment.criarVertice(ponto);
     }
 
@@ -71,6 +73,10 @@ public class SingletonFacade {
 
     public static CompositeSubjectGrafoFragment getGrafoFragment() {
         return grafoFragment;
+    }
+
+    public int getQuantidadeDeVertices() {
+        return grafoFragment.getListaVertices().size();
     }
 
     public static void setGrafoFragment(CompositeSubjectGrafoFragment grafoFragment) {

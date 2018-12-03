@@ -11,4 +11,5 @@
     <dimen name="borda_vertice">8dp</dimen>
     <dimen name="borda_aresta">10</dimen>
     <dimen name="monitoria_margem_inferior">60dp</dimen>
+    <dimen name="tamanho_text_grid">34sp</dimen>
 </resources>

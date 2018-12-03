@@ -1,4 +1,6 @@
 package com.example.robotica.grafostudio;
 
-public interface Grafo {
+import java.io.Serializable;
+
+public interface Grafo extends Serializable {
 }

@@ -8,12 +8,13 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.robotica.grafostudio.utils.Calculos;
+import com.example.robotica.grafostudio.utils.Ponto;
 
 import java.util.ArrayList;
 
 public class ClickTela implements View.OnTouchListener {
-    private PointF pontoCentral;
-    private PointF pontoCentralFinal;
+    private Ponto pontoCentral;
+    private Ponto pontoCentralFinal;
     private SingletonFacade facade;
     private Calculos calculos;
 
@@ -28,15 +29,15 @@ public class ClickTela implements View.OnTouchListener {
         if (facade.getEstadoFerramentas() == 2) {
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
-                    pontoCentral = new PointF(event.getRawX(), event.getRawY());
+                    pontoCentral = new Ponto(event.getRawX(), event.getRawY());
                     facade.deselecionarVertice();
                     break;
 
 
                 case MotionEvent.ACTION_UP:
-                    pontoCentralFinal = new PointF(event.getRawX(), event.getRawY());
+                    pontoCentralFinal = new Ponto(event.getRawX(), event.getRawY());
                     if (calculos.pontoDentroDoCirculo(pontoCentralFinal, pontoCentral, R.dimen.tamanho_vertice, R.dimen.tamanho_vertice)) {
-                        PointF pontoCriarVertice = new PointF(event.getX(), event.getY());
+                        Ponto pontoCriarVertice = new Ponto(event.getX(), event.getY());
                         facade.criarVertice(pontoCriarVertice);
                     }
                     break;
@@ -44,7 +45,7 @@ public class ClickTela implements View.OnTouchListener {
         } else if (facade.getEstadoFerramentas() == 4) {
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
-                    pontoCentral = new PointF(event.getX(), event.getY());
+                    pontoCentral = new Ponto(event.getX(), event.getY());
                     new Handler().post(new Runnable() {
                         @Override
                         public void run() {
@@ -57,7 +58,7 @@ public class ClickTela implements View.OnTouchListener {
         return false;
     }
 
-    private void excluirArestas(PointF pontoToqueNaTela) {
+    private void excluirArestas(Ponto pontoToqueNaTela) {
         ArrayList<Aresta> excluirArestas = new ArrayList<>();
 
         for (Vertice vertice : facade.getGrafoFragment().getMapaVerticesAdjacentes().keySet()) {
@@ -68,7 +69,7 @@ public class ClickTela implements View.OnTouchListener {
                 if (rect.contains(pontoToqueNaTela.x, pontoToqueNaTela.y)) {
                     for (Aresta aresta : facade.getGrafoFragment().getListaArestas()) {
                         if (aresta.getVerticeInicial() == vertice && aresta.getVerticeFinal() == verticeAdjacente) {
-                            if (calculos.pontoToqueSobreAresta(aresta.getPointA(), aresta.getPointB(), pontoCentral)) {
+                            if (calculos.pontoToqueSobreAresta(aresta.getPontoInicial(), aresta.getPontoFinal(), pontoCentral)) {
                                 excluirArestas.add(aresta);
                             }
                         }

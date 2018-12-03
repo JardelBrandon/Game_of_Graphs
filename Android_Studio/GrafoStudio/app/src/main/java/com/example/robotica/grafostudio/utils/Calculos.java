@@ -31,7 +31,7 @@ public class Calculos {
         return ladosDoRetangulo;
     }
 
-    public boolean pontoToqueSobreAresta(PointF pontoInicial, PointF pontoFinal, PointF pontoTeste) {
+    public boolean pontoToqueSobreAresta(Ponto pontoInicial, Ponto pontoFinal, Ponto pontoTeste) {
         int larguraAresta = 15;
         if (Math.abs(pontoInicial.x - pontoFinal.x) < 45) {
             return (pontoTeste.x < (pontoFinal.x + larguraAresta)) && (pontoTeste.x > (pontoFinal.x - larguraAresta));
@@ -42,26 +42,26 @@ public class Calculos {
         }
     }
 
-    public boolean pontoDentroDoCirculo(PointF test, PointF center, float width, float height) {
+    public boolean pontoDentroDoCirculo(Ponto test, Ponto center, float width, float height) {
         float dx = test.x - center.x;
         float dy = test.y - center.y;
         return ((dx * dx) / (width * width) + (dy * dy) / (height * height)) * 4 <= 1;
     }
 
 
-    public List<PointF> getPontoInterseccaoAresta(Aresta aresta) {
+    public List<Ponto> getPontoInterseccaoAresta(Aresta aresta) {
         Vertice verticeInicial = aresta.getVerticeInicial();
         Vertice verticeFinal = aresta.getVerticeFinal();
         int metadeTamanhoVerticeA = verticeInicial.getMetadeTamanhoVertice();
         int metadeTamanhoVerticeB = verticeInicial.getMetadeTamanhoVertice();
-        PointF pointCentroA = new PointF(verticeInicial.getX() + metadeTamanhoVerticeA, verticeInicial.getY() + metadeTamanhoVerticeA);
-        PointF pointCentroB = new PointF(verticeFinal.getX() + metadeTamanhoVerticeB, verticeFinal.getY() + metadeTamanhoVerticeB);
+        Ponto pointCentroA = new Ponto(verticeInicial.getX() + metadeTamanhoVerticeA, verticeInicial.getY() + metadeTamanhoVerticeA);
+        Ponto pointCentroB = new Ponto(verticeFinal.getX() + metadeTamanhoVerticeB, verticeFinal.getY() + metadeTamanhoVerticeB);
         List interseccaoA = getPontoInterseccaoVertice(pointCentroA, pointCentroB, pointCentroA, metadeTamanhoVerticeA);
         List interseccaoB = getPontoInterseccaoVertice(pointCentroA, pointCentroB, pointCentroB, metadeTamanhoVerticeB);
-        return Arrays.asList((PointF) interseccaoA.get(1), (PointF) interseccaoB.get(0));
+        return Arrays.asList((Ponto) interseccaoA.get(1), (Ponto) interseccaoB.get(0));
     }
 
-    private List<PointF> getPontoInterseccaoVertice(PointF pointA, PointF pointB, PointF center, float radius) {
+    private List<Ponto> getPontoInterseccaoVertice(Ponto pointA, Ponto pointB, Ponto center, float radius) {
         float baX = pointB.x - pointA.x;
         float baY = pointB.y - pointA.y;
         float caX = center.x - pointA.x;
@@ -84,11 +84,11 @@ public class Calculos {
         float abScalingFactor1 = -pBy2 + tmpSqrt;
         float abScalingFactor2 = -pBy2 - tmpSqrt;
 
-        PointF p1 = new PointF(pointA.x - baX * abScalingFactor1, pointA.y - baY * abScalingFactor1);
+        Ponto p1 = new Ponto(pointA.x - baX * abScalingFactor1, pointA.y - baY * abScalingFactor1);
         if (disc == 0) { // abScalingFactor1 == abScalingFactor2
             return Collections.singletonList(p1);
         }
-        PointF p2 = new PointF(pointA.x - baX * abScalingFactor2, pointA.y - baY * abScalingFactor2);
+        Ponto p2 = new Ponto(pointA.x - baX * abScalingFactor2, pointA.y - baY * abScalingFactor2);
         return Arrays.asList(p1, p2);
     }
 
