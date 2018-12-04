@@ -18,7 +18,6 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.example.robotica.grafostudio.utils.CrossfadeWrapper;
-import com.example.robotica.grafostudio.utils.Ponto;
 import com.mikepenz.crossfader.Crossfader;
 import com.mikepenz.crossfader.util.UIUtils;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
@@ -186,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
                         }
                         if (drawerItem.getIdentifier() == 8) {
-                            Intent intentGrafosPreDefinidos = new Intent(getApplicationContext(), PreDefinidosActivity.class);
+                            Intent intentGrafosPreDefinidos = new Intent(getApplicationContext(), MenuPreDefinidosActivity.class);
                             startActivity(intentGrafosPreDefinidos);
                         }
                         int estadoAtual = (int) drawerItem.getIdentifier();

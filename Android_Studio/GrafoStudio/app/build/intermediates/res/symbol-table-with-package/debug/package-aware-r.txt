@@ -1242,6 +1242,7 @@ dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen borda_aresta
+dimen borda_sliding_panel
 dimen borda_vertice
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1315,6 +1316,8 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen margem_ic_parar
+dimen margem_ic_registro
 dimen material_drawer_account_header_compact
 dimen material_drawer_account_header_dropdown
 dimen material_drawer_account_header_dropdown_margin_bottom
@@ -1563,12 +1566,19 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable grafo_sample
 drawable header
+drawable ic_assignment_black
 drawable ic_border_outer_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_pause_black
+drawable ic_play_circle_filled_black
+drawable ic_play_circle_outline_black
+drawable ic_skip_next_black
+drawable ic_skip_previous_black
+drawable ic_stop_black
 drawable material_drawer_badge
 drawable material_drawer_circle_mask
 drawable material_drawer_shadow_bottom
@@ -1598,6 +1608,7 @@ drawable profile4
 drawable profile5
 drawable profile6
 drawable romania
+drawable romania2
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable vertice_dark
@@ -1608,6 +1619,7 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id MenuList
 id SHIFT
 id SYM
 id action_bar
@@ -1636,10 +1648,12 @@ id all
 id always
 id async
 id auto
+id avancar
 id barrier
 id beginning
 id blocking
 id bottom
+id bottom_toolbar
 id buttonPanel
 id card_view
 id center
@@ -1651,6 +1665,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comecar_pausar
 id container
 id content
 id contentPanel
@@ -1783,6 +1798,7 @@ id packed
 id pane
 id panel
 id parallax
+id parar
 id parent
 id parentPanel
 id parent_matrix
@@ -1791,7 +1807,10 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id recycler_view
+id recycler_view_algoritmos
+id recycler_view_pre_definidos
+id registro
+id retroceder
 id right
 id right_icon
 id right_side
@@ -1932,8 +1951,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_algoritmos
 layout activity_main
-layout activity_pre_definidos
+layout activity_menu_algoritmos
+layout activity_menu_pre_definidos
 layout card_layout
 layout crossfader_base
 layout crossfader_gmail_style

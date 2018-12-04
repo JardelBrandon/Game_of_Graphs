@@ -20,8 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PreDefinidosActivity"
-            android:theme="@style/MaterialDrawerTheme.Light">
+            android:name=".MenuPreDefinidosActivity"
+            android:theme="@style/MaterialDrawerTheme.Light" />
+        <activity
+            android:name=".MenuAlgoritmosActivity"
+            android:theme="@style/MaterialDrawerTheme.Light"></activity>
+        <activity
+            android:name=".AlgoritmosActivity"
+            android:theme="@style/MaterialDrawerTheme.Light"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

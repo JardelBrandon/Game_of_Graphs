@@ -12,4 +12,7 @@
     <dimen name="borda_aresta">10</dimen>
     <dimen name="monitoria_margem_inferior">60dp</dimen>
     <dimen name="tamanho_text_grid">34sp</dimen>
+    <dimen name="margem_ic_registro">25dp</dimen>
+    <dimen name="margem_ic_parar">10dp</dimen>
+    <dimen name="borda_sliding_panel">17dp</dimen>
 </resources>
