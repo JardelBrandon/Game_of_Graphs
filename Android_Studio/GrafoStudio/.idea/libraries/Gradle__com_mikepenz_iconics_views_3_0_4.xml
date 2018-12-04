@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.mikepenz:iconics-views-3.0.4">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iconics-views-3.0.4.aar/144f97f9a42a6184a27dc28a095fa8cf/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iconics-views-3.0.4.aar/144f97f9a42a6184a27dc28a095fa8cf/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iconics-views-3.0.4.aar/c50fedf42aa85e3bbb83b5c1de558d46/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iconics-views-3.0.4.aar/c50fedf42aa85e3bbb83b5c1de558d46/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

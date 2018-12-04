@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.mikepenz:entypo-typeface-1.0.0.4">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/entypo-typeface-1.0.0.4.aar/400f1cdadab39ba92b951f48c5e2cb8d/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/entypo-typeface-1.0.0.4.aar/400f1cdadab39ba92b951f48c5e2cb8d/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/entypo-typeface-1.0.0.4.aar/213ffd2fcf40222cb929586fd16cf449/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/entypo-typeface-1.0.0.4.aar/213ffd2fcf40222cb929586fd16cf449/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

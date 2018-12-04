@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/robotica/Documentos/Github/Grafos/Android_Studio/GrafoStudio/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\jarde\\Documents\\GitHub\\Grafos\\Android_Studio\\GrafoStudio\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/6522c17b1f755cda6548fc0f4bbd00bc/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\jarde\\.gradle\\caches\\transforms-1\\files-1.1\\materialize-1.1.2.aar\\ff2d54e9e152d55f5920e33978eeb819\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1237",
+                        "endColumns": "54",
+                        "endOffsets": "1287"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jarde\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc02.aar\\1b6cc2582dd9c49980b54d0fabb60f32\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +31,7 @@
                     }
                 },
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/design-28.0.0-rc01.aar/0352cc93ada18cd98cd65f10da13f6b8/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\jarde\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0-rc01.aar\\014a398fbc24b397a9f43d92e55b6d3a\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -33,24 +50,7 @@
                     }
                 },
                 {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/4db6358b94354b23ad9f29576f8249a7/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "54",
-                        "endOffsets": "105"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1237",
-                        "endColumns": "54",
-                        "endOffsets": "1287"
-                    }
-                },
-                {
-                    "source": "/home/robotica/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/91c5fb9a88d32af834b4f9a4f560ce52/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\jarde\\.gradle\\caches\\transforms-1\\files-1.1\\materialdrawer-6.0.9.aar\\d86a20d2908c85d98a3361392591fdb7\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

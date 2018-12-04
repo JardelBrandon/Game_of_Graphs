@@ -1,6 +1,7 @@
 package com.example.robotica.grafostudio;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -185,7 +186,8 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
                         }
                         if (drawerItem.getIdentifier() == 8) {
-                            Toast.makeText(getApplicationContext(), "Carregar pre-definidos", Toast.LENGTH_LONG).show();
+                            Intent intentGrafosPreDefinidos = new Intent(getApplicationContext(), PreDefinidosActivity.class);
+                            startActivity(intentGrafosPreDefinidos);
                         }
                         int estadoAtual = (int) drawerItem.getIdentifier();
                         facade.setEstadoFerramentas(estadoAtual);

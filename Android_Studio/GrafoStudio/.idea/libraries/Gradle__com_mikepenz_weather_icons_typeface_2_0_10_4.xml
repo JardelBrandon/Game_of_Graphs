@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.mikepenz:weather-icons-typeface-2.0.10.4">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/weather-icons-typeface-2.0.10.4.aar/a76745cbc23ddcacc948c48e4e9725c3/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/weather-icons-typeface-2.0.10.4.aar/a76745cbc23ddcacc948c48e4e9725c3/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/weather-icons-typeface-2.0.10.4.aar/cb7f4cd6a3ca84b0ecbae8fda78d6483/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/weather-icons-typeface-2.0.10.4.aar/cb7f4cd6a3ca84b0ecbae8fda78d6483/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
