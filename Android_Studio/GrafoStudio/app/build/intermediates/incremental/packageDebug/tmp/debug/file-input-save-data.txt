@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Dec 04 14:56:32 GFT 2018
+#Wed Dec 05 09:05:41 GFT 2018
 4.path=fonts/pixeden-7-stroke-font-v1.2.0.ttf
 13.baseType=DIRECTORY
 8.set=ASSET

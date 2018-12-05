@@ -24,9 +24,9 @@ public class AlgoritmosRecyclerAdapter extends RecyclerView.Adapter<AlgoritmosRe
                                 "BPS",
                                 "A star"};
 
-    private int[] images = { R.drawable.grafo_sample,
-                            R.drawable.grafo_sample,
-                            R.drawable.grafo_sample};
+    private int[] images = { R.drawable.ic_play_circle_outline_black,
+                            R.drawable.ic_play_circle_outline_black,
+                            R.drawable.ic_play_circle_outline_black};
 
     public AlgoritmosRecyclerAdapter(Context context) {
         this.contexto = context;
@@ -52,6 +52,8 @@ public class AlgoritmosRecyclerAdapter extends RecyclerView.Adapter<AlgoritmosRe
                     Snackbar.make(v, "Click detected on item " + position,
                             Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+
+                    facade.setAlgoritmo(position);
 
                     Intent intentAlgoritmos = new Intent(contexto, AlgoritmosActivity.class);
                     contexto.startActivity(intentAlgoritmos);

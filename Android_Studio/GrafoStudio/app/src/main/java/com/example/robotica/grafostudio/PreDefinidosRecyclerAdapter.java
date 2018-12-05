@@ -18,7 +18,7 @@ public class PreDefinidosRecyclerAdapter extends RecyclerView.Adapter<PreDefinid
 
     private String[] details = {"04/12/2018"};
 
-    private int[] images = { R.drawable.grafo_sample};
+    private int[] images = { R.drawable.grafo};
 
     private Context contexto;
 

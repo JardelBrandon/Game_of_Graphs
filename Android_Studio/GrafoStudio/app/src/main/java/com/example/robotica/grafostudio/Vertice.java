@@ -8,4 +8,6 @@ public interface Vertice {
     public float getX();
     public float getY();
     public CharSequence getText();
+    public boolean isVisitado();
+    public void setVisitado(boolean visitado);
 }

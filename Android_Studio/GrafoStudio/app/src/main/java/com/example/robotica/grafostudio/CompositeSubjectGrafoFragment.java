@@ -2,7 +2,6 @@ package com.example.robotica.grafostudio;
 
 
 import android.annotation.SuppressLint;
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -60,6 +59,8 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
 
         direcionado = false;
         handler = new Handler();
+
+
         SingletonFacade.setGrafoFragment(this);
         cadastrarObservador(new ObserverMatrizAdjacencias());
     }
@@ -101,16 +102,28 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         for (Ponto pontoVertice : mapaDePontos.keySet()) {
             criarVertice(pontoVertice);
         }
+        
         handler.post(new Runnable() {
             @Override
             public void run() {
-
+                int tamanhoVertice = 0;
+                if (SingletonFacade.getGrafoLayout().getId() == R.id.grafo_layout_romenia) {
+                    if (listaVertices.size() > 0) {
+                        tamanhoVertice = listaVertices.get(0).getTamanhoVertice() / 2;
+                    }
+                }
+                else {
+                    if (listaVertices.size() > 0) {
+                        tamanhoVertice = listaVertices.get(0).getTamanhoVertice();
+                    }
+                }
                 for (Vertice verticeInicial : listaVertices) {
                     for (Ponto pontoInicial : mapaDePontos.keySet()) {
-                        if (verticeInicial.getX() == pontoInicial.x - 50 && verticeInicial.getY() == pontoInicial.y - 50) {
+
+                        if (verticeInicial.getX() == pontoInicial.x - tamanhoVertice && verticeInicial.getY() == pontoInicial.y - tamanhoVertice) {
                             for (Vertice verticeFinal : listaVertices) {
                                 for (Ponto pontoFinal : mapaDePontos.get(pontoInicial)) {
-                                    if (verticeFinal.getX() == pontoFinal.x - 50 && verticeFinal.getY() == pontoFinal.y - 50) {
+                                    if (verticeFinal.getX() == pontoFinal.x - tamanhoVertice && verticeFinal.getY() == pontoFinal.y - tamanhoVertice) {
                                         criarAresta(verticeInicial, verticeFinal);
                                     }
                                 }
@@ -350,5 +363,82 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         for (Observer observer : OBSERVERS) {
             observer.atualizar(this);
         }
+    }
+
+    public void rodarAlgoritmos(int algoritmo, Vertice verticeInicial, Vertice verticeFinal) {
+        for (Vertice  vertice : mapaVerticesAdjacentes.keySet()) {
+            vertice.setVisitado(false);
+        }
+        if (algoritmo == 0) {
+            ArrayList<Vertice> verticesCaminho = buscaEmProfundidade(verticeInicial, verticeFinal, new ArrayList<Vertice>());
+            for (Vertice vertice : verticesCaminho) {
+                vertice.selecionar();
+            }
+        }
+        else if (algoritmo == 1) {
+            buscaEmLargura(verticeInicial, verticeFinal);
+        }
+        else if (algoritmo == 2) {
+            buscaAEstrela(verticeInicial, verticeFinal);
+        }
+    }
+
+    private ArrayList<Vertice> buscaEmProfundidade(Vertice verticeInicial, Vertice verticeFinal, ArrayList<Vertice> caminho) {
+        caminho.add(verticeInicial);
+        if (verticeInicial == verticeFinal) {
+            return caminho;
+        }
+        for (Vertice  vertice : mapaVerticesAdjacentes.get(verticeInicial)) {
+            if (!caminho.contains(vertice)) {
+                ArrayList<Vertice> verticesCaminho = buscaEmProfundidade(vertice, verticeFinal, caminho);
+                if (verticesCaminho != null) {
+                    return verticesCaminho;
+                }
+            }
+
+        }
+        return null;
+    }
+
+    //    def DFS(graph, start, end, path = []):
+//            # Assumes graph is a Digraph
+// # Assumes start and end are nodes in graph
+//    path = path + [start]
+//    print 'Current dfs path:', printPath(path)
+// if start == end:
+//            return path
+// for node in graph.childrenOf(start):
+//            if node not in path: # Avoid cycles
+//    newPath = DFS(graph,node,end,path)
+// if newPath != None:
+//            return newPath
+// return None
+
+    private void ordenarBusca(Vertice vertice, Vertice verticeDesejado, boolean encontrou) {
+        vertice.setVisitado(true);
+        if (encontrou) {
+            vertice.selecionar();
+        }
+        if (vertice == verticeDesejado) {
+            for (Vertice vertices : mapaVerticesAdjacentes.keySet()) {
+                vertices.setVisitado(true);
+            }
+
+        }
+        for (Vertice verticeAdjacente : mapaVerticesAdjacentes.get(vertice)) {
+            if (!verticeAdjacente.isVisitado()) {
+                ordenarBusca(verticeAdjacente, verticeDesejado, false);
+            }
+        }
+    }
+
+
+
+    private void buscaEmLargura(Vertice verticeInicial, Vertice verticeFinal) {
+
+    }
+
+    private void buscaAEstrela(Vertice verticeInicial, Vertice verticeFinal) {
+
     }
 }

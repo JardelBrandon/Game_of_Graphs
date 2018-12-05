@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
-        android:background="@drawable/romania2"
-        tools:context=".AlgoritmosFragment">
+        android:layout_marginBottom="?actionBarSize"
+        tools:context=".AlgoritmosFragment"
+        tools:targetApi="jelly_bean_mr1">
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:layout_gravity="left">
 
             <ListView
@@ -30,15 +35,27 @@
             android:orientation="vertical" >
 
         </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/romenia3"
+            android:layout_marginBottom="?actionBarSize">
 
+            <fragment
+                android:id="@+id/grafo_layout_romenia"
+                android:name="com.example.robotica.grafostudio.CompositeSubjectGrafoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_grafo" />
+        </FrameLayout>
     </android.support.v4.widget.SlidingPaneLayout>
     <RelativeLayout
         android:id="@+id/bottom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp" >
+        android:background="?attr/colorPrimary">
+
         <ImageButton
             android:id="@+id/comecar_pausar"
             android:layout_width="wrap_content"
