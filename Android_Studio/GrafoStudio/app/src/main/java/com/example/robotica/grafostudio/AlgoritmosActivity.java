@@ -59,7 +59,7 @@ public class AlgoritmosActivity extends AppCompatActivity {
         TypedValue tv = new TypedValue();
         int actionBarHeight = 0;
         if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics()) + 40;
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics()) + 0;
         }
         // old x = 426 : y = 298
         Ponto oradea = new Ponto((float) 308 / LARGURA_TELA_REFERENCIA * width, (float) 262 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);

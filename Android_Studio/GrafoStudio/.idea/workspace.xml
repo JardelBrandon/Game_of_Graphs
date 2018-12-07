@@ -35,11 +35,10 @@
       <file leaf-file-name="AlgoritmosActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="302">
+              <caret line="61" column="115" lean-forward="false" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#coordenadasGrafoRomenia#0;class#AlgoritmosActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,8 +47,8 @@
       <file leaf-file-name="SingletonFacade.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/SingletonFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="158" column="32" lean-forward="false" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="32" />
+            <state relative-caret-position="207">
+              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding>
                 <element signature="e#3889#3890#0" expanded="true" />
                 <element signature="e#3925#3926#0" expanded="true" />
@@ -62,22 +61,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuAlgoritmosActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MenuAlgoritmosActivity.java">
+      <file leaf-file-name="DarkTheme.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/DarkTheme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgoritmosRecyclerAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosRecyclerAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="182">
+              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+              <folding>
+                <element signature="e#1039#2125#0" expanded="true" />
+                <element signature="e#2124#2125#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,18 +77,8 @@
       <file leaf-file-name="LightTheme.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/LightTheme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="42" column="103" lean-forward="false" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DarkTheme.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/DarkTheme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,54 +87,40 @@
       <file leaf-file-name="CompositeSubjectGrafoFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/CompositeSubjectGrafoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="397" column="13" lean-forward="true" selection-start-line="397" selection-start-column="13" selection-end-line="397" selection-end-column="13" />
               <folding>
-                <element signature="e#3459#4912#0" expanded="true" />
-                <element signature="e#4911#4912#0" expanded="true" />
-                <element signature="e#5922#6145#0" expanded="true" />
-                <element signature="e#6144#6145#0" expanded="true" />
-                <element signature="e#6264#6506#0" expanded="true" />
-                <element signature="e#6505#6506#0" expanded="true" />
-                <element signature="e#10807#10808#0" expanded="true" />
-                <element signature="e#10841#10842#0" expanded="true" />
-                <element signature="e#10896#10897#0" expanded="true" />
-                <element signature="e#10942#10943#0" expanded="true" />
-                <element signature="e#10990#10991#0" expanded="true" />
-                <element signature="e#11024#11025#0" expanded="true" />
-                <element signature="e#11088#11089#0" expanded="true" />
-                <element signature="e#11134#11135#0" expanded="true" />
-                <element signature="e#11186#11187#0" expanded="true" />
-                <element signature="e#11222#11223#0" expanded="true" />
-                <element signature="e#11392#11393#0" expanded="true" />
-                <element signature="e#11427#11428#0" expanded="true" />
-                <element signature="e#11493#11494#0" expanded="true" />
-                <element signature="e#11540#11541#0" expanded="true" />
-                <element signature="e#11586#11587#0" expanded="true" />
-                <element signature="e#11627#11628#0" expanded="true" />
-                <element signature="e#11794#11795#0" expanded="true" />
-                <element signature="e#11828#11829#0" expanded="true" />
-                <element signature="e#11877#11878#0" expanded="true" />
-                <element signature="e#11911#11912#0" expanded="true" />
-                <element signature="e#12280#12281#0" expanded="true" />
-                <element signature="e#12321#12322#0" expanded="true" />
-                <element signature="e#12527#12528#0" expanded="true" />
-                <element signature="e#12562#12563#0" expanded="true" />
-                <element signature="e#12776#12777#0" expanded="true" />
-                <element signature="e#12815#12816#0" expanded="true" />
-                <element signature="e#12885#12886#0" expanded="true" />
-                <element signature="e#12927#12928#0" expanded="true" />
+                <element signature="e#5953#6176#0" expanded="true" />
+                <element signature="e#6175#6176#0" expanded="true" />
+                <element signature="e#10838#10839#0" expanded="true" />
+                <element signature="e#10872#10873#0" expanded="true" />
+                <element signature="e#10927#10928#0" expanded="true" />
+                <element signature="e#10973#10974#0" expanded="true" />
+                <element signature="e#11021#11022#0" expanded="true" />
+                <element signature="e#11055#11056#0" expanded="true" />
+                <element signature="e#11119#11120#0" expanded="true" />
+                <element signature="e#11165#11166#0" expanded="true" />
+                <element signature="e#11217#11218#0" expanded="true" />
+                <element signature="e#11253#11254#0" expanded="true" />
+                <element signature="e#11423#11424#0" expanded="true" />
+                <element signature="e#11458#11459#0" expanded="true" />
+                <element signature="e#11524#11525#0" expanded="true" />
+                <element signature="e#11571#11572#0" expanded="true" />
+                <element signature="e#11617#11618#0" expanded="true" />
+                <element signature="e#11658#11659#0" expanded="true" />
+                <element signature="e#11825#11826#0" expanded="true" />
+                <element signature="e#11859#11860#0" expanded="true" />
+                <element signature="e#11908#11909#0" expanded="true" />
+                <element signature="e#11942#11943#0" expanded="true" />
+                <element signature="e#12311#12312#0" expanded="true" />
+                <element signature="e#12352#12353#0" expanded="true" />
+                <element signature="e#12558#12559#0" expanded="true" />
+                <element signature="e#12593#12594#0" expanded="true" />
+                <element signature="e#12807#12808#0" expanded="true" />
+                <element signature="e#12846#12847#0" expanded="true" />
+                <element signature="e#12916#12917#0" expanded="true" />
+                <element signature="e#12958#12959#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArestaDark.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/ArestaDark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +128,8 @@
       <file leaf-file-name="Vertice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/Vertice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="240">
+              <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -171,8 +139,13 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeLight.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-              <folding />
+              <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="45" />
+              <folding>
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1369#1370#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,6 +167,7 @@
       <find>notificar</find>
       <find>boolean</find>
       <find>selec</find>
+      <find>facade</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2478,12 +2452,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/PreDefinidosRecyclerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/utils/ZoomLayout.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosRecyclerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/SingletonFacade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/LightTheme.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/DarkTheme.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeDark.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeLight.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/Vertice.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/CompositeSubjectGrafoFragment.java" />
       </list>
     </option>
@@ -2508,8 +2483,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2527,30 +2502,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="grafostudio" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GrafoStudio" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="grafostudio" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GrafoStudio" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="GrafoStudio" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="GrafoStudio" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="GrafoStudio" type="1abcf292:AndroidViewProjectNode" />
@@ -2744,6 +2695,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2752,7 +2704,6 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2766,7 +2717,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31743422" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31743422" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2774,6 +2725,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2785,62 +2737,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/CompositeSubjectGrafoFragment.java</url>
-          <line>386</line>
+          <line>416</line>
           <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
         <watch expression="R.id.grafo_layout_romenia" />
-        <watch expression="this.getId()" />
+        <watch expression="getActivity()" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grafo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MenuAlgoritmosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosRecyclerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
-          <folding>
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_algoritmos.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
@@ -2855,7 +2774,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2871,7 +2792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2890,9 +2810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-          <folding>
-            <element signature="e#1183#1223#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2927,13 +2844,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-            <element signature="e#811#812#0" expanded="false" />
-            <element signature="e#2548#2549#0" expanded="false" />
-            <element signature="e#2584#2585#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2941,7 +2852,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#3889#3890#0" expanded="true" />
+            <element signature="e#3925#3926#0" expanded="true" />
+            <element signature="e#4530#4531#0" expanded="true" />
+            <element signature="e#4562#4563#0" expanded="true" />
+            <element signature="e#4609#4610#0" expanded="true" />
+            <element signature="e#4651#4652#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2949,7 +2867,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#5953#6176#0" expanded="true" />
+            <element signature="e#6175#6176#0" expanded="true" />
+            <element signature="e#10838#10839#0" expanded="true" />
+            <element signature="e#10872#10873#0" expanded="true" />
+            <element signature="e#10927#10928#0" expanded="true" />
+            <element signature="e#10973#10974#0" expanded="true" />
+            <element signature="e#11021#11022#0" expanded="true" />
+            <element signature="e#11055#11056#0" expanded="true" />
+            <element signature="e#11119#11120#0" expanded="true" />
+            <element signature="e#11165#11166#0" expanded="true" />
+            <element signature="e#11217#11218#0" expanded="true" />
+            <element signature="e#11253#11254#0" expanded="true" />
+            <element signature="e#11423#11424#0" expanded="true" />
+            <element signature="e#11458#11459#0" expanded="true" />
+            <element signature="e#11524#11525#0" expanded="true" />
+            <element signature="e#11571#11572#0" expanded="true" />
+            <element signature="e#11617#11618#0" expanded="true" />
+            <element signature="e#11658#11659#0" expanded="true" />
+            <element signature="e#11825#11826#0" expanded="true" />
+            <element signature="e#11859#11860#0" expanded="true" />
+            <element signature="e#11908#11909#0" expanded="true" />
+            <element signature="e#11942#11943#0" expanded="true" />
+            <element signature="e#12311#12312#0" expanded="true" />
+            <element signature="e#12352#12353#0" expanded="true" />
+            <element signature="e#12558#12559#0" expanded="true" />
+            <element signature="e#12593#12594#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
+            <element signature="e#12846#12847#0" expanded="true" />
+            <element signature="e#12916#12917#0" expanded="true" />
+            <element signature="e#12958#12959#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2957,7 +2906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2991,7 +2939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3007,14 +2954,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
@@ -3037,37 +2984,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="25" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-rc02.aar/82e7401e73cc182fe3d2864511e5a16f/jars/classes.jar!/android/support/v4/app/Fragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="334" column="0" lean-forward="false" selection-start-line="334" selection-start-column="0" selection-end-line="334" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/app/Instrumentation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1178" column="58" lean-forward="false" selection-start-line="1178" selection-start-column="58" selection-end-line="1178" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3075,9 +3004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="17" />
-          <folding>
-            <element signature="e#407#440#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3088,7 +3014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3119,49 +3044,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4019#4036#0" expanded="false" />
-            <element signature="e#6300#7590#0" expanded="false" />
-            <element signature="e#7589#7590#0" expanded="false" />
-            <element signature="e#8027#8059#0" expanded="false" />
-            <element signature="e#8115#8134#0" expanded="false" />
-            <element signature="e#8493#8513#0" expanded="false" />
-            <element signature="e#8640#8659#0" expanded="false" />
-            <element signature="e#8780#8796#0" expanded="false" />
-            <element signature="e#8966#8983#0" expanded="false" />
-            <element signature="e#9098#9114#0" expanded="false" />
-            <element signature="e#9227#9254#0" expanded="false" />
-            <element signature="e#9312#9331#0" expanded="false" />
-            <element signature="e#9451#9473#0" expanded="false" />
-            <element signature="e#9594#9623#0" expanded="false" />
-            <element signature="e#9681#9695#0" expanded="false" />
-            <element signature="e#9817#9832#0" expanded="false" />
-            <element signature="e#9948#9965#0" expanded="false" />
-            <element signature="e#10088#10122#0" expanded="false" />
-            <element signature="e#10180#10195#0" expanded="false" />
-            <element signature="e#10312#10325#0" expanded="false" />
-            <element signature="e#13280#13777#0" expanded="false" />
-            <element signature="e#13776#13777#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_algoritmos.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-          <folding>
-            <element signature="e#1166#1194#0" expanded="false" />
-            <element signature="e#3904#3928#0" expanded="false" />
-            <element signature="e#4176#4200#0" expanded="false" />
-            <element signature="e#4507#4534#0" expanded="false" />
-            <element signature="e#4695#4722#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3172,29 +3058,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeDark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/view/LayoutInflater.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="71" column="130" lean-forward="false" selection-start-line="71" selection-start-column="130" selection-end-line="71" selection-end-column="130" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3202,53 +3075,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-          <folding>
-            <element signature="e#7875#7876#0" expanded="false" />
-            <element signature="e#7911#7912#0" expanded="false" />
-            <element signature="e#8322#8323#0" expanded="false" />
-            <element signature="e#8350#8351#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/ClickVertice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#coordenadasGrafoRomenia#0;class#AlgoritmosActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/LightTheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="42" column="103" lean-forward="false" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/DarkTheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosRecyclerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
+        <state relative-caret-position="900">
           <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding />
         </state>
@@ -3262,34 +3094,359 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MenuAlgoritmosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/LightTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-rc02.aar/82e7401e73cc182fe3d2864511e5a16f/jars/classes.jar!/android/support/v4/app/FragmentHostCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeLight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding />
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="45" />
+          <folding>
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/Vertice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="240">
+          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/MenuAlgoritmosActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/VerticeDark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        <state relative-caret-position="480">
+          <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1446#1447#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-rc02.aar/82e7401e73cc182fe3d2864511e5a16f/jars/classes.jar!/android/support/v4/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="334" column="0" lean-forward="false" selection-start-line="334" selection-start-column="0" selection-end-line="334" selection-end-column="0" />
+          <folding>
+            <marker date="1543629648747" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1543629648747" expanded="false" signature="146:2046" ph="..." />
+            <marker date="1543629648747" expanded="false" signature="4025:4036" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="4067:4073" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="4079:4103" ph="@{...}" />
+            <marker date="1543629648747" expanded="true" signature="4154:4453" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="4536:4592" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="4653:4988" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="5012:5019" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="5091:5156" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="5251:6902" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="6977:7359" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="7420:7996" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="8050:8260" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="8295:8306" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="8340:8346" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="8389:8400" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="8423:8429" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="8462:8473" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="8497:8503" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="8534:9052" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="9082:9093" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="9117:9123" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="9171:9182" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="9199:9205" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="9259:9481" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="9535:9546" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="9569:9575" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="9617:9717" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="9793:10031" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="10113:10898" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="10959:10970" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="10990:10996" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="11041:11052" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="11083:11089" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="11136:11147" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="11206:11212" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="11269:11504" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="11568:11662" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="11729:11979" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="12028:12039" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="12097:12103" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="12156:12375" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="12431:12442" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="12486:12492" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="12567:12625" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="12696:12756" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="12849:12921" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="12990:13001" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="13030:13036" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="13109:13397" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="13471:14065" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="14127:14138" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14172:14178" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14239:14250" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14278:14284" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14320:14331" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14372:14378" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14417:14428" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14450:14456" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14495:14506" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14528:14534" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14573:14584" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14606:14612" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="14650:14661" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14685:14691" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="14730:14884" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="14921:14932" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="14952:14958" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="15040:15051" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="15072:15078" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="15159:15170" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="15195:15201" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="15251:15258" ph="{}" />
+            <marker date="1543629648747" expanded="false" signature="15309:15320" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="15350:15356" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="15402:15413" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="15441:15447" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="15500:15724" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="15781:16038" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="16100:16563" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="16604:16615" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="16644:16650" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="16656:16674" ph="/**...*/" />
+            <marker date="1543629648747" expanded="false" signature="16734:16745" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="16784:16790" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="16836:16847" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="16888:16894" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="16967:17209" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="17282:17361" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="17460:17711" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="17916:18221" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="18302:18309" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="18400:18652" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="18774:18781" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="18867:18981" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="19079:19145" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="19199:19320" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="19416:19593" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="19599:19617" ph="/**...*/" />
+            <marker date="1543629648747" expanded="true" signature="19622:19685" ph="@{...}" />
+            <marker date="1543629648747" expanded="true" signature="19767:20229" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="20336:20608" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="20614:20632" ph="/**...*/" />
+            <marker date="1543629648747" expanded="true" signature="20637:20663" ph="@{...}" />
+            <marker date="1543629648747" expanded="true" signature="20756:20792" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="20851:20858" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="20917:21161" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="21167:21185" ph="/**...*/" />
+            <marker date="1543629648747" expanded="true" signature="21190:21216" ph="@{...}" />
+            <marker date="1543629648747" expanded="false" signature="21260:21271" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="21291:21297" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="21379:21390" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="21402:21408" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="21488:21499" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="21511:21517" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="21596:21859" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="21933:22454" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="22601:22629" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="22718:22725" ph="{}" />
+            <marker date="1543629648747" expanded="false" signature="22766:22777" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="22795:22801" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="22888:22899" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="22919:22925" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23014:23025" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23045:23051" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23093:23104" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23124:23130" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23173:23184" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23204:23210" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="23274:23281" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="23353:23360" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="23442:23449" ph="{}" />
+            <marker date="1543629648747" expanded="false" signature="23529:23540" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23560:23566" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23608:23619" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23639:23645" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23686:23697" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23717:23723" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23769:23780" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23800:23806" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="23854:23865" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="23885:23891" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="23936:24254" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="24277:24821" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="24864:24875" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="24895:24901" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="24973:24980" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="25030:25037" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="25078:25085" ph="{}" />
+            <marker date="1543629648747" expanded="false" signature="25142:25153" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="25166:25172" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="25221:25228" ph="{}" />
+            <marker date="1543629648747" expanded="true" signature="25318:25392" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="25443:25454" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="25496:25502" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="25556:25643" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="25700:25711" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="25724:25730" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="25810:25889" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="25968:26046" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26112:26185" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26240:26337" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26404:26478" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26534:26788" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26853:26925" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="26979:27075" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="27143:27218" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="27261:27516" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="27595:27681" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="27749:27859" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="27939:28026" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="28095:28388" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="28452:28532" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="28586:28755" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="28820:28901" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="28956:29127" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="29171:29247" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="29297:29914" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="29552:29608" ph="run() → {" />
+            <marker date="1543629648747" expanded="false" signature="29694:29717" ph="}" />
+            <marker date="1543629648747" expanded="true" signature="29955:30421" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="30513:34801" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="34846:35056" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="35101:36128" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="35398:36104" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="35477:35761" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="35805:35828" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="35863:35881" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="35980:36090" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="36180:36682" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="36813:37929" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="37013:37081" ph="getLifecycle() → {" />
+            <marker date="1543629648747" expanded="false" signature="37355:37370" ph="}" />
+            <marker date="1543629648747" expanded="true" signature="37990:38542" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="38568:39342" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="39369:40213" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="40244:40372" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="40442:40662" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="40742:40982" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="41046:41242" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="41272:41428" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="41501:41917" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="41968:42366" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="42422:42786" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="42842:43168" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="43215:43523" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="43576:43873" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="43899:44446" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="44471:45013" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="45045:45671" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="45699:46228" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="46255:46926" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="47021:47680" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="47739:47900" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="47923:47934" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="48005:48011" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="48054:48204" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="48234:48327" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="48401:48694" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="48729:48827" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="48884:48989" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="49045:49149" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="49179:49274" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="49312:49323" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="49372:49378" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="49419:49430" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="49478:49484" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="49513:49603" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="49638:49736" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="49781:49853" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="49881:49988" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="50019:50116" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="50161:50231" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="50264:51497" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="51061:51491" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="51544:51622" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="51696:51813" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="51764:51779" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="51797:51807" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="51872:52979" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="52016:52476" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="52085:52171" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="52260:52335" ph="{...}" />
+            <marker date="1543629648747" expanded="true" signature="52397:52466" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="52511:52526" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="52546:52556" ph=" }" />
+            <marker date="1543629648747" expanded="true" signature="52608:52786" ph="{...}" />
+            <marker date="1543629648747" expanded="false" signature="52825:52840" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="52849:52859" ph=" }" />
+            <marker date="1543629648747" expanded="false" signature="52918:52933" ph=" { " />
+            <marker date="1543629648747" expanded="false" signature="52963:52973" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/ClickVertice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/os/Looper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/SingletonFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="158" column="32" lean-forward="false" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="32" />
+        <state relative-caret-position="207">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
             <element signature="e#3889#3890#0" expanded="true" />
             <element signature="e#3925#3926#0" expanded="true" />
@@ -3301,45 +3458,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-28/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="338" column="35" lean-forward="false" selection-start-line="338" selection-start-column="35" selection-end-line="338" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/DarkTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding>
+            <element signature="e#1039#2125#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/AlgoritmosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="61" column="115" lean-forward="false" selection-start-line="61" selection-start-column="115" selection-end-line="61" selection-end-column="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/robotica/grafostudio/CompositeSubjectGrafoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+        <state relative-caret-position="282">
+          <caret line="397" column="13" lean-forward="true" selection-start-line="397" selection-start-column="13" selection-end-line="397" selection-end-column="13" />
           <folding>
-            <element signature="e#3459#4912#0" expanded="true" />
-            <element signature="e#4911#4912#0" expanded="true" />
-            <element signature="e#5922#6145#0" expanded="true" />
-            <element signature="e#6144#6145#0" expanded="true" />
-            <element signature="e#6264#6506#0" expanded="true" />
-            <element signature="e#6505#6506#0" expanded="true" />
-            <element signature="e#10807#10808#0" expanded="true" />
-            <element signature="e#10841#10842#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10942#10943#0" expanded="true" />
-            <element signature="e#10990#10991#0" expanded="true" />
-            <element signature="e#11024#11025#0" expanded="true" />
-            <element signature="e#11088#11089#0" expanded="true" />
-            <element signature="e#11134#11135#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11222#11223#0" expanded="true" />
-            <element signature="e#11392#11393#0" expanded="true" />
-            <element signature="e#11427#11428#0" expanded="true" />
-            <element signature="e#11493#11494#0" expanded="true" />
-            <element signature="e#11540#11541#0" expanded="true" />
-            <element signature="e#11586#11587#0" expanded="true" />
-            <element signature="e#11627#11628#0" expanded="true" />
-            <element signature="e#11794#11795#0" expanded="true" />
-            <element signature="e#11828#11829#0" expanded="true" />
-            <element signature="e#11877#11878#0" expanded="true" />
-            <element signature="e#11911#11912#0" expanded="true" />
-            <element signature="e#12280#12281#0" expanded="true" />
-            <element signature="e#12321#12322#0" expanded="true" />
-            <element signature="e#12527#12528#0" expanded="true" />
-            <element signature="e#12562#12563#0" expanded="true" />
-            <element signature="e#12776#12777#0" expanded="true" />
-            <element signature="e#12815#12816#0" expanded="true" />
-            <element signature="e#12885#12886#0" expanded="true" />
-            <element signature="e#12927#12928#0" expanded="true" />
+            <element signature="e#5953#6176#0" expanded="true" />
+            <element signature="e#6175#6176#0" expanded="true" />
+            <element signature="e#10838#10839#0" expanded="true" />
+            <element signature="e#10872#10873#0" expanded="true" />
+            <element signature="e#10927#10928#0" expanded="true" />
+            <element signature="e#10973#10974#0" expanded="true" />
+            <element signature="e#11021#11022#0" expanded="true" />
+            <element signature="e#11055#11056#0" expanded="true" />
+            <element signature="e#11119#11120#0" expanded="true" />
+            <element signature="e#11165#11166#0" expanded="true" />
+            <element signature="e#11217#11218#0" expanded="true" />
+            <element signature="e#11253#11254#0" expanded="true" />
+            <element signature="e#11423#11424#0" expanded="true" />
+            <element signature="e#11458#11459#0" expanded="true" />
+            <element signature="e#11524#11525#0" expanded="true" />
+            <element signature="e#11571#11572#0" expanded="true" />
+            <element signature="e#11617#11618#0" expanded="true" />
+            <element signature="e#11658#11659#0" expanded="true" />
+            <element signature="e#11825#11826#0" expanded="true" />
+            <element signature="e#11859#11860#0" expanded="true" />
+            <element signature="e#11908#11909#0" expanded="true" />
+            <element signature="e#11942#11943#0" expanded="true" />
+            <element signature="e#12311#12312#0" expanded="true" />
+            <element signature="e#12352#12353#0" expanded="true" />
+            <element signature="e#12558#12559#0" expanded="true" />
+            <element signature="e#12593#12594#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
+            <element signature="e#12846#12847#0" expanded="true" />
+            <element signature="e#12916#12917#0" expanded="true" />
+            <element signature="e#12958#12959#0" expanded="true" />
           </folding>
         </state>
       </provider>

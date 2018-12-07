@@ -54,4 +54,9 @@ public class VerticeDark extends AppCompatButton implements Grafo, Vertice {
     public void deselecionar() {
         this.setBackgroundResource(R.drawable.vertice_dark);
     }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(color);
+    }
 }

@@ -2,6 +2,7 @@ package com.example.robotica.grafostudio;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -371,15 +372,30 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         }
         if (algoritmo == 0) {
             ArrayList<Vertice> verticesCaminho = buscaEmProfundidade(verticeInicial, verticeFinal, new ArrayList<Vertice>());
-            for (Vertice vertice : verticesCaminho) {
-                vertice.selecionar();
-            }
+            colorirCaminho(verticesCaminho);
         }
         else if (algoritmo == 1) {
-            buscaEmLargura(verticeInicial, verticeFinal);
+            ArrayList<Vertice> verticesCaminho = buscaEmLargura(verticeInicial, verticeFinal);
+            colorirCaminho(verticesCaminho);
         }
         else if (algoritmo == 2) {
             buscaAEstrela(verticeInicial, verticeFinal);
+        }
+    }
+
+    private void colorirCaminho(ArrayList<Vertice> caminho) {
+        if (caminho != null) {
+            for (Vertice vertice : caminho) {
+//                if (vertice == caminho.get(0)) {
+//                    vertice.setBackgroundColor(Color.BLUE);
+//                }
+//                else if (vertice == caminho.get(caminho.size() - 1)) {
+//                    vertice.setBackgroundColor(Color.GREEN);
+//                }
+//                else {
+                    vertice.selecionar();
+//                }
+            }
         }
     }
 
@@ -391,54 +407,36 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         for (Vertice  vertice : mapaVerticesAdjacentes.get(verticeInicial)) {
             if (!caminho.contains(vertice)) {
                 ArrayList<Vertice> verticesCaminho = buscaEmProfundidade(vertice, verticeFinal, caminho);
-                if (verticesCaminho != null) {
                     return verticesCaminho;
+            }
+        }
+        return caminho;
+    }
+
+    private ArrayList<Vertice> buscaEmLargura(Vertice verticeInicial, Vertice verticeFinal) {
+        ArrayList<Vertice> filaVertices = new ArrayList();
+        ArrayList<Vertice> caminho = new ArrayList<>();
+        verticeInicial.setVisitado(true);
+        filaVertices.add(verticeInicial);
+        while(!filaVertices.isEmpty()){
+            Vertice verticeInicialDaFila = filaVertices.get(0);
+            caminho.add(verticeInicialDaFila);
+            if(verticeInicialDaFila == verticeFinal){
+                break;
+            }else{
+                for(Vertice v: mapaVerticesAdjacentes.get(verticeInicialDaFila)){
+                    if(!v.isVisitado()){
+                        v.setVisitado(true);
+                        filaVertices.add(v);
+                    }
                 }
             }
-
+            filaVertices.remove(verticeInicialDaFila);
         }
-        return null;
+        return caminho;
     }
 
-    //    def DFS(graph, start, end, path = []):
-//            # Assumes graph is a Digraph
-// # Assumes start and end are nodes in graph
-//    path = path + [start]
-//    print 'Current dfs path:', printPath(path)
-// if start == end:
-//            return path
-// for node in graph.childrenOf(start):
-//            if node not in path: # Avoid cycles
-//    newPath = DFS(graph,node,end,path)
-// if newPath != None:
-//            return newPath
-// return None
-
-    private void ordenarBusca(Vertice vertice, Vertice verticeDesejado, boolean encontrou) {
-        vertice.setVisitado(true);
-        if (encontrou) {
-            vertice.selecionar();
-        }
-        if (vertice == verticeDesejado) {
-            for (Vertice vertices : mapaVerticesAdjacentes.keySet()) {
-                vertices.setVisitado(true);
-            }
-
-        }
-        for (Vertice verticeAdjacente : mapaVerticesAdjacentes.get(vertice)) {
-            if (!verticeAdjacente.isVisitado()) {
-                ordenarBusca(verticeAdjacente, verticeDesejado, false);
-            }
-        }
-    }
-
-
-
-    private void buscaEmLargura(Vertice verticeInicial, Vertice verticeFinal) {
-
-    }
-
-    private void buscaAEstrela(Vertice verticeInicial, Vertice verticeFinal) {
+    private void buscaAEstrela (Vertice verticeInicial, Vertice verticeFinal){
 
     }
 }
