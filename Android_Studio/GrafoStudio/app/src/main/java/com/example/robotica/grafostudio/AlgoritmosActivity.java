@@ -1,6 +1,7 @@
 package com.example.robotica.grafostudio;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,10 +21,15 @@ public class AlgoritmosActivity extends AppCompatActivity {
     private SingletonFacade facade;
     private static final String FILE_NAME = "romenia";
     private ZoomLayout grafoLayoutRomenia;
-    private final int LARGURA_TELA_REFERENCIA = 1794;
-    private final int ALTURA_TELA_REFERENCIA = 1080;
-    private int width;
-    int height;
+
+    private static final String PREFS_NAME = "prefs";
+    private static final String PREF_LARGURA = "largura_tela";
+    private static final String PREF_ALTURA = "altura_tela";
+
+    private int larguraTelaReferencia;
+    private int alturaTelaReferencia;
+    private int larguraAtual;
+    private int alturaAtual;
 
     @SuppressLint("ClickableViewAccessibility")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -32,11 +38,15 @@ public class AlgoritmosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_algoritmos);
 
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        larguraTelaReferencia = preferences.getInt(PREF_LARGURA, 1794);
+        alturaTelaReferencia = preferences.getInt(PREF_ALTURA, 1080);
+
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        width = size.x;
-        height = size.y;
+        larguraAtual = size.x;
+        alturaAtual = size.y;
 
         grafoLayoutRomenia = findViewById(R.id.grafo_layout_romenia);
         grafoLayoutRomenia.setFocusable(false);
@@ -44,44 +54,52 @@ public class AlgoritmosActivity extends AppCompatActivity {
 
         facade = SingletonFacade.getInstancia();
 
-        CompositeSubjectGrafoFragment grafo = facade.lerGrafoArquivo(FILE_NAME);
-        if (grafo == null || width != LARGURA_TELA_REFERENCIA || height != ALTURA_TELA_REFERENCIA) {
-            facade.getGrafoFragment().carregarGrafo(coordenadasGrafoRomenia());
-            facade.salvarGrafoArquivo(facade.getGrafoFragment(), FILE_NAME);
+        if (facade.getGrafoFragment().getFolhasGrafo().size() == 0) {
+            CompositeSubjectGrafoFragment grafo = facade.lerGrafoArquivo(FILE_NAME);
+            if (grafo == null || larguraAtual != larguraTelaReferencia || alturaAtual != alturaTelaReferencia) {
+                facade.getGrafoFragment().carregarGrafo(coordenadasGrafoRomenia());
+                facade.salvarGrafoArquivo(facade.getGrafoFragment(), FILE_NAME);
+                salvarTamanhoTela(larguraAtual, alturaAtual);
+            } else {
+                facade.getGrafoFragment().carregarGrafo(grafo.getMapaPontosArquivos());
+            }
         }
-        else {
-            facade.getGrafoFragment().carregarGrafo(coordenadasGrafoRomenia());
-            //facade.getGrafoFragment().carregarGrafo(grafo.getMapaPontosArquivos());
-        }
+    }
+
+    private void salvarTamanhoTela(int largura, int altura) {
+        SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+        editor.putInt(PREF_LARGURA, largura);
+        editor.putInt(PREF_ALTURA, altura);
+        editor.apply();
+
     }
 
     private HashMap<Ponto, ArrayList<Ponto>>  coordenadasGrafoRomenia() {
         TypedValue tv = new TypedValue();
         int actionBarHeight = 0;
         if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics()) + 0;
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics()) + getResources().getDimensionPixelSize(R.dimen.tamanho_vertice) / 2 - 10;
         }
-        // old x = 426 : y = 298
-        Ponto oradea = new Ponto((float) 308 / LARGURA_TELA_REFERENCIA * width, (float) 262 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto zerind = new Ponto((float) 236 / LARGURA_TELA_REFERENCIA * width, (float) 346 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto arad = new Ponto((float) 182 / LARGURA_TELA_REFERENCIA * width, (float) 425 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto timisoara = new Ponto((float) 190 / LARGURA_TELA_REFERENCIA * width, (float) 593 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto lugoj = new Ponto((float) 408 / LARGURA_TELA_REFERENCIA * width, (float) 660 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto mehadia = new Ponto((float) 417 / LARGURA_TELA_REFERENCIA * width, (float) 740 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto dobreta = new Ponto((float) 408 / LARGURA_TELA_REFERENCIA * width, (float) 819 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto craiova = new Ponto((float) 681 / LARGURA_TELA_REFERENCIA * width, (float) 848 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto pitesti = new Ponto((float) 895 / LARGURA_TELA_REFERENCIA * width, (float) 685 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto rimnicu  = new Ponto((float) 622 / LARGURA_TELA_REFERENCIA * width, (float) 593 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto sibiu = new Ponto((float) 538 / LARGURA_TELA_REFERENCIA * width, (float) 497 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto fagaras = new Ponto((float) 853 / LARGURA_TELA_REFERENCIA * width, (float) 509 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto bucharest = new Ponto((float) 1143 / LARGURA_TELA_REFERENCIA * width, (float) 760 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto giurgiu = new Ponto((float) 1059 / LARGURA_TELA_REFERENCIA * width, (float) 878 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto urziceni = new Ponto((float)1323 / LARGURA_TELA_REFERENCIA * width, (float) 714 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto vaslui = new Ponto((float)1478 / LARGURA_TELA_REFERENCIA * width, (float) 522 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto iasi = new Ponto((float) 1369 / LARGURA_TELA_REFERENCIA * width, (float) 396 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto neamt = new Ponto((float) 1155 / LARGURA_TELA_REFERENCIA * width, (float) 333 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto hirsova = new Ponto((float) 1558 / LARGURA_TELA_REFERENCIA * width, (float) 719 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
-        Ponto eforie = new Ponto((float) 1642 / LARGURA_TELA_REFERENCIA * width, (float) 832 / ALTURA_TELA_REFERENCIA * height - actionBarHeight / 2);
+        Ponto oradea = new Ponto((float) 308 / larguraTelaReferencia * larguraAtual, (float) 280 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto zerind = new Ponto((float) 236 / larguraTelaReferencia * larguraAtual, (float) 360 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto arad = new Ponto((float) 185 / larguraTelaReferencia * larguraAtual, (float) 435 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto timisoara = new Ponto((float) 195 / larguraTelaReferencia * larguraAtual, (float) 600 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto lugoj = new Ponto((float) 410 / larguraTelaReferencia * larguraAtual, (float) 663 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto mehadia = new Ponto((float) 420 / larguraTelaReferencia * larguraAtual, (float) 740 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto dobreta = new Ponto((float) 410 / larguraTelaReferencia * larguraAtual, (float) 819 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto craiova = new Ponto((float) 685 / larguraTelaReferencia * larguraAtual, (float) 842 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto pitesti = new Ponto((float) 895 / larguraTelaReferencia * larguraAtual, (float) 685 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto rimnicu  = new Ponto((float) 625 / larguraTelaReferencia * larguraAtual, (float) 600 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto sibiu = new Ponto((float) 545 / larguraTelaReferencia * larguraAtual, (float) 505 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto fagaras = new Ponto((float) 853 / larguraTelaReferencia * larguraAtual, (float) 522 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto bucharest = new Ponto((float) 1140 / larguraTelaReferencia * larguraAtual, (float) 765 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto giurgiu = new Ponto((float) 1059 / larguraTelaReferencia * larguraAtual, (float) 875 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto urziceni = new Ponto((float)1318 / larguraTelaReferencia * larguraAtual, (float) 720 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto vaslui = new Ponto((float)1480 / larguraTelaReferencia * larguraAtual, (float) 530 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto iasi = new Ponto((float) 1369 / larguraTelaReferencia * larguraAtual, (float) 410 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto neamt = new Ponto((float) 1160 / larguraTelaReferencia * larguraAtual, (float) 350 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto hirsova = new Ponto((float) 1553 / larguraTelaReferencia * larguraAtual, (float) 719 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
+        Ponto eforie = new Ponto((float) 1642 / larguraTelaReferencia * larguraAtual, (float) 832 / alturaTelaReferencia * alturaAtual - actionBarHeight / 2);
         HashMap<Ponto, ArrayList<Ponto>> mapaPontosArquivos = new HashMap<>();
         mapaPontosArquivos.put(oradea, new ArrayList<Ponto>(Arrays.asList(zerind, sibiu)));
         mapaPontosArquivos.put(zerind, new ArrayList<Ponto>(Arrays.asList(oradea, arad)));

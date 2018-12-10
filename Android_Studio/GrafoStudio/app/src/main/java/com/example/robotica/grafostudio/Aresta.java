@@ -15,4 +15,5 @@ public interface Aresta {
     public void setVerticeInicial(Vertice verticeInicial);
     public void setVerticeFinal(Vertice verticeFinal);
     public void setLayoutParams(ViewGroup.LayoutParams params);
+    public float getPeso();
 }

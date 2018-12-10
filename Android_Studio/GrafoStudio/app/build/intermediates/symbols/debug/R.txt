@@ -1614,8 +1614,10 @@ int drawable tooltip_frame_dark 0x7f070092
 int drawable tooltip_frame_light 0x7f070093
 int drawable vertice_dark 0x7f070094
 int drawable vertice_dark_pressed 0x7f070095
-int drawable vertice_light 0x7f070096
-int drawable vertice_light_pressed 0x7f070097
+int drawable vertice_final 0x7f070096
+int drawable vertice_inicial 0x7f070097
+int drawable vertice_light 0x7f070098
+int drawable vertice_light_pressed 0x7f070099
 int id ALT 0x7f080000
 int id CTRL 0x7f080001
 int id FUNCTION 0x7f080002

@@ -10,5 +10,5 @@ public interface Vertice {
     public CharSequence getText();
     public boolean isVisitado();
     public void setVisitado(boolean visitado);
-    public void setBackgroundColor(int color);
+    public void setBackgroundResource(int resId);
 }

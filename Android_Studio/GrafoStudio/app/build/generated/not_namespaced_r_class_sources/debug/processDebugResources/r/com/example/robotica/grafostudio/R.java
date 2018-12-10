@@ -7191,8 +7191,10 @@ public final class R {
     public static final int tooltip_frame_light=0x7f070093;
     public static final int vertice_dark=0x7f070094;
     public static final int vertice_dark_pressed=0x7f070095;
-    public static final int vertice_light=0x7f070096;
-    public static final int vertice_light_pressed=0x7f070097;
+    public static final int vertice_final=0x7f070096;
+    public static final int vertice_inicial=0x7f070097;
+    public static final int vertice_light=0x7f070098;
+    public static final int vertice_light_pressed=0x7f070099;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

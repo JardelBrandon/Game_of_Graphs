@@ -1,7 +1,5 @@
 package com.example.robotica.grafostudio.utils;
 
-import android.graphics.PointF;
-
 import com.example.robotica.grafostudio.Aresta;
 import com.example.robotica.grafostudio.Vertice;
 
@@ -92,4 +90,9 @@ public class Calculos {
         return Arrays.asList(p1, p2);
     }
 
+    public static float getDistanciaVertices(Vertice verticeInicial, Vertice verticeFinal) {
+        Ponto pontoInicial = new Ponto(verticeInicial.getX(), verticeInicial.getY());
+        Ponto pontoFinal = new Ponto(verticeFinal.getX(), verticeFinal.getY());
+        return (float) Math.sqrt(Math.pow((pontoFinal.x - pontoInicial.x), 2) + Math.pow((pontoFinal.y - pontoInicial.y), 2));
+    }
 }

@@ -57,8 +57,4 @@ public class VerticeLight extends AppCompatButton implements Grafo, Vertice {
         this.setBackgroundResource(R.drawable.vertice_light);
     }
 
-    @Override
-    public void setBackgroundColor(int color) {
-        super.setBackgroundColor(color);
-    }
 }

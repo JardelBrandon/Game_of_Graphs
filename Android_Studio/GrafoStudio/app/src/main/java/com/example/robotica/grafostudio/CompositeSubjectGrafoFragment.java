@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.robotica.grafostudio.utils.Calculos;
 import com.example.robotica.grafostudio.utils.Ponto;
 import com.example.robotica.grafostudio.utils.ZoomLayout;
 
@@ -35,8 +36,6 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     private static ThemeFactory themeFactory;
     private static boolean direcionado;
     transient private Handler handler;
-    private static final String PREFS_NAME = "prefs";
-    private static final String PREF_DARK_THEME = "dark_theme";
     private static final long serialVersionUID = -6298516694275121291L;
 
     public CompositeSubjectGrafoFragment() {
@@ -369,32 +368,31 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
     public void rodarAlgoritmos(int algoritmo, Vertice verticeInicial, Vertice verticeFinal) {
         for (Vertice  vertice : mapaVerticesAdjacentes.keySet()) {
             vertice.setVisitado(false);
+            vertice.deselecionar();
         }
+
+        ArrayList<Vertice> verticesCaminho = null;
+
         if (algoritmo == 0) {
-            ArrayList<Vertice> verticesCaminho = buscaEmProfundidade(verticeInicial, verticeFinal, new ArrayList<Vertice>());
-            colorirCaminho(verticesCaminho);
+            verticesCaminho = buscaEmProfundidade(verticeInicial, verticeFinal, new ArrayList<Vertice>());
         }
         else if (algoritmo == 1) {
-            ArrayList<Vertice> verticesCaminho = buscaEmLargura(verticeInicial, verticeFinal);
-            colorirCaminho(verticesCaminho);
+            verticesCaminho = buscaEmLargura(verticeInicial, verticeFinal);
         }
         else if (algoritmo == 2) {
-            buscaAEstrela(verticeInicial, verticeFinal);
+            verticesCaminho = buscaAEstrela(verticeInicial, verticeFinal, new ArrayList<Vertice>());
         }
+        colorirCaminho(verticesCaminho, verticeInicial, verticeFinal);
     }
 
-    private void colorirCaminho(ArrayList<Vertice> caminho) {
+    private void colorirCaminho(ArrayList<Vertice> caminho, Vertice verticeInicial, Vertice verticeFinal) {
         if (caminho != null) {
             for (Vertice vertice : caminho) {
-//                if (vertice == caminho.get(0)) {
-//                    vertice.setBackgroundColor(Color.BLUE);
-//                }
-//                else if (vertice == caminho.get(caminho.size() - 1)) {
-//                    vertice.setBackgroundColor(Color.GREEN);
-//                }
-//                else {
-                    vertice.selecionar();
-//                }
+                vertice.selecionar();
+            }
+            verticeInicial.setBackgroundResource(R.drawable.vertice_inicial);
+            if (verticeFinal != null) {
+                verticeFinal.setBackgroundResource(R.drawable.vertice_final);
             }
         }
     }
@@ -436,7 +434,47 @@ public class CompositeSubjectGrafoFragment extends Fragment implements Grafo, Su
         return caminho;
     }
 
-    private void buscaAEstrela (Vertice verticeInicial, Vertice verticeFinal){
+    private ArrayList<Vertice> buscaAEstrela (Vertice verticeInicial, Vertice verticeFinal, ArrayList<Vertice> caminho){
+        if(caminho.isEmpty()){
+            caminho.add(verticeInicial);
+        }
+        if(verticeInicial == verticeFinal){
+            return caminho;
+        }
 
+        Vertice proximo = heuristica(verticeInicial, verticeFinal);
+        caminho.add(proximo);
+        return buscaAEstrela(proximo, verticeFinal, caminho);
+    }
+
+    private Vertice heuristica(Vertice verticeAtual, Vertice verticeFinal) {
+        verticeAtual.setVisitado(true);
+        Vertice proximoVertice = verticeAtual;
+
+        float menorDistancia = Float.POSITIVE_INFINITY;
+
+        for(Aresta aresta : listaArestas) {
+            if (aresta.getVerticeInicial() == verticeAtual) {
+                Vertice verticeAdjacente = aresta.getVerticeFinal();
+                if (!verticeAdjacente.isVisitado()) {
+                    float distancia = Calculos.getDistanciaVertices(verticeAdjacente, verticeFinal);
+                    if (aresta.getPeso() + distancia < menorDistancia) {
+                        menorDistancia = aresta.getPeso() + distancia;
+                        proximoVertice = verticeAdjacente;
+                    }
+                }
+            }
+            else if (aresta.getVerticeFinal() == verticeAtual) {
+                Vertice verticeAdjacente = aresta.getVerticeInicial();
+                if (!verticeAdjacente.isVisitado()) {
+                    float distancia = Calculos.getDistanciaVertices(verticeAdjacente, verticeFinal);
+                    if (aresta.getPeso() + distancia < menorDistancia) {
+                        menorDistancia = aresta.getPeso() + distancia;
+                        proximoVertice = verticeAdjacente;
+                    }
+                }
+            }
+        }
+        return proximoVertice;
     }
 }
