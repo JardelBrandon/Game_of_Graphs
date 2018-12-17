@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 public class PreDefinidosRecyclerAdapter extends RecyclerView.Adapter<PreDefinidosRecyclerAdapter.ViewHolder> {
 
-    private SingletonFacade facade = SingletonFacade.getInstancia();
-
     private String[] titles = {"Romênia"};
 
     private String[] details = {"04/12/2018"};
@@ -37,8 +35,7 @@ public class PreDefinidosRecyclerAdapter extends RecyclerView.Adapter<PreDefinid
             super(itemView);
             itemImage = (ImageView)itemView.findViewById(R.id.item_image);
             itemTitle = (TextView)itemView.findViewById(R.id.item_title);
-            itemDetail =
-                    (TextView)itemView.findViewById(R.id.item_detail);
+            itemDetail = (TextView)itemView.findViewById(R.id.item_detail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {

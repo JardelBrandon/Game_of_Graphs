@@ -15,7 +15,6 @@ public class MenuPreDefinidosActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
-    ZoomLayout grafoLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,6 @@ public class MenuPreDefinidosActivity extends AppCompatActivity {
         // setSupportActionBar(toolbar);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_pre_definidos);
-        grafoLayout = (ZoomLayout) findViewById(R.id.grafoLayout);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 

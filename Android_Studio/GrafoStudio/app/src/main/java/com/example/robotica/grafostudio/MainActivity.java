@@ -1,6 +1,5 @@
 package com.example.robotica.grafostudio;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -17,7 +16,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 
 import com.example.robotica.grafostudio.utils.CrossfadeWrapper;
 import com.mikepenz.crossfader.Crossfader;
@@ -69,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
         facade.setMainActivity(this);
         salvarGrafo = false;
 
+        if(useDarkTheme) {
+            setTheme(R.style.MaterialDrawerTheme);
+            facade.getGrafoFragment().setThemeFactory(new DarkTheme());
+        }
+        else {
+            facade.getGrafoFragment().setThemeFactory(new LightTheme());
+        }
+
         if (facade.getGrafoFragment() != null && facade.getMainActivity() != null) {
             CompositeSubjectGrafoFragment grafo = facade.lerGrafoArquivo(FILE_NAME);
             if (grafo != null) {
@@ -80,13 +86,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if(useDarkTheme) {
-            setTheme(R.style.MaterialDrawerTheme);
-            facade.getGrafoFragment().setThemeFactory(new DarkTheme());
-        }
-        else {
-            facade.getGrafoFragment().setThemeFactory(new LightTheme());
-        }
         setContentView(R.layout.activity_main);
 
         // Handle Toolbar
@@ -175,15 +174,30 @@ public class MainActivity extends AppCompatActivity {
                     int estadoAnterior;
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        if (drawerItem instanceof Nameable) {
-                            Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
+//                        if (drawerItem instanceof Nameable) {
+//                            Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
+//                        }
+
+                        int estadoAtual = (int) drawerItem.getIdentifier();
+                        facade.setEstadoFerramentas(estadoAtual);
+                        if (estadoAtual == 5) {
+                            facade.getGrafoFragment().carregarGrafo(facade.getRestauracaoMemento(true));
                         }
-                        if (drawerItem.getIdentifier() == 8) {
+                        else if (estadoAtual == 6) {
+                            facade.getGrafoFragment().carregarGrafo(facade.getRestauracaoMemento(false));
+                        }
+//                        else if (estadoAtual == 7) {
+//                            Intent intentAlgoritmos = new Intent(getApplicationContext(), MenuAlgoritmosActivity.class);
+//                            Bundle extras = new Bundle();
+//                            facade.getGrafoFragment().salvarPontos();
+//                            extras.putInt("Activity", 1);
+//                            intentAlgoritmos.putExtras(extras);
+//                            startActivity(intentAlgoritmos);
+//                        }
+                        else if (estadoAtual == 8) {
                             Intent intentGrafosPreDefinidos = new Intent(getApplicationContext(), MenuPreDefinidosActivity.class);
                             startActivity(intentGrafosPreDefinidos);
                         }
-                        int estadoAtual = (int) drawerItem.getIdentifier();
-                        facade.setEstadoFerramentas(estadoAtual);
 
                         return false;
                     }
@@ -240,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
         recreate();
     }
 
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         //add the values which need to be saved from the drawer to the bundle
@@ -287,8 +302,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
+        super.onPause();
         if (salvarGrafo) {
             facade.salvarGrafoArquivo(facade.getGrafoFragment(), FILE_NAME);
         }

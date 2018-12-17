@@ -1,11 +1,8 @@
 package com.example.robotica.grafostudio;
 
 import android.content.Context;
-import android.graphics.PointF;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.robotica.grafostudio.utils.Ponto;
 import com.example.robotica.grafostudio.utils.ZoomLayout;
@@ -17,11 +14,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SingletonFacade {
     private static SingletonFacade instancia = null;
     private static CompositeSubjectGrafoFragment grafoFragment;
     private static MainActivity mainActivity;
+
     private SingletonFerramentas ferramentas;
     private int algoritmo;
 
@@ -78,7 +78,7 @@ public class SingletonFacade {
     }
 
     public void deselecionarVertice() {
-        if (grafoFragment.getVerticeSelecionado() != null) {
+        if (grafoFragment != null && grafoFragment.getVerticeSelecionado() != null) {
             grafoFragment.getVerticeSelecionado().deselecionar();
             grafoFragment.setVerticeSelecionado(null);
         }
@@ -157,5 +157,21 @@ public class SingletonFacade {
 
     public void rodarAlgoritmos(int algoritmo, Vertice verticeInicial, Vertice verticeFinal) {
         grafoFragment.rodarAlgoritmos(algoritmo, verticeInicial, verticeFinal);
+    }
+
+    public HashMap<Ponto, ArrayList<Ponto>> getRestauracaoMemento(Boolean anterior) {
+        ObserverOriginator originator = grafoFragment.getOriginator();
+        int posicaoRestauracao = 0;
+        if (anterior) {
+            if (originator.getMementoAtual() >= 1) {
+                posicaoRestauracao = originator.getMementoAtual() - 1;
+            }
+        }
+        else {
+            if (originator.getMementosSalvos() - 1 > originator.getMementoAtual()) {
+                posicaoRestauracao = originator.getMementoAtual() + 1;
+            }
+        }
+        return originator.restaurar(posicaoRestauracao);
     }
 }

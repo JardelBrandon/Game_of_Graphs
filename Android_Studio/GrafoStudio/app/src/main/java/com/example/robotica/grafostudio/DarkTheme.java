@@ -27,28 +27,7 @@ public class DarkTheme extends ThemeFactory {
         final VerticeDark verticeDark = new VerticeDark(contexto);
         if (facade.getGrafoLayout().getId() == R.id.grafo_layout_romenia) {
             verticeDark.setTamanhoVertice(verticeDark.getTamanhoVertice() / 2);
-            verticeDark.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Vertice verticeSelecionado = facade.getGrafoFragment().getVerticeSelecionado();
-                    Vertice vertice = (Vertice) view;
-                    String mensagem;
-                    if (verticeSelecionado == null) {
-                            facade.selecionarVertice(vertice);
-                            mensagem = "Selecione o vertice final";
-                            facade.snackBar(mensagem);
-                    } else {
-                        if (verticeSelecionado != vertice) {
-                                facade.deselecionarVertice();
-                                facade.rodarAlgoritmos(facade.getAlgoritmo(), verticeSelecionado, vertice);
-                                mensagem = "Rodar Algoritmo";
-                                facade.snackBar(mensagem);
-                        } else {
-                            facade.deselecionarVertice();
-                        }
-                    }
-                }
-            });
+            verticeDark.setOnClickListener(new ClickVerticeRomenia());
         }
         else {
             verticeDark.setOnTouchListener(new ClickVertice());

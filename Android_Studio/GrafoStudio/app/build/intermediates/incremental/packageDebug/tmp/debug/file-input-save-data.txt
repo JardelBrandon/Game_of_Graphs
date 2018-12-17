@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Dec 09 11:54:50 GFT 2018
+#Tue Dec 11 08:13:08 GFT 2018
 4.path=fonts/fontawesome-font-v5.0.6.0.ttf
 13.baseType=DIRECTORY
 8.set=ASSET

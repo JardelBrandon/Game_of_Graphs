@@ -27,28 +27,7 @@ public class LightTheme extends ThemeFactory {
         final VerticeLight verticeLight = new VerticeLight(contexto);
         if (facade.getGrafoLayout().getId() == R.id.grafo_layout_romenia) {
             verticeLight.setTamanhoVertice(verticeLight.getTamanhoVertice() / 2);
-            verticeLight.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Vertice verticeSelecionado = facade.getGrafoFragment().getVerticeSelecionado();
-                    Vertice vertice = (Vertice) view;
-                    String mensagem;
-                    if (verticeSelecionado == null) {
-                        facade.selecionarVertice(vertice);
-                        mensagem = "Selecione o vertice final";
-                        facade.snackBar(mensagem);
-                    } else {
-                        if (verticeSelecionado != vertice) {
-                            facade.deselecionarVertice();
-                            facade.rodarAlgoritmos(facade.getAlgoritmo(), verticeSelecionado, vertice);
-                            mensagem = "Rodar Algoritmo";
-                            facade.snackBar(mensagem);
-                        } else {
-                            facade.deselecionarVertice();
-                        }
-                    }
-                }
-            });
+            verticeLight.setOnClickListener(new ClickVerticeRomenia());
         }
         else {
             verticeLight.setOnTouchListener(new ClickVertice());

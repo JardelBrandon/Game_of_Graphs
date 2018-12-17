@@ -1,7 +1,9 @@
 package com.example.robotica.grafostudio;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatButton;
+import android.view.View;
 
 import java.io.Serializable;
 
@@ -43,6 +45,11 @@ public class VerticeDark extends AppCompatButton implements Grafo, Vertice {
 
         tamanhoVertice = getResources().getDimensionPixelSize(R.dimen.tamanho_vertice);
         this.setBackgroundResource(R.drawable.vertice_dark);
+    }
+
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
     }
 
     @Override

@@ -24,12 +24,14 @@
             android:theme="@style/MaterialDrawerTheme.Light" />
         <activity
             android:name=".MenuAlgoritmosActivity"
-            android:theme="@style/MaterialDrawerTheme.Light"></activity>
+            android:theme="@style/MaterialDrawerTheme.Light" />
+        <activity
+            android:name=".AlgoritmosRomeniaActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/MaterialDrawerTheme.Light"/>
         <activity
             android:name=".AlgoritmosActivity"
-            android:theme="@style/MaterialDrawerTheme.Light"
-            android:screenOrientation="landscape">
-        </activity>
+            android:theme="@style/MaterialDrawerTheme.Light"/>
     </application>
 
 </manifest>

@@ -55,7 +55,7 @@ public class AlgoritmosRecyclerAdapter extends RecyclerView.Adapter<AlgoritmosRe
 
                     facade.setAlgoritmo(position);
 
-                    Intent intentAlgoritmos = new Intent(contexto, AlgoritmosActivity.class);
+                    Intent intentAlgoritmos = new Intent(contexto, AlgoritmosRomeniaActivity.class);
                     contexto.startActivity(intentAlgoritmos);
 
                 }

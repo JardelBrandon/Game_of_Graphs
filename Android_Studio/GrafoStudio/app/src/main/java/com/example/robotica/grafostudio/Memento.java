@@ -1,16 +1,20 @@
 package com.example.robotica.grafostudio;
 
+import com.example.robotica.grafostudio.utils.Ponto;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Memento {
-    private ArrayList<Grafo> grafo;
 
-    public Memento(ArrayList<Grafo> grafo) {
-        this.grafo = grafo;
+    private HashMap<Ponto, ArrayList<Ponto>> mapaPontosGrafo;
+
+    public Memento(HashMap<Ponto, ArrayList<Ponto>> grafo) {
+        this.mapaPontosGrafo = grafo;
     }
 
-    public ArrayList<Grafo> getGrafo() {
-        return grafo;
+    public HashMap<Ponto, ArrayList<Ponto>> getMapaPontosGrafo() {
+        return mapaPontosGrafo;
     }
 
 }

@@ -1,5 +1,8 @@
 package com.example.robotica.grafostudio;
 
+import android.support.annotation.Nullable;
+import android.view.View;
+
 public interface Vertice {
     public void selecionar();
     public void deselecionar();
@@ -11,4 +14,6 @@ public interface Vertice {
     public boolean isVisitado();
     public void setVisitado(boolean visitado);
     public void setBackgroundResource(int resId);
+    public void setOnClickListener(@Nullable View.OnClickListener l);
+    public void setOnTouchListener(View.OnTouchListener l);
 }

@@ -34,4 +34,5 @@
     <string name="exportar">Exportar</string>
     <string name="tema">Tema (Claro/Escuro)</string>
     <string name="opcoes">Opções</string>
+    <string name="grafo_fragment">grafo_fragment</string>
 </resources>

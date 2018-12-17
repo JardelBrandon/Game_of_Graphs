@@ -38,7 +38,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/romenia3"
             android:layout_marginBottom="?actionBarSize">
 
             <fragment
